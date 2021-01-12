@@ -74,8 +74,9 @@ class SearchCiteURLService(dbus.service.Object):
         return [
             dict(
                 id=id,
-                name=id,
                 gicon="web-browser",
+                name=self.query,
+                description=id
             )
             for id in ids
         ]
@@ -86,14 +87,14 @@ class SearchCiteURLService(dbus.service.Object):
 
     @dbus.service.method(in_signature="asu", terms="as", timestamp="u", **sbn)
     def LaunchSearch(self, terms, timestamp):
-        pass
+        webbrowser.open('github.com/raindrum/gnome-citeurl-search-provider')
 
     def get_result_set(self, terms):
-        query = ' '.join(terms)
-        if len(terms) < 2 or not re.search('\d', query):
+        self.query = ' '.join(terms)
+        if len(terms) < 2 or not re.search('\d', self.query):
             return []
         try:
-            return [self.schemas.lookup_query(query)]
+            return [self.schemas.lookup_query(self.query)]
         except:
             return []
 

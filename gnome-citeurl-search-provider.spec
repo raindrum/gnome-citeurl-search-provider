@@ -1,5 +1,5 @@
 Name:           gnome-citeurl-search-provider
-Version:        master
+Version:        main
 Release:        0
 License:        GPL-3.0+
 Summary:        Gnome Shell search provider to look up legal citations
