@@ -1,85 +1,19 @@
-A search provider for GNOME Shell that adds support for searching in zx2c4/[pass](https://www.passwordstore.org/).
+A search provider for GNOME Shell that lets you look up legal citations using [CiteURL](https://github.com/raindrum/citeurl/).
 
-Names of passwords will show up in GNOME Shell searches, choosing one will copy the corresponding content to the clipboard.
-
-Supports OTP, fields and can use GPaste.
+GNOME Shell functionality is based on [gnome-pass-search-provider](https://github.com/jle64/gnome-pass-search-provider).
 
 ![Sreencapture](misc/screencapture.gif)
 
 # Installation
-[![Packaging status](https://repology.org/badge/vertical-allrepos/gnome-pass-search-provider.svg)](https://repology.org/project/gnome-pass-search-provider/versions)
+Ensure that python>=3.5 as well as the dbus and gobject modules are installed. They should all be packaged under python-name or python3-name depending on your distribution.
 
-## Arch Linux
-Install `gnome-pass-search-provider-git` from the AUR.
+Then, install [CiteURL](https://github.com/raindrum/citeurl/) by running `python3 -m pip install citeurl`.
 
-## Debian, Ubuntu and derivatives
-If a package is available for your distribution version (see above for packaging status), just install `gnome-pass-search-provider` through APT.
-
-## Fedora
-Enable the copr repo and install the package with DNF:
+Then, clone this repository and run the installation script as root:
 
 ```shell
-dnf copr enable jle64/gnome-pass-search-provider
-dnf install gnome-pass-search-provider
-```
-
-## Manual
-
-Ensure that python>=3.5 as well as the dbus, gobject, fuzzywuzzy modules are installed. They should all be packaged under python-name or python3-name depending on your distribution.
-
-Clone this repository and run the installation script as root:
-```shell
-git clone git@github.com:jle64/gnome-shell-pass-search-provider.git
+git clone https://github.com/raindrum/gnome-citeurl-search-provider
 sudo ./install.sh
 ```
 
-# Post-installation
-
-Log out and reopen your GNOME session.
-
-The search provider will be loaded automatically when doing a search. You should see it enabled in GNOME Settings Search pane.
-
-# OTP
-
-The [pass-otp](https://github.com/tadfisher/pass-otp) extension is supported. Searches starting with `otp` will copy the otp token to the clipboard.
-
-# Fields
-
-To copy other values than the password in the first line from a pass file, start the search with `:NAME search...`. The field name must be a full but case insensitive match. This requires `GPaste`.
-
-For example with a pass file like:
-```
-SUPERSECRETPASSWORD
-user: username
-pin: 123456
-```
-
-To copy the pin start the search with `:pin` and for the username `:user`.
-
-# Environment variables
-
-If you are configuring `pass` through environment variables, such as `PASSWORD_STORE_DIR`, make sure to set them in a way that will propagate to the search provider executable, not just in your shell.
-
-Setting them in `~/.profile` or `~/.pam_environment` should be sufficient, but stuff in shell-specific files such as `~/.bashrc` will not be picked up by gnome-shell.
-
-If your values have no effect, make sure they propagate to the script environment:
-```shell
-ps auxeww | grep [g]nome-pass-search-provider.py
-```
-
-# Clipboard managers
-
-If you are using GPaste, passwords will be sent to it marked as passwords, thus ensuring they are not visible.
-Otherwise they are sent to the clipboard using `pass -c` which defaults to expiration after 45 seconds.
-
-# Compatibility
-
-This implements the `org.gnome.Shell.SearchProvider2` D-Bus API and has been tested with GNOME Shell 3.22-3.38. This uses the `org.gnome.GPaste1` or `org.gnome.GPaste2` versions of the GPaste D-Bus API to add passwords to GPaste.
-
-# Troubleshooting
-
-If you don't see passphrase prompts when your key is locked, it might be because GPG is not using the right pinentry program. You can force gpg-agent to use pinentry-gnome3 by adding `pinentry-program /usr/bin/pinentry-gnome3` to `~/.gnupg/gpg-agent.conf`.
-
-If you encounter problems, make sure to look to wherever GNOME and D-Bus are logging for error messages. You can do this using `journalctl --user` on systemd-using systems.
-
-Don't hesitate to open an issue.
+Finally, log out and reopen your GNOME session. A CiteURL result will now appear any time you type a recognized citation into GNOME Search.

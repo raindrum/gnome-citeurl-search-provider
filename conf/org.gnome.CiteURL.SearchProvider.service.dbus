@@ -1,0 +1,4 @@
+[D-BUS Service]
+Name=org.gnome.CiteURL.SearchProvider
+Exec=/usr/lib/gnome-citeurl-search-provider/gnome-citeurl-search-provider.py
+SystemdService=org.gnome.CiteURL.SearchProvider.service
