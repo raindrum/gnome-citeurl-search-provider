@@ -4,6 +4,7 @@ cd "$(dirname "$(realpath "${0}")")"
 
 DATADIR=${DATADIR:-/usr/share}
 LIBDIR=${LIBDIR:-/usr/lib}
+CONFDIR=/home/$SUDO_USER/.config/gnome-citeurl-search-provider
 
 # The actual executable
 install -Dm 0755 gnome-citeurl-search-provider.py "${LIBDIR}"/gnome-citeurl-search-provider/gnome-citeurl-search-provider.py
@@ -19,3 +20,7 @@ install -Dm 0644 conf/org.gnome.CiteURL.SearchProvider.service.dbus "${DATADIR}"
 
 # DBus configuration (systemd)
 install -Dm 0644 conf/org.gnome.CiteURL.SearchProvider.service.systemd "${LIBDIR}"/systemd/user/org.gnome.CiteURL.SearchProvider.service
+
+# CiteURL Configuration
+mkdir $CONFDIR
+chown $SUDO_USER:$SUDO_USER $CONFDIR

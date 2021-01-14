@@ -28,15 +28,22 @@
 # Copyright (C) 2012 Red Hat, Inc.
 # Author: Luke Macken <lmacken@redhat.com>
 
+# Gnome Search Provider imports
 import dbus
 import dbus.service
-import re
-import webbrowser
-
 from dbus.mainloop.glib import DBusGMainLoop
 from gi.repository import GLib
 
+# Python standard imports for basic functionality
+import re
+import webbrowser
+from pathlib import Path
+
+# Citation lookup functionality
 from citeurl import Schema_Set
+
+# Config directory to scan for custom YAMLs and suppress_defaults.txt
+CONF_DIR = Path.home() / '.config/gnome-citeurl-search-provider'
 
 # Convenience shorthand for declaring dbus interface methods.
 # s.b.n. -> search_bus_name
@@ -59,7 +66,12 @@ class SearchCiteURLService(dbus.service.Object):
         self.session_bus = dbus.SessionBus()
         bus_name = dbus.service.BusName(self.bus_name, bus=self.session_bus)
         dbus.service.Object.__init__(self, bus_name, self._object_path)
-        self.schemas = Schema_Set()
+        # initialize CiteURL, using settings from CONF_DIR if present
+        suppress_defaults_file = CONF_DIR / 'suppress_defaults.txt'
+        self.schemas = Schema_Set(defaults=not suppress_defaults_file.exists())
+        for path in CONF_DIR.iterdir():
+            if path.suffix in ['.yaml', '.yml', '.YAML', '.YML']:
+                self.schemas.load_schemas(path)
 
     @dbus.service.method(in_signature="sasu", **sbn)
     def ActivateResult(self, id, terms, timestamp):
@@ -91,11 +103,14 @@ class SearchCiteURLService(dbus.service.Object):
 
     def get_result_set(self, terms):
         self.query = ' '.join(terms)
+        
+        # skip one-word queries and those with no digits
         if len(terms) < 2 or not re.search('\d', self.query):
             return []
+        
         try:
             return [self.schemas.lookup_query(self.query)]
-        except:
+        except KeyError:
             return []
 
 if __name__ == "__main__":
