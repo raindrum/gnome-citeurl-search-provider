@@ -87,7 +87,7 @@ class SearchCiteURLService(dbus.service.Object):
             dict(
                 id=id,
                 gicon="web-browser",
-                name=self.query,
+                name=self.schema_names[id],
                 description=id
             )
             for id in ids
@@ -108,10 +108,16 @@ class SearchCiteURLService(dbus.service.Object):
         if len(terms) < 2 or not re.search('\d', self.query):
             return []
         
-        try:
-            return [self.schemas.lookup_query(self.query)]
-        except KeyError:
-            return []
+        matches = []
+        self.schema_names = {}
+        for schema in self.schemas.schemas:
+            url = schema.url_from_query(self.query)
+            if url:
+                matches.append(url)
+                self.schema_names[url] = schema.name
+                #return matches # delete this to allow matching multiple schemas
+        return matches
+                
 
 if __name__ == "__main__":
     DBusGMainLoop(set_as_default=True)
