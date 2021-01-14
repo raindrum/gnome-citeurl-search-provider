@@ -33,55 +33,66 @@ import dbus
 import dbus.service
 from dbus.mainloop.glib import DBusGMainLoop
 from gi.repository import GLib
-
 # Python standard imports for basic functionality
 import re
 import webbrowser
 from pathlib import Path
-
 # Citation lookup functionality
+from yaml import YAMLError
 from citeurl import Schema_Set
 
+
 # Config directory to scan for custom YAMLs and suppress_defaults.txt
-CONF_DIR = Path.home() / '.config/gnome-citeurl-search-provider'
+CONFIG_DIR = Path.home() / '.config/gnome-citeurl-search-provider'
 
 # Convenience shorthand for declaring dbus interface methods.
-# s.b.n. -> search_bus_name
-search_bus_name = "org.gnome.Shell.SearchProvider2"
-sbn = dict(dbus_interface=search_bus_name)
-
+# SBN: "search_bus_name"
+SBN = dict(dbus_interface="org.gnome.Shell.SearchProvider2")
 
 class SearchCiteURLService(dbus.service.Object):
     """The CiteURL search daemon.
 
     This service is started through DBus activation by calling the
-    :meth:`Enable` method, and stopped with :meth:`Disable`.
-
-    """
+    :meth:`Enable` method, and stopped with :meth:`Disable`."""
     
     bus_name = "org.gnome.CiteURL.SearchProvider"
     _object_path = "/" + bus_name.replace(".", "/")
-
+    
+    # called when GNOME starts
     def __init__(self):
+        # dbus code
         self.session_bus = dbus.SessionBus()
         bus_name = dbus.service.BusName(self.bus_name, bus=self.session_bus)
         dbus.service.Object.__init__(self, bus_name, self._object_path)
-        # initialize CiteURL, using settings from CONF_DIR if present
-        suppress_defaults_file = CONF_DIR / 'suppress_defaults.txt'
-        self.schemas = Schema_Set(defaults=not suppress_defaults_file.exists())
-        for path in CONF_DIR.iterdir():
-            if path.suffix in ['.yaml', '.yml', '.YAML', '.YML']:
-                self.schemas.load_schemas(path)
-
-    @dbus.service.method(in_signature="sasu", **sbn)
-    def ActivateResult(self, id, terms, timestamp):
+        
+        # load default schemas or, if suppress_defaults.txt
+        # exists in CONFIG_DIR, load an empty set
+        use_defaults = not (CONFIG_DIR / 'suppress_defaults.txt').exists()
+        self.schemas = Schema_Set(defaults=use_defaults)
+        
+        # load all custom YAML files in CONFIG_DIR
+        yaml_paths = (
+            path for path in CONFIG_DIR.iterdir()
+            if path.suffix in ['.yaml', '.yml', '.YAML', '.YML']
+        )
+        for path in yaml_paths:
+            try:
+                self.schemas.load_yaml(path)
+            except Exception as e:
+                self.notify('CiteURL YAML Exception', body=e)
+    
+    # called when a search result ( is clicked
+    @dbus.service.method(in_signature="sasu", **SBN)
+    def ActivateResult(self, id, terms, timestamp):        
         webbrowser.open(id)
 
-    @dbus.service.method(in_signature="as", out_signature="as", **sbn)
+    # called when first character typed into search bar
+    @dbus.service.method(in_signature="as", out_signature="as", **SBN)
     def GetInitialResultSet(self, terms):
         return self.get_result_set(terms)
 
-    @dbus.service.method(in_signature="as", out_signature="aa{sv}", **sbn)
+    # construct search results display
+    @dbus.service.method(in_signature="as", out_signature="aa{sv}", **SBN)
     def GetResultMetas(self, ids):
         return [
             dict(
@@ -92,30 +103,32 @@ class SearchCiteURLService(dbus.service.Object):
             )
             for id in ids
         ]
-
-    @dbus.service.method(in_signature="asas", out_signature="as", **sbn)
+    
+    # called whenever query changes
+    @dbus.service.method(in_signature="asas", out_signature="as", **SBN)
     def GetSubsearchResultSet(self, previous_results, new_terms):
         return self.get_result_set(new_terms)
 
-    @dbus.service.method(in_signature="asu", terms="as", timestamp="u", **sbn)
+    # called upon clicking program icon (to left of search results)
+    @dbus.service.method(in_signature="asu", terms="as", timestamp="u", **SBN)
     def LaunchSearch(self, terms, timestamp):
         webbrowser.open('github.com/raindrum/gnome-citeurl-search-provider')
-
+    
     def get_result_set(self, terms):
         self.query = ' '.join(terms)
         
-        # skip one-word queries and those with no digits
-        if len(terms) < 2 or not re.search('\d', self.query):
-            return []
+        # to skip one-word queries and those without digits
+        # if len(terms) < 2 or not re.search('\d', self.query):
+        #     return []
         
         matches = []
         self.schema_names = {}
         for schema in self.schemas.schemas:
             url = schema.url_from_query(self.query)
-            if url:
-                matches.append(url)
-                self.schema_names[url] = schema.name
-                #return matches # delete this to allow matching multiple schemas
+            if not url:
+                continue
+            matches.append(url)
+            self.schema_names[url] = schema.name
         return matches
                 
 
