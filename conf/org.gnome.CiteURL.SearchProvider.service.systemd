@@ -1,6 +1,5 @@
 [Unit]
 Description=CiteURL search provider for GNOME Shell daemon
-Wants=org.gnome.GPaste.service
 
 [Service]
 Type=dbus

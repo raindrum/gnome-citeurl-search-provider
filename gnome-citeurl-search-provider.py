@@ -39,7 +39,7 @@ import webbrowser
 from pathlib import Path
 # Citation lookup functionality
 from yaml import YAMLError
-from citeurl import Schema_Set
+from citeurl import Citator
 
 
 # Config directory to scan for custom YAMLs and suppress_defaults.txt
@@ -51,7 +51,6 @@ SBN = dict(dbus_interface="org.gnome.Shell.SearchProvider2")
 
 class SearchCiteURLService(dbus.service.Object):
     """The CiteURL search daemon.
-
     This service is started through DBus activation by calling the
     :meth:`Enable` method, and stopped with :meth:`Disable`."""
     
@@ -68,7 +67,7 @@ class SearchCiteURLService(dbus.service.Object):
         # load default schemas or, if suppress_defaults.txt
         # exists in CONFIG_DIR, load an empty set
         use_defaults = not (CONFIG_DIR / 'suppress_defaults.txt').exists()
-        self.schemas = Schema_Set(defaults=use_defaults)
+        self.citator = Citator(defaults=use_defaults)
         
         # load all custom YAML files in CONFIG_DIR
         yaml_paths = (
@@ -77,7 +76,7 @@ class SearchCiteURLService(dbus.service.Object):
         )
         for path in yaml_paths:
             try:
-                self.schemas.load_yaml(path)
+                self.citator.load_yaml(path)
             except Exception as e:
                 self.notify('CiteURL YAML Exception', body=e)
     
@@ -123,12 +122,12 @@ class SearchCiteURLService(dbus.service.Object):
         
         matches = []
         self.schema_names = {}
-        for schema in self.schemas.schemas:
-            url = schema.url_from_query(self.query)
-            if not url:
+        for schema in self.citator.schemas:
+            citation = schema.lookup(self.query)
+            if not citation:
                 continue
-            matches.append(url)
-            self.schema_names[url] = schema.name
+            matches.append(citation.URL)
+            self.schema_names[citation.URL] = schema.name
         return matches
                 
 
