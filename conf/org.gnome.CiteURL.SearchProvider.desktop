@@ -7,3 +7,4 @@ Comment=GNOME Shell search provider for CiteURL
 Terminal=false
 Type=Application
 OnlyShowIn=GNOME;
+Exec=gio open https://github.com/raindrum/gnome-citeurl-search-provider
