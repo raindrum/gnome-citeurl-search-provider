@@ -124,7 +124,7 @@ class SearchCiteURLService(dbus.service.Object):
         self.schema_names = {}
         for schema in self.citator.schemas:
             citation = schema.lookup(self.query)
-            if not citation:
+            if not citation or not hasattr(citation, 'URL'):
                 continue
             matches.append(citation.URL)
             self.schema_names[citation.URL] = schema.name
