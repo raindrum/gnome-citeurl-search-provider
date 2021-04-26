@@ -1,0 +1,9 @@
+{
+    "name": "Gnome CiteURL Search Provider",
+    "shell-version": ["3.36", "3.38", "40.0"],
+    "uuid": "gnome-citeurl-search-provider@raindrum.github.io",
+    "settings-schema": "org.gnome.shell.extensions.citeurl-search-provider",
+    "description": "Look up U.S. laws in GNOME Search",
+    "url": "https://github.com/raindrum/gnome-citeurl-search-provider",
+    "version": 1
+}
