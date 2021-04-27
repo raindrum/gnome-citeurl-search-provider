@@ -1,4 +1,4 @@
-const Gio = imports.gi.Gio;
+const { Gio, St } = imports.gi;
 const main = imports.ui.main;
 const ext = imports.misc.extensionUtils.getCurrentExtension();
 const gicon = Gio.icon_new_for_string(`${ext.dir.get_path()}/logo.svg`);
@@ -28,13 +28,24 @@ catch (error) {
 }
 
 const citeurlProvider = {
-    // define how the looks in the search sidebar
+    // define how the search tool looks in the sidebar
     appInfo: {
         get_name: () => `CiteURL`,
         get_icon: () => gicon,
         get_id: () => `citeurl-provider`,
         should_show: () => true,
     },
+    // go to github page when the search icon or name is clicked
+    launchSearch(terms) {
+        Gio.app_info_launch_default_for_uri(
+            'https://github.com/raindrum/gnome-citeurl-search-provider',
+            null,
+        );
+    },
+    
+    // define the appearance of search results:
+    // name: <whatever the matched text was>
+    // description: <name of template matched> at <hostname of relevant site>
     getResultMetas(results, callback) {
         let metas = [];
         for (r in results) {
@@ -47,24 +58,25 @@ const citeurlProvider = {
                 id,
                 name: text,
                 description: template + ' at ' + hostname,
-                createIcon() { return null; },
+                createIcon(size) {
+                    const icon = new St.Icon({
+                        gicon: new Gio.ThemedIcon({ name: 'web-browser' }),
+                        icon_size: size,
+                    });
+                    return icon;
+                },
             });
         }
         callback(metas);
     },
+    // when a search result is clicked, open it in the relevant app
     activateResult(result) {
         let { url } = JSON.parse(result);
-        Gio.app_info_launch_default_for_uri(
-            url,
-            global.create_app_launch_context(
-                global.display.get_current_time_roundtrip(),
-                -1
-            ),
-        );
+        Gio.app_info_launch_default_for_uri(url, null);
     },
-    filterResults(providerResults, maxResults) {
-        return providerResults.slice(0, maxResults);
-    },
+    
+    // When a search query is entered, run it through CiteURL
+    // and generate a result for each citation detected.
     getInitialResultSet(terms, callback) {
         let query = terms.join(" ");
         let citations = citeurl.getCitations(query, false);
@@ -78,9 +90,14 @@ const citeurlProvider = {
         }
         callback(results);
     },
+    // when search terms subsequently change, just call the
+    // main search again
     getSubsearchResultSet(_, terms, callback) {
         this.getInitialResultSet(terms, callback);
-    }
+    },
+    filterResults(providerResults, maxResults) {
+        return providerResults.slice(0, maxResults);
+    },
 };
 
 // code to enable and disable the extension
@@ -93,4 +110,5 @@ function enable() {
 function disable() {
     global.log(`Disabling CiteURL Search Provider`);
     searchResults._unregisterProvider(instance);
+    instance = null;
 }
