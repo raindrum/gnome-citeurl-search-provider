@@ -1,0 +1,7 @@
+[Unit]
+Description=CiteURL search provider for GNOME Shell daemon
+
+[Service]
+Type=dbus
+BusName=org.gnome.CiteURL.SearchProvider
+ExecStart=/usr/lib/gnome-citeurl-search-provider/gnome-citeurl-search-provider.py

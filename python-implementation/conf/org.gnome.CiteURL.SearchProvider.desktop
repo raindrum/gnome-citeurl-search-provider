@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Categories=GNOME;Law;Web;
+Icon=gnome-citeurl-search-provider
+Name=CiteURL
+Comment=GNOME Shell search provider for CiteURL
+Terminal=false
+Type=Application
+OnlyShowIn=GNOME;
+Exec=gio open https://github.com/raindrum/gnome-citeurl-search-provider
