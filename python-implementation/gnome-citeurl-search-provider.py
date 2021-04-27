@@ -37,7 +37,7 @@ from gi.repository import GLib
 import re
 import webbrowser
 from pathlib import Path
-from urllib.parse import urlparse, unquote
+from urllib.parse import unquote
 # Citation lookup functionality
 from yaml import YAMLError
 try:
@@ -103,7 +103,11 @@ class SearchCiteURLService(dbus.service.Object):
                 name=self.citation_texts[id],
                 description=(
                     self.template_names[id] + ' at ' +
-                    urlparse(id).hostname or unquote(id)                
+                    re.sub(
+                        '\/.+',
+                        '',
+                        re.sub('(https?:\/\/)?(www\.)?', '', unquote(id))
+                    )
                 )
             )
             for id in ids
