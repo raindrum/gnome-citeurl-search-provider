@@ -210,10 +210,27 @@ const templates = [
         "name": "Federal Rules of Appellate Procedure",
         "defaults": {},
         "URL": [
-            "https://www.law.cornell.edu/rules/frap/rule_{rule}"
+            "https://www.law.cornell.edu/rules/frap/rule_{rule}",
+            "#rule_{rule}_{subsection}"
         ],
         "regexes": [
             "(F\\.? ?R\\.? ?A\\.? ?P\\.?|Fed\\.? ?R(\\.?|ule) ?App\\.? ?Pr?o?c?\\.?|Federal Rules? of Appellate Procedure) ?(Rule )?(?<rule>\\d+(\\.\\d+)?[a-z]?)"
+        ],
+        "operations": [
+            {
+                "token": "subsection",
+                "sub": [
+                    "\\W+",
+                    "_"
+                ]
+            },
+            {
+                "token": "subsection",
+                "sub": [
+                    "^_|_$",
+                    ""
+                ]
+            }
         ]
     },
     {
@@ -248,7 +265,8 @@ const templates = [
         "name": "Federal Rules of Evidence",
         "defaults": {},
         "URL": [
-            "https://www.law.cornell.edu/rules/fre/rule_{rule}"
+            "https://www.law.cornell.edu/rules/fre/rule_{rule}",
+            "#rule_{rule}_{subsection}"
         ],
         "regexes": [
             "(F\\.? ?R\\.? ?E\\.?|Fed\\.? R(\\.?|ule) ?Evid\\.?|Federal Rules? of Evidence) ?(Rule )?(?<rule>\\d+(\\.\\d+)?[a-z]?)"
@@ -256,11 +274,9 @@ const templates = [
     },
     {
         "name": "Immigration and Nationality Act",
-        "defaults": {
-            "title": "8"
-        },
+        "defaults": {},
         "URL": [
-            "https://www.law.cornell.edu/uscode/text/{title}/{section}",
+            "https://www.law.cornell.edu/uscode/text/8/{section}",
             "#{subsection}"
         ],
         "regexes": [
@@ -470,11 +486,9 @@ const templates = [
     },
     {
         "name": "Internal Revenue Code",
-        "defaults": {
-            "title": "26"
-        },
+        "defaults": {},
         "URL": [
-            "https://www.law.cornell.edu/uscode/text/{title}/{section}",
+            "https://www.law.cornell.edu/uscode/text/26/{section}",
             "#{subsection}"
         ],
         "regexes": [
@@ -499,44 +513,24 @@ const templates = [
     },
     {
         "name": "Treasury Regulations",
-        "defaults": {
-            "title": "26"
-        },
+        "defaults": {},
         "URL": [
-            "https://ecfr.federalregister.gov/cfr-reference?cfr%5Bdate%5D=current&cfr%5Breference%5D={title} CFR {section}",
+            "https://ecfr.federalregister.gov/cfr-reference?cfr%5Bdate%5D=current&cfr%5Breference%5D=26 CFR {section}",
             "#p-{section}{subsection}"
         ],
         "regexes": [
             "Treas(ury|\\.?) ?Reg(ulations?|\\.?)((,? )?(&sect;|&#167|§){1,2}|Sect?\\.?|Sections?)? ?(?<section>\\d[\\w.-]*\\w|\\d)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.) ?)?(?<subsection>(\\(\\w+\\))+))?"
-        ],
-        "operations": [
-            {
-                "token": "subsection",
-                "sub": [
-                    "\\W+",
-                    "_"
-                ]
-            },
-            {
-                "token": "subsection",
-                "sub": [
-                    "^_|_$",
-                    ""
-                ]
-            }
         ]
     },
     {
         "name": "National Labor Relations Act",
-        "defaults": {
-            "title": "29"
-        },
+        "defaults": {},
         "URL": [
-            "https://www.law.cornell.edu/uscode/text/{title}/{section}",
+            "https://www.law.cornell.edu/uscode/text/29/{section}",
             "#{subsection}"
         ],
         "regexes": [
-            "(Natioanal Labor Relations Act|N\\.? ?L\\.? ?R\\.? ?A\\.?)((,? )?(&sect;|&#167|§){1,2}|Sect?\\.?|Sections?)? ?(?<section>\\d[\\w.-]*\\w|\\d)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.) ?)?(?<subsection>(\\(\\w+\\))+))?"
+            "(National Labor Relations Act|N\\.? ?L\\.? ?R\\.? ?A\\.?)((,? )?(&sect;|&#167|§){1,2}|Sect?\\.?|Sections?)? ?(?<section>\\d[\\w.-]*\\w|\\d)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.) ?)?(?<subsection>(\\(\\w+\\))+))?"
         ],
         "operations": [
             {
@@ -601,11 +595,9 @@ const templates = [
     },
     {
         "name": "Endangered Species Act",
-        "defaults": {
-            "title": "16"
-        },
+        "defaults": {},
         "URL": [
-            "https://www.law.cornell.edu/uscode/text/{title}/{section}",
+            "https://www.law.cornell.edu/uscode/text/16/{section}",
             "#{subsection}"
         ],
         "regexes": [
@@ -650,11 +642,9 @@ const templates = [
     },
     {
         "name": "Clean Air Act",
-        "defaults": {
-            "title": "42"
-        },
+        "defaults": {},
         "URL": [
-            "https://www.law.cornell.edu/uscode/text/{title}/{section}",
+            "https://www.law.cornell.edu/uscode/text/42/{section}",
             "#{subsection}"
         ],
         "regexes": [
@@ -838,16 +828,28 @@ const templates = [
                     "617": "7671p",
                     "618": "7671q"
                 }
+            },
+            {
+                "token": "subsection",
+                "sub": [
+                    "\\W+",
+                    "_"
+                ]
+            },
+            {
+                "token": "subsection",
+                "sub": [
+                    "^_|_$",
+                    ""
+                ]
             }
         ]
     },
     {
         "name": "Clean Water Act",
-        "defaults": {
-            "title": "33"
-        },
+        "defaults": {},
         "URL": [
-            "https://www.law.cornell.edu/uscode/text/{title}/{section}",
+            "https://www.law.cornell.edu/uscode/text/33/{section}",
             "#{subsection}"
         ],
         "regexes": [
@@ -906,15 +908,13 @@ const templates = [
     },
     {
         "name": "Fair Housing Act",
-        "defaults": {
-            "title": "42"
-        },
+        "defaults": {},
         "URL": [
-            "https://www.law.cornell.edu/uscode/text/{title}/{section}",
+            "https://www.law.cornell.edu/uscode/text/42/{section}",
             "#{subsection}"
         ],
         "regexes": [
-            "(Fair Housing Act|F\\.? ?h\\.? ?A\\.?)((,? )?(&sect;|&#167|§){1,2}|Sect?\\.?|Sections?)? ?(?<section>\\d[\\w.-]*\\w|\\d)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.) ?)?(?<subsection>(\\(\\w+\\))+))?"
+            "(Fair Housing Act|F\\.? ?H\\.? ?A\\.?)((,? )?(&sect;|&#167|§){1,2}|Sect?\\.?|Sections?)? ?(?<section>\\d[\\w.-]*\\w|\\d)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.) ?)?(?<subsection>(\\(\\w+\\))+))?"
         ],
         "operations": [
             {
@@ -964,11 +964,9 @@ const templates = [
     },
     {
         "name": "Americans With Disabilities Act",
-        "defaults": {
-            "title": "42"
-        },
+        "defaults": {},
         "URL": [
-            "https://www.law.cornell.edu/uscode/text/{title}/{section}",
+            "https://www.law.cornell.edu/uscode/text/42/{section}",
             "#{subsection}"
         ],
         "regexes": [
@@ -977,7 +975,7 @@ const templates = [
         "operations": [
             {
                 "token": "section",
-                "index": {
+                "lookup": {
                     "2": "12101",
                     "3": "12102",
                     "101": "12111",
@@ -1077,7 +1075,7 @@ const templates = [
         "name": "Code of Alabama, 1975",
         "defaults": {},
         "URL": [
-            "https://alisondb.legislature.state.al.us/alison/CodeOfAlabama/1975/{title}-{chapter}-{section}.htm"
+            "http://alisondb.legislature.state.al.us/alison/CodeOfAlabama/1975/{title}-{chapter}-{section}.htm"
         ],
         "regexes": [
             "(Ala(bama|\\.)|AL)( ?Rev(ised|\\.))?( ?Ann(otated|\\.))?( ?Gen(eral|\\.))? ?(Codes?|Stat(utes|s?\\.?))( ?Ann(otated|\\.))?,? ?((Sections?|(&sect;|&#167|§){1,2}) ?)?(?<title>\\d+(\\.\\d+)?[A-Za-z]?)[-‑–](?<chapter>\\d+(\\.\\d+)?[A-Za-z]?)[-‑–](?<section>\\d+(\\.\\d+)?)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.) ?)?(?<subsection>(\\(\\w+\\))+))?"
@@ -1212,7 +1210,7 @@ const templates = [
         "name": "Arizona Constitution",
         "defaults": {},
         "URL": [
-            "https://ballotpedia.org/Article_{arabic_article},_Arizona_Constitution",
+            "https://ballotpedia.org/Article_{article},_Arizona_Constitution",
             "#Section_{section}"
         ],
         "regexes": [
@@ -1284,7 +1282,7 @@ const templates = [
         "URL": [
             "https://leginfo.legislature.ca.gov/faces/codes_display{displayType}.xhtml?lawCode=CONS",
             "&article={article}",
-            "&sectionNum=SEC.%20{section}."
+            "&sectionNum=SEC. {section}."
         ],
         "regexes": [
             "(Cal(ifornia|\\.)|CAL?) ?Const(itution|\\.) ?[Aa]rt(icle|\\.) ?(?<article>[\\dIVXivx]{1,8})(,? ?((&sect;|&#167|§){1,2}|[Ss]ect?(ions?|s?\\.)) ?(?<section>(\\d[\\w.]*\\w|\\d))(,? ([Cc]l(ause|\\.) ?(?<clause>\\d+)))?)?"
@@ -1298,8 +1296,7 @@ const templates = [
                 "token": "section",
                 "output": "displayType",
                 "optionalLookup": {
-                    ".+": null,
-                    "Section": null
+                    ".+": "Section"
                 }
             }
         ]
@@ -2125,7 +2122,7 @@ const templates = [
             "https://mgaleg.maryland.gov/mgawebsite/Laws/StatuteText?article={articleCode}&section={title}-{section}"
         ],
         "regexes": [
-            "M(aryland|d\\.|D) (?<article>(Ac|Al|[BCEFHILNPRST]).{4,38}?) (Code( Ann(otated|\\.))? )?((Sections?|(&sect;|&#167|§){1,2}) ?)?(?<title>\\d+[A-Z]?)[-‑–](?<section>[\\dA-Z\\-–.]*[\\dA-Z])(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.) ?)?(?<subsection>(\\(\\w+\\))+))?"
+            "M(aryland|d\\.|D) (Code( Ann(otated|\\.))?,? )?(?<article>(Ac|Al|[BCEFHILNPRST]).{4,38}?) (Code( Ann(otated|\\.))?,? )?((Sections?|(&sect;|&#167|§){1,2}) ?)?(?<title>\\d+[A-Z]?)[-‑–](?<section>[\\dA-Z\\-–.]*[\\dA-Z])(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.) ?)?(?<subsection>(\\(\\w+\\))+))?"
         ],
         "operations": [
             {
@@ -3631,12 +3628,14 @@ class Citation {
         + ', and these tokens were found:'
       );
       for (var group in regexMatch.groups) {
-        log(group + ': "' + regexMatch.groups[group] + '"');
+        if (typeof group !== 'undefined') {
+          log(group + ': "' + regexMatch.groups[group] + '"');
+        }
       }
       log(' ');
     }
     else {
-      throw Error("The provided text and template do not match.");
+      throw Error("The given query does not match the given template.");
     }
     
     this.tokens = regexMatch.groups;
@@ -3718,12 +3717,15 @@ class Citation {
         if (lookupTypes[t] in operation) {
           let outputValue;
           
-          log(tokens[operation['token']]);
-          
           for (var key in operation[lookupTypes[t]]) {
             let regexStr = '^(' + key + ')$';
             if (tokens[operation['token']].match(new RegExp(regexStr, 'i'))) {
               outputValue = operation[lookupTypes[t]][key];
+              log(
+                'Looked up ' + operation['token'] + ' "'
+                + tokens[operation['token']] + '" in a table, and used that '
+                + 'to set ' + output + ' to "' + outputValue + '"' 
+              );
               break;
             }
           }
@@ -3791,6 +3793,11 @@ class Citation {
         for (var pair in numerals) {
           if (numerals[pair][key].match(inputValue.toUpperCase())) {
             tokens[output] = numerals[pair][value];
+            log(
+              'translated ' + operation['token'] + ' to '
+              + operation['numberFormat'] + " format if it wasn't already, and"
+              + ' saved the result (' + tokens[output] + ') to ' + output
+            );
             break;
           }
         }
@@ -3805,7 +3812,8 @@ class Citation {
         tokens[output] = outputValue
         log(
           'added zeros to the beginning of ' + operation['token']
-          + ' until it was ' + String(operation['lpad']) + ' characters long'
+          + ' until it was ' + String(operation['lpad']) + ' characters long,'
+          + ' and saved the result to ' + tokens[output]
         );
       }
     }
@@ -3819,7 +3827,7 @@ class Citation {
     // placeholder.
     let URL = [];
     let missingPlaceholder = new RegExp("\\{.+\\}");
-    log("generating URL from parts provided in the citation template...");
+    log("filling in placeholders in each part of the URL template...");
     for (var part in template.URL) {
       let URLPart = template.URL[part]
       for (var k in this.processedTokens) {

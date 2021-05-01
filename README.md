@@ -35,7 +35,7 @@ Either way, configuration changes will take effect on your next login.
 
 This extension relies entirely on CiteURL for the ability to detect citations and translate them into URLs. So if there is an issue with a particular citation template (e.g. it generates broken links or doesn't recognize a particular citation), please use [CiteURL's issues page](https://github.com/raindrum/citeurl/issues) instead of this one.
 
-This project's issues page is the place to report issues with its function as a GNOME extension specifically, like if it fails to load or generate any search results.
+[This project's issues page](https://github.com/raindrum/gnome-citeurl-search-provider/issues) is the place to report issues with its function as a GNOME extension specifically, like if it fails to load or generate any search results.
 
 # Python Implementation
 
