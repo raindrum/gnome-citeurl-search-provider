@@ -16,7 +16,7 @@ If you ever want to uninstall the search provider, you can run the included `uni
 
 # Configuration
 
-The underlying program, CiteURL, [allows you to define custom YAML files](https://raindrum.github.io/citeurl/#template-yamls) to supplement or replace the built-in citation formats. This means you can add support for any body of law you want, as long as you know a little regex and as long as the body of law can be looked up via a predictable URL scheme.
+The underlying program, CiteURL, [allows you to define custom YAML files](https://raindrum.github.io/citeurl/template-yamls) to supplement or replace the built-in citation formats. This means you can add support for any body of law you want, as long as you know a little regex and as long as the body of law can be looked up via a predictable URL scheme.
 
 The GNOME search provider will load any such YAML files that are placed in its config folder, `~/.config/gnome-citeurl-search-provider`.
 

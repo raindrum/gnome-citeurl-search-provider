@@ -24,12 +24,12 @@ python -m pip3 install citeurl
 Next, run the following command:
 
 ```bash
-citeurl-makejs -o ~/.local/share/gnome-shell/extensions/gnome-citeurl-search-provider@raindrum.github.io/citeurlCustom.js PATH_TO_YOUR_TEMPLATES.YAML
+citeurl makejs -o ~/.local/share/gnome-shell/extensions/gnome-citeurl-search-provider@raindrum.github.io/citeurlCustom.js -t PATH_TO_YOUR_TEMPLATES.YAML
 ```
 
-Alternatively, if you want your templates to *replace* the built-in templates instead of supplement them, add the `-n` option to the above command.
+Alternatively, if you want your templates to *replace* the built-in templates instead of supplement them, use `-nt` instead of `-t` in the above command.
 
-Either way, configuration changes will take effect on your next login.
+Configuration changes will take effect on your next login.
 
 # Reporting Issues
 
