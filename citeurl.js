@@ -1,8 +1,8 @@
 
-// This script was made with CiteURL, an extensible framework to turn
-// legal references into URLs.
+// This script was made with CiteURL v8.2.4, an extensible framework
+// to turn legal references into URLs.
 //
-// The "templates" variable directly below holds the data necessary to 
+// The "templates" variable below holds the data necessary to 
 // turn each kind of citation into a URL. Some or all of the templates may
 // have been made by a third party and are not part of CiteURL itself.
 //
@@ -3588,7 +3588,6 @@ class Citation {
     if (regexMatch) {
       for (var group in regexMatch.groups) {
         if (typeof group !== 'undefined') {
-          log(group + ': "' + regexMatch.groups[group] + '"');
         }
       }
     }
@@ -3763,8 +3762,6 @@ class Citation {
       }
       if (!URLPart.match(missingPlaceholder)) {
         URL.push(URLPart);
-      }
-      else {
       }
     }
     this.URL = URL.join('');
