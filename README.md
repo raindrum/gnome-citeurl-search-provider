@@ -13,7 +13,7 @@ By default, this extension recognizes citations to U.S. state and federal court 
 
 Besides the built-in sources of law, CiteURL allows you to add support for more bodies of law by writing custom citation templates in YAML format. If you want to do that, you can follow [this guide](https://raindrum.github.io/citeurl/#template-yamls).
 
-Once you've made your own YAML file, you can use the `citeurl-makejs` command to export the custom templates into a `citeurlCustom.js` file in the extension folder.
+Once you've made your own YAML file, you can use the `citeurl makejs` command to export the custom templates into a `citeurlCustom.js` file in the extension folder.
 
 To do that, first ensure that CiteURL is installed:
 
@@ -27,7 +27,7 @@ Next, run the following command:
 citeurl makejs -o ~/.local/share/gnome-shell/extensions/gnome-citeurl-search-provider@raindrum.github.io/citeurlCustom.js -t PATH_TO_YOUR_TEMPLATES.YAML
 ```
 
-Alternatively, if you want your templates to *replace* the built-in templates instead of supplement them, use `-nt` instead of `-t` in the above command.
+Alternatively, if you want your templates to *replace* the built-in templates instead of supplement them, add the `-n` option to the above command.
 
 Configuration changes will take effect on your next login.
 
@@ -41,4 +41,4 @@ This extension relies entirely on CiteURL for the ability to detect citations an
 
 This extension is written in JavaScript so that it can be installed easily from [extensions.gnome.org](https://extensions.gnome.org/). That said, it was originally made in Python so as to be more compatible with the underlying [CiteURL](https://github.com/raindrum/citeurl/) library, and so that the citation templates could be loaded directly in YAML format without conversion to JavaScript.
 
-If you want to install the original Python-based version, you can find it [here](https://github.com/raindrum/gnome-citeurl-search-provider/tree/main/python-implementation).
+If you want to install the original Python-based version of the search provider, you can find it [here](https://github.com/raindrum/gnome-citeurl-search-provider/tree/main/python-implementation).

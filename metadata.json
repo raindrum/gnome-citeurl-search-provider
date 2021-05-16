@@ -5,5 +5,5 @@
     "settings-schema": "org.gnome.shell.extensions.citeurl-search-provider",
     "description": "Look up U.S. laws in GNOME Search",
     "url": "https://github.com/raindrum/gnome-citeurl-search-provider",
-    "version": 3
+    "version": 4
 }

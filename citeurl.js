@@ -6,8 +6,8 @@
 // turn each kind of citation into a URL. Some or all of the templates may
 // have been made by a third party and are not part of CiteURL itself.
 //
-// CiteURL is copyright of Simon Raindrum Sherred under the MIT License,
-// and is available at https://github.com/raindrum/citeurl.
+// CiteURL is copyright of Simon Raindrum Sherred under the MIT License.
+// See https://raindrum.github.io/citeurl for more info.
 
 const templates = [
     {
@@ -18,8 +18,8 @@ const templates = [
             "#{subsection}"
         ],
         "regexes": [
-            "([Tt]itle )?(?<title>\\d+) (U\\.?|United) ?(S\\.?|States) ?C(ode|\\.?)( ?[AS]\\.?| Ann(otated|o?\\.)| Serv(ice|\\.))?((,? )?(&sect;|&#167|§){1,2}|Sect?\\.?|Sections?)? ?(?<section>\\d[\\w.-]*\\w|\\d)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.) ?)?(?<subsection>(\\(\\w+\\))+))?",
-            "[Ss]ection((,? )?(&sect;|&#167|§){1,2}|Sect?\\.?|Sections?)? ?(?<section>\\d[\\w.-]*\\w|\\d)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.) ?)?(?<subsection>(\\(\\w+\\))+))? of ([Tt]itle )?(?<title>\\d+) of the (U\\.?|United) ?(S\\.?|States) ?C(ode|\\.?)( ?[AS]\\.?| Ann(otated|o?\\.)| Serv(ice|\\.))?"
+            "([Tt]itle )?(?<title>\\d+) (U\\.?|United) ?(S\\.?|States) ?C(ode|\\.?)( ?[AS]\\.?| Ann(otated|o?\\.)| Serv(ice|\\.))?(,? )?((&sect;|&#167|§){1,2}|[Ss]ec(tions?|t?s?\\.))? ?(?<section>\\d[\\w.-]*\\w|\\d)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.) ?)?(?<subsection>(\\(\\w+\\))+))?",
+            "[Ss]ection(,? )?((&sect;|&#167|§){1,2}|[Ss]ec(tions?|t?s?\\.))? ?(?<section>\\d[\\w.-]*\\w|\\d)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.) ?)?(?<subsection>(\\(\\w+\\))+))? of ([Tt]itle )?(?<title>\\d+) of the (U\\.?|United) ?(S\\.?|States) ?C(ode|\\.?)( ?[AS]\\.?| Ann(otated|o?\\.)| Serv(ice|\\.))?"
         ],
         "operations": [
             {
@@ -99,15 +99,15 @@ const templates = [
                     "eighteen": "18",
                     "nineteen": "19",
                     "twentie": "20",
-                    "twenty(- )?fir": "21",
+                    "twenty[- ]?fir": "21",
                     "twenty(- )?seco": "22",
-                    "twenty(- )?thi": "23",
+                    "twenty[- ]?thi": "23",
                     "twenty(- )?four": "24",
-                    "twenty(- )?fif": "25",
-                    "twenty(- )?six": "26",
-                    "twenty(- )?seven": "21",
-                    "twenty(- )?eigh": "28",
-                    "twenty(- )?nin": "29"
+                    "twenty[- ]?fif": "25",
+                    "twenty[- ]?six": "26",
+                    "twenty[- ]?seven": "21",
+                    "twenty[- ]?eigh": "28",
+                    "twenty[- ]?nin": "29"
                 }
             },
             {
@@ -176,7 +176,7 @@ const templates = [
             "#p-{section}{subsection}"
         ],
         "regexes": [
-            "([Tt]itle )?(?<title>\\d+) (C\\.? ?F\\.? ?R\\.?|Code of Federal Regulations)( [Pp]arts?| [Pp]ts?\\.)?((,? )?(&sect;|&#167|§){1,2}|Sect?\\.?|Sections?)? ?(?<section>\\d[\\w.-]*\\w|\\d)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.) ?)?(?<subsection>(\\(\\w+\\))+))?"
+            "([Tt]itle )?(?<title>\\d+) (C\\.? ?F\\.? ?R\\.?|Code of Federal Regulations)( [Pp]arts?| [Pp]ts?\\.)?(,? )?((&sect;|&#167|§){1,2}|[Ss]ec(tions?|t?s?\\.))? ?(?<section>\\d[\\w.-]*\\w|\\d)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.) ?)?(?<subsection>(\\(\\w+\\))+))?"
         ]
     },
     {
@@ -280,7 +280,7 @@ const templates = [
             "#{subsection}"
         ],
         "regexes": [
-            "(Immigration ([Aa]nd|&) Nationality Act|I\\.?N\\.?A\\.?|I\\. N\\. A\\.)((,? )?(&sect;|&#167|§){1,2}|Sect?\\.?|Sections?)? ?(?<section>\\d[\\w.-]*\\w|\\d)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.) ?)?(?<subsection>(\\(\\w+\\))+))?"
+            "(Immigration ([Aa]nd|&) Nationality Act|I\\.?N\\.?A\\.?|I\\. N\\. A\\.)(,? )?((&sect;|&#167|§){1,2}|[Ss]ec(tions?|t?s?\\.))? ?(?<section>\\d[\\w.-]*\\w|\\d)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.) ?)?(?<subsection>(\\(\\w+\\))+))?"
         ],
         "operations": [
             {
@@ -492,7 +492,7 @@ const templates = [
             "#{subsection}"
         ],
         "regexes": [
-            "(Internal Revenue Code|I\\.? ?R\\.? ?C\\.?)((,? )?(&sect;|&#167|§){1,2}|Sect?\\.?|Sections?)? ?(?<section>\\d[\\w.-]*\\w|\\d)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.) ?)?(?<subsection>(\\(\\w+\\))+))?"
+            "(Internal Revenue Code|I\\.? ?R\\.? ?C\\.?)(,? )?((&sect;|&#167|§){1,2}|[Ss]ec(tions?|t?s?\\.))? ?(?<section>\\d[\\w.-]*\\w|\\d)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.) ?)?(?<subsection>(\\(\\w+\\))+))?"
         ],
         "operations": [
             {
@@ -519,7 +519,7 @@ const templates = [
             "#p-{section}{subsection}"
         ],
         "regexes": [
-            "Treas(ury|\\.?) ?Reg(ulations?|\\.?)((,? )?(&sect;|&#167|§){1,2}|Sect?\\.?|Sections?)? ?(?<section>\\d[\\w.-]*\\w|\\d)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.) ?)?(?<subsection>(\\(\\w+\\))+))?"
+            "Treas(ury|\\.?) ?Reg(ulations?|\\.?)(,? )?((&sect;|&#167|§){1,2}|[Ss]ec(tions?|t?s?\\.))? ?(?<section>\\d[\\w.-]*\\w|\\d)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.) ?)?(?<subsection>(\\(\\w+\\))+))?"
         ]
     },
     {
@@ -530,7 +530,7 @@ const templates = [
             "#{subsection}"
         ],
         "regexes": [
-            "(National Labor Relations Act|N\\.? ?L\\.? ?R\\.? ?A\\.?)((,? )?(&sect;|&#167|§){1,2}|Sect?\\.?|Sections?)? ?(?<section>\\d[\\w.-]*\\w|\\d)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.) ?)?(?<subsection>(\\(\\w+\\))+))?"
+            "(National Labor Relations Act|N\\.? ?L\\.? ?R\\.? ?A\\.?)(,? )?((&sect;|&#167|§){1,2}|[Ss]ec(tions?|t?s?\\.))? ?(?<section>\\d[\\w.-]*\\w|\\d)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.) ?)?(?<subsection>(\\(\\w+\\))+))?"
         ],
         "operations": [
             {
@@ -601,7 +601,7 @@ const templates = [
             "#{subsection}"
         ],
         "regexes": [
-            "(Endangered Species Act|E\\.? ?S\\.? ?A\\.?)((,? )?(&sect;|&#167|§){1,2}|Sect?\\.?|Sections?)? ?(?<section>\\d[\\w.-]*\\w|\\d)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.) ?)?(?<subsection>(\\(\\w+\\))+))?"
+            "(Endangered Species Act|E\\.? ?S\\.? ?A\\.?)(,? )?((&sect;|&#167|§){1,2}|[Ss]ec(tions?|t?s?\\.))? ?(?<section>\\d[\\w.-]*\\w|\\d)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.) ?)?(?<subsection>(\\(\\w+\\))+))?"
         ],
         "operations": [
             {
@@ -648,7 +648,7 @@ const templates = [
             "#{subsection}"
         ],
         "regexes": [
-            "(C\\.? ?A\\.? ?A\\.?|Clean Air Act)((,? )?(&sect;|&#167|§){1,2}|Sect?\\.?|Sections?)? ?(?<section>\\d[\\w.-]*\\w|\\d)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.) ?)?(?<subsection>(\\(\\w+\\))+))?"
+            "(C\\.? ?A\\.? ?A\\.?|Clean Air Act)(,? )?((&sect;|&#167|§){1,2}|[Ss]ec(tions?|t?s?\\.))? ?(?<section>\\d[\\w.-]*\\w|\\d)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.) ?)?(?<subsection>(\\(\\w+\\))+))?"
         ],
         "operations": [
             {
@@ -853,7 +853,7 @@ const templates = [
             "#{subsection}"
         ],
         "regexes": [
-            "(Clean Water Act|C\\.? ?W\\.? ?A\\.?)((,? )?(&sect;|&#167|§){1,2}|Sect?\\.?|Sections?)? ?(?<section>\\d[\\w.-]*\\w|\\d)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.) ?)?(?<subsection>(\\(\\w+\\))+))?"
+            "(Clean Water Act|C\\.? ?W\\.? ?A\\.?)(,? )?((&sect;|&#167|§){1,2}|[Ss]ec(tions?|t?s?\\.))? ?(?<section>\\d[\\w.-]*\\w|\\d)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.) ?)?(?<subsection>(\\(\\w+\\))+))?"
         ],
         "operations": [
             {
@@ -914,7 +914,7 @@ const templates = [
             "#{subsection}"
         ],
         "regexes": [
-            "(Fair Housing Act|F\\.? ?H\\.? ?A\\.?)((,? )?(&sect;|&#167|§){1,2}|Sect?\\.?|Sections?)? ?(?<section>\\d[\\w.-]*\\w|\\d)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.) ?)?(?<subsection>(\\(\\w+\\))+))?"
+            "(Fair Housing Act|F\\.? ?H\\.? ?A\\.?)(,? )?((&sect;|&#167|§){1,2}|[Ss]ec(tions?|t?s?\\.))? ?(?<section>\\d[\\w.-]*\\w|\\d)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.) ?)?(?<subsection>(\\(\\w+\\))+))?"
         ],
         "operations": [
             {
@@ -970,7 +970,7 @@ const templates = [
             "#{subsection}"
         ],
         "regexes": [
-            "(Americans [Ww]ith Disabilities Act|A\\. D\\. A\\.|A\\.?D\\.?A\\.?)((,? )?(&sect;|&#167|§){1,2}|Sect?\\.?|Sections?)? ?(?<section>\\d[\\w.-]*\\w|\\d)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.) ?)?(?<subsection>(\\(\\w+\\))+))?"
+            "(Americans [Ww]ith Disabilities Act|A\\. D\\. A\\.|A\\.?D\\.?A\\.?)(,? )?((&sect;|&#167|§){1,2}|[Ss]ec(tions?|t?s?\\.))? ?(?<section>\\d[\\w.-]*\\w|\\d)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.) ?)?(?<subsection>(\\(\\w+\\))+))?"
         ],
         "operations": [
             {
@@ -1234,7 +1234,7 @@ const templates = [
             "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode={codeAcronym}&sectionNum={section}"
         ],
         "regexes": [
-            "(Cal(ifornia|\\.)|CAL?) ?(?<code>[BCDEFGHILMPRSUVW].{2,40}?)( ?C(ode|\\.)( Ann(otated|\\.))?,?)?((,? )?(&sect;|&#167|§){1,2}|Sect?\\.?|Sections?)? ?(?<section>\\d[\\w.-]*\\w|\\d)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.) ?)?(?<subsection>(\\(\\w+\\))+))?"
+            "(Cal(ifornia|\\.)|CAL?) ?(?<code>[BCDEFGHILMPRSUVW].{2,40}?)( ?C(ode|\\.)( Ann(otated|\\.))?,?)?(,? )?((&sect;|&#167|§){1,2}|[Ss]ec(tions?|t?s?\\.))? ?(?<section>\\d[\\w.-]*\\w|\\d)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.) ?)?(?<subsection>(\\(\\w+\\))+))?"
         ],
         "operations": [
             {
@@ -1255,7 +1255,7 @@ const templates = [
                     "Food (and|&) Agric(ultural|\\.)|FAC": "FAC",
                     "Gov(ernment|'?t?\\.?)|GOV": "GOV",
                     "Harb(ors|\\.) (and|&) Nav(igation|\\.)|HNC|H&N": "HNC",
-                    "Health (and|&) Safety|HSC|H&S": "HSC",
+                    "Health (and|&) Saf(ety|\\.)|HSC|H&S": "HSC",
                     "Ins(urance|\\.)|INS": "INS",
                     "Lab(or|\\.)|LAB": "LAB",
                     "Mil(itary|\\.) (and|&) Vet(erans|\\.)|MVC|M&V": "MVC",
@@ -1377,7 +1377,7 @@ const templates = [
             "https://www.lawserver.com/law/state/delaware/de-code/delaware_code_title_{title}_{section}"
         ],
         "regexes": [
-            "([Tt]it(le|\\.) )?(?<title>\\d{1,2}),? (Del(aware|\\.)|DE) ?C(ode|\\.)((,? )?(&sect;|&#167|§){1,2}|Sect?\\.?|Sections?)? ?(?<section>\\d[\\w.-]*\\w|\\d)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.) ?)?(?<subsection>(\\(\\w+\\))+))?"
+            "([Tt]it(le|\\.) )?(?<title>\\d{1,2}),? (Del(aware|\\.)|DE) ?C(ode|\\.)(,? )?((&sect;|&#167|§){1,2}|[Ss]ec(tions?|t?s?\\.))? ?(?<section>\\d[\\w.-]*\\w|\\d)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.) ?)?(?<subsection>(\\(\\w+\\))+))?"
         ],
         "operations": [
             {
@@ -1393,7 +1393,7 @@ const templates = [
             "https://delcode.delaware.gov/title8/c001/sc{subchapter}/index.shtml#{section}."
         ],
         "regexes": [
-            "(D\\.? ?G\\.? ?C\\.? ?L\\.?|Del(aware|\\.) ?Gen(eral|\\.) ?Corp(orations?|s?\\.) ?L(aw|\\.))((,? )?(&sect;|&#167|§){1,2}|Sect?\\.?|Sections?)? ?(?<section>\\d[\\w.-]*\\w|\\d)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.) ?)?(?<subsection>(\\(\\w+\\))+))?"
+            "(D\\.? ?G\\.? ?C\\.? ?L\\.?|Del(aware|\\.) ?Gen(eral|\\.) ?Corp(orations?|s?\\.) ?L(aw|\\.))(,? )?((&sect;|&#167|§){1,2}|[Ss]ec(tions?|t?s?\\.))? ?(?<section>\\d[\\w.-]*\\w|\\d)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.) ?)?(?<subsection>(\\(\\w+\\))+))?"
         ],
         "operations": [
             {
@@ -1548,7 +1548,7 @@ const templates = [
         "name": "Idaho Constitution",
         "defaults": {},
         "URL": [
-            "https://ballotpedia.org/Article_{roman_article},_Idaho_Constitution",
+            "https://ballotpedia.org/Article_{article},_Idaho_Constitution",
             "#Section_{section}"
         ],
         "regexes": [
@@ -1568,7 +1568,7 @@ const templates = [
             "https://www.ilga.gov/legislation/ilcs/fulltext.asp?DocName={chapter}{act}0K{section}"
         ],
         "regexes": [
-            "(?<chapter>\\d+) ILCS (?<act>\\d+)/(?<section>(\\d[\\d.-]*\\w|\\d))"
+            "([Cc]h(apter|\\.) )?(?<chapter>\\d+) (ILCS|Ill(inois|\\.) Comp(iled|\\.) Stat(utes|\\.)) (?<act>\\d+)/(?<section>(\\d[\\d.-]*\\w|\\d))"
         ],
         "operations": [
             {
@@ -1732,7 +1732,7 @@ const templates = [
             "https://apps.legislature.ky.gov/Law/Constitution/Constitution/ViewConstitution?rsn={section}"
         ],
         "regexes": [
-            "K(entucky|y\\.|Y) ?Const(itution|\\.),?( ?(Art(icle|\\.) ?)?([IVXivx]{1,7}|\\d{1,2}|Bill of Rights|Rights of Victims of Crime|Dist(ribution|\\.) of the Powers of Gov(ernment|('t)?\\.?)|(The )?(Leg(islative|(is)?\\.)|Exec(utive|\\.)|Jud(icial|\\.)) ?Dep(artment|('t)?\\.?)|Counties (and|&) County Seats|Impeachments|(C(ounty|ty\\.)|Fisc(al|\\.)) ?C(ourts|ts\\.)|Justices of the Peace|Suff(rage|\\.) ?(and|&) ?Elec(tions|\\.)|Mun(icipalities|i?\\.)|Rev(enue|\\.) ?(and|&) ?Tax(ation|\\.?)|Educ(ation|\\.)|Corp(orations?|s?\\.)|R(ailroads|\\.R\\.) (and|&) Com(merce|m?\\.)|(The )?Militia|Gen(eral|\\.) ?Prov(isions|s?\\.)|Mode of Rev(ision|\\.)),?)?((,? )?(&sect;|&#167|§){1,2}|Sect?\\.?|Sections?)? ?(?<section>\\d[\\w.-]*\\w|\\d)"
+            "K(entucky|y\\.|Y) ?Const(itution|\\.),?( ?(Art(icle|\\.) ?)?([IVXivx]{1,7}|\\d{1,2}|Bill of Rights|Rights of Victims of Crime|Dist(ribution|\\.) of the Powers of Gov(ernment|('t)?\\.?)|(The )?(Leg(islative|(is)?\\.)|Exec(utive|\\.)|Jud(icial|\\.)) ?Dep(artment|('t)?\\.?)|Counties (and|&) County Seats|Impeachments|(C(ounty|ty\\.)|Fisc(al|\\.)) ?C(ourts|ts\\.)|Justices of the Peace|Suff(rage|\\.) ?(and|&) ?Elec(tions|\\.)|Mun(icipalities|i?\\.)|Rev(enue|\\.) ?(and|&) ?Tax(ation|\\.?)|Educ(ation|\\.)|Corp(orations?|s?\\.)|R(ailroads|\\.R\\.) (and|&) Com(merce|m?\\.)|(The )?Militia|Gen(eral|\\.) ?Prov(isions|s?\\.)|Mode of Rev(ision|\\.)),?)?(,? )?((&sect;|&#167|§){1,2}|[Ss]ec(tions?|t?s?\\.))? ?(?<section>\\d[\\w.-]*\\w|\\d)"
         ],
         "operations": [
             {
@@ -2070,7 +2070,7 @@ const templates = [
             "https://legislature.maine.gov/legis/statutes/{title}/title{title}sec{section}.html"
         ],
         "regexes": [
-            "M(aine|e\\.|E)( ?Rev(ised|\\.))?( ?Ann(otated|\\.))?( ?Gen(eral|\\.))? ?(Codes?|Stat(utes|s?\\.?))( ?Ann(otated|\\.))?,? ?,? [Tt]it(le|\\.) ?(?<title>\\d+([-‑–][A-Z])?),?((,? )?(&sect;|&#167|§){1,2}|Sect?\\.?|Sections?)? ?(?<section>\\d[\\w.-]*\\w|\\d)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.) ?)?(?<subsection>(\\(\\w+\\))+))?"
+            "M(aine|e\\.|E)( ?Rev(ised|\\.))?( ?Ann(otated|\\.))?( ?Gen(eral|\\.))? ?(Codes?|Stat(utes|s?\\.?))( ?Ann(otated|\\.))?,? ?,? [Tt]it(le|\\.) ?(?<title>\\d+([-‑–][A-Z])?),?(,? )?((&sect;|&#167|§){1,2}|[Ss]ec(tions?|t?s?\\.))? ?(?<section>\\d[\\w.-]*\\w|\\d)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.) ?)?(?<subsection>(\\(\\w+\\))+))?"
         ],
         "operations": [
             {
@@ -2859,7 +2859,7 @@ const templates = [
         "name": "North Dakota Constitution",
         "defaults": {},
         "URL": [
-            "https://ballotpedia.org/Article_{roman_article},_North_Dakota_Constitution",
+            "https://ballotpedia.org/Article_{article},_North_Dakota_Constitution",
             "#Section_{section}"
         ],
         "regexes": [
@@ -2879,7 +2879,7 @@ const templates = [
             "https://cnmilaw.org/pdf/cmc_section/T{title}/{section}.pdf"
         ],
         "regexes": [
-            "(?<title>\\d+) N(orthern|\\.) ?Mar(iana|\\.) ?I(slands|\\.)( ?Rev(ised|\\.))?( ?Ann(otated|\\.))?( ?Gen(eral|\\.))? ?(Codes?|Stat(utes|s?\\.?))( ?Ann(otated|\\.))?,? ?((,? )?(&sect;|&#167|§){1,2}|Sect?\\.?|Sections?)? ?(?<section>\\d[\\w.-]*\\w|\\d)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.) ?)?(?<subsection>(\\(\\w+\\))+))?"
+            "(?<title>\\d+) N(orthern|\\.) ?Mar(iana|\\.) ?I(slands|\\.)( ?Rev(ised|\\.))?( ?Ann(otated|\\.))?( ?Gen(eral|\\.))? ?(Codes?|Stat(utes|s?\\.?))( ?Ann(otated|\\.))?,? ?(,? )?((&sect;|&#167|§){1,2}|[Ss]ec(tions?|t?s?\\.))? ?(?<section>\\d[\\w.-]*\\w|\\d)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.) ?)?(?<subsection>(\\(\\w+\\))+))?"
         ]
     },
     {
@@ -2936,7 +2936,7 @@ const templates = [
             "https://law.justia.com/codes/oklahoma/{year}/title-{title}/section-{title}-{section}/index.html"
         ],
         "regexes": [
-            "(Okla(homa|\\.)|OK)( ?Rev(ised|\\.))?( ?Ann(otated|\\.))?( ?Gen(eral|\\.))? ?(Codes?|Stat(utes|s?\\.?))( ?Ann(otated|\\.))?,? ?,? [Tt]it(le|\\.) ?(?<title>\\d+([-‑–][A-Z])?),?((,? )?(&sect;|&#167|§){1,2}|Sect?\\.?|Sections?)? ?(?<section>\\d[\\w.-]*\\w|\\d)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.) ?)?(?<subsection>(\\(\\w+\\))+))?(,? \\((?<year>\\d{4})\\))?"
+            "(Okla(homa|\\.)|OK)( ?Rev(ised|\\.))?( ?Ann(otated|\\.))?( ?Gen(eral|\\.))? ?(Codes?|Stat(utes|s?\\.?))( ?Ann(otated|\\.))?,? ?,? [Tt]it(le|\\.) ?(?<title>\\d+([-‑–][A-Z])?),?(,? )?((&sect;|&#167|§){1,2}|[Ss]ec(tions?|t?s?\\.))? ?(?<section>\\d[\\w.-]*\\w|\\d)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.) ?)?(?<subsection>(\\(\\w+\\))+))?(,? \\((?<year>\\d{4})\\))?"
         ],
         "operations": [
             {
@@ -2949,7 +2949,7 @@ const templates = [
         "name": "Oklahoma Constitution",
         "defaults": {},
         "URL": [
-            "https://ballotpedia.org/Article_{roman_article},_Oklahoma_Constitution",
+            "https://ballotpedia.org/Article_{article},_Oklahoma_Constitution",
             "#Section_{section}"
         ],
         "regexes": [
@@ -3181,7 +3181,7 @@ const templates = [
                     "Fam(ily|\\.)|FAC?|FAM": "FA",
                     "Fin(ance|\\.)|FIC?|FIN": "FI",
                     "Gov(ernment|('?t)?\\.?)?|GO?VC?": "GV",
-                    "Health (and|&) Safety|H&?SC?": "HS",
+                    "Health (and|&) Saf(ety|\\.)|H&?SC?": "HS",
                     "Hum(an|\\.) Res(ources|\\.)|HRC?": "HR",
                     "Ins(urance|\\.)|INC?": "IN",
                     "Labor|LA": "LA",
@@ -3262,7 +3262,7 @@ const templates = [
             "https://www.lawserver.com/law/state/vermont/vt-statutes/vermont_statutes_title_{title}_{section}"
         ],
         "regexes": [
-            "V(ermont|t\\.|T)( ?Rev(ised|\\.))?( ?Ann(otated|\\.))?( ?Gen(eral|\\.))? ?(Codes?|Stat(utes|s?\\.?))( ?Ann(otated|\\.))?,? ?,? [Tt]it(le|\\.) ?(?<title>\\d+([-‑–][A-Z])?),?((,? )?(&sect;|&#167|§){1,2}|Sect?\\.?|Sections?)? ?(?<section>\\d[\\w.-]*\\w|\\d)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.) ?)?(?<subsection>(\\(\\w+\\))+))?"
+            "V(ermont|t\\.|T)( ?Rev(ised|\\.))?( ?Ann(otated|\\.))?( ?Gen(eral|\\.))? ?(Codes?|Stat(utes|s?\\.?))( ?Ann(otated|\\.))?,? ?,? [Tt]it(le|\\.) ?(?<title>\\d+([-‑–][A-Z])?),?(,? )?((&sect;|&#167|§){1,2}|[Ss]ec(tions?|t?s?\\.))? ?(?<section>\\d[\\w.-]*\\w|\\d)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.) ?)?(?<subsection>(\\(\\w+\\))+))?"
         ]
     },
     {
@@ -3410,7 +3410,7 @@ const templates = [
         "name": "West Virginia Constitution",
         "defaults": {},
         "URL": [
-            "https://ballotpedia.org/Article_{roman_article},_West_Virginia_Constitution",
+            "https://ballotpedia.org/Article_{article},_West_Virginia_Constitution",
             "#Section_{section}"
         ],
         "regexes": [
@@ -3574,43 +3574,6 @@ const templates = [
     }
 ];
 
-// on page load, check whether there's a URL parameter.
-// If there is, insert it into the search bar, and run the
-// search. Otherwise, unhide the page for normal display.
-if (typeof document !== 'undefined') {
-  document.addEventListener("DOMContentLoaded", () => {
-    if (!location.search) {
-      return document.body.removeAttribute('hidden');
-    }
-    let query = decodeURIComponent(location.search);
-    query = query.trim().replace(/^\?(?:q=)?|\.$|,$|;$/g, '');
-    document.getElementById("q").value = query.replace(/\+/g, ' ');
-    
-    handleQuery(query);
-  });
-}
-
-if (
-    typeof window !== 'undefined'
-    && typeof window.addEventListener !== 'undefined'
-) {
-  window.addEventListener( "pageshow", function ( event ) {
-    var historyTraversal = event.persisted || (
-      typeof window.performance != "undefined" &&
-      window.performance.navigation.type === 2
-    );
-    if ( historyTraversal ) {
-      // Handle page restore.
-      window.location.reload();
-    }
-  });
-}
-
-function log(text) {
-  if (typeof console !== 'undefined') {
-    console.log(text)
-  }
-}
 
 class Citation {
   constructor(template, text) {
@@ -3623,16 +3586,11 @@ class Citation {
       }
     }
     if (regexMatch) {
-      log(
-        '"' + text + '" matched regex for ' + template['name']
-        + ', and these tokens were found:'
-      );
       for (var group in regexMatch.groups) {
         if (typeof group !== 'undefined') {
           log(group + ': "' + regexMatch.groups[group] + '"');
         }
       }
-      log(' ');
     }
     else {
       throw Error("The given query does not match the given template.");
@@ -3649,20 +3607,12 @@ class Citation {
     // set default values for missing tokens
     for (var d in template.defaults) {
       if (!tokens[d]) {
-        log(
-          d + ' was not specified, so it will be set to "'
-          + template.defaults[d] + '" by default'
-        );
         tokens[d] = template.defaults[d];
-        log(' ');
       }
     }
     
     // apply predefined operations to the found tokens
     let appliedAnOperation = false;
-    if (!('operations' in template)) {
-      return;
-    }
     function titleCase (txt) {
       return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
     }
@@ -3704,11 +3654,6 @@ class Citation {
         let regex = new RegExp(operation['sub'][0], 'ig');
         let outputValue = inputValue.replace(regex, operation['sub'][1]);
         tokens[output] = outputValue;
-        log(
-          'replaced all instances of regex "' + operation['sub'][0] + '" in '
-          + 'token "' + operation['token'] + '" with "' + operation['sub'][1]
-          + '" to set token "${output}" to "${outputValue}".'
-        );
       }
       
       // handle regex lookups
@@ -3721,11 +3666,6 @@ class Citation {
             let regexStr = '^(' + key + ')$';
             if (tokens[operation['token']].match(new RegExp(regexStr, 'i'))) {
               outputValue = operation[lookupTypes[t]][key];
-              log(
-                'Looked up ' + operation['token'] + ' "'
-                + tokens[operation['token']] + '" in a table, and used that '
-                + 'to set ' + output + ' to "' + outputValue + '"' 
-              );
               break;
             }
           }
@@ -3733,10 +3673,6 @@ class Citation {
             tokens[output] = outputValue;
           }
           else if (lookupTypes[t] == 'optionalLookup') {
-            log(
-              'tried to look up token "' + operation['token'] + '" in an index,'
-              + 'but failed, so token "' + output + '" will not be modified.'
-            );
           }
           else {
             throw Error(
@@ -3793,11 +3729,6 @@ class Citation {
         for (var pair in numerals) {
           if (numerals[pair][key].match(inputValue.toUpperCase())) {
             tokens[output] = numerals[pair][value];
-            log(
-              'translated ' + operation['token'] + ' to '
-              + operation['numberFormat'] + " format if it wasn't already, and"
-              + ' saved the result (' + tokens[output] + ') to ' + output
-            );
             break;
           }
         }
@@ -3810,15 +3741,9 @@ class Citation {
           outputValue = '0' + outputValue;
         }
         tokens[output] = outputValue
-        log(
-          'added zeros to the beginning of ' + operation['token']
-          + ' until it was ' + String(operation['lpad']) + ' characters long,'
-          + ' and saved the result to ' + tokens[output]
-        );
       }
     }
     if (appliedAnOperation) {
-      log(' ');
     }
     this.processedTokens = tokens;
     
@@ -3827,7 +3752,6 @@ class Citation {
     // placeholder.
     let URL = [];
     let missingPlaceholder = new RegExp("\\{.+\\}");
-    log("filling in placeholders in each part of the URL template...");
     for (var part in template.URL) {
       let URLPart = template.URL[part]
       for (var k in this.processedTokens) {
@@ -3839,44 +3763,14 @@ class Citation {
       }
       if (!URLPart.match(missingPlaceholder)) {
         URL.push(URLPart);
-        log('"' + template.URL[part] + '"   -->   "' + URLPart + '"')
       }
       else {
-        log(
-          'omitting "' + template.URL[part]
-          + '" since it references a missing placeholder'
-        )
       }
     }
     this.URL = URL.join('');
-    log('Finished building URL: "' + this.URL + '"');
-    log(' ');
   }
 }
 
-// run search from form entry
-function handleSearch(event) {
-  event.preventDefault()
-  let query = document.getElementById("q").value;
-  handleQuery(query);
-}
-
-// run search from URL parameter
-function handleQuery(query) {
-  try {
-    // if no query provided, clear the search bar
-    if (!query) {
-      document.getElementById("explainer").innerHTML = "";
-      return;
-    }
-    window.location.href = getUrlForQuery(query);
-  }
-  // on error, unhide the page and display explainer
-  catch (error) {
-    document.body.removeAttribute('hidden');
-    document.getElementById("explainer").innerHTML = error.message;
-  }
-}
 
 // perform each step to convert query into URL
 function getUrlForQuery(query) {
@@ -3901,10 +3795,6 @@ function getCitations(query, returnFirst) {
     }
   }
   if (returnFirst) {
-    log(
-      '"' + query + '" did not match the regex for any template. Check the '
-      + 'page source to see the templates and their regexes.'
-    );
     throw Error(MATCH_ERROR);
   }
   return citations;
