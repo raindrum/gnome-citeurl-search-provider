@@ -79,7 +79,7 @@ class SearchCiteURLService(dbus.service.Object):
         )
         for path in yaml_paths:
             try:
-                self.citator.load_yaml(path)
+                self.citator.load_yaml(path.read_text())
             except Exception as e:
                 self.notify('CiteURL YAML Exception', body=e)
     
