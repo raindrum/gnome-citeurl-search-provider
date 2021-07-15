@@ -69,8 +69,11 @@ class SearchCiteURLService(dbus.service.Object):
         
         # load default templates or, if suppress_defaults.txt
         # exists in CONFIG_DIR, load an empty set
-        use_defaults = not (CONFIG_DIR / 'suppress_defaults.txt').exists()
-        self.citator = Citator(defaults=use_defaults)
+        suppress_defaults = CONFIG_DIR / 'suppress_defaults.txt'
+        if suppress_defaults.exists():
+            self.citator = Citator(defaults=None)
+        else:
+            self.citator = Citator()
         
         # load all custom YAML files in CONFIG_DIR
         yaml_paths = (
@@ -133,13 +136,13 @@ class SearchCiteURLService(dbus.service.Object):
         matches = []
         self.template_names = {}
         self.citation_texts = {}
-        for template in self.citator.templates:
-            citation = template.lookup(self.query)
+        for template in self.citator:
+            citation = template.cite(self.query)
             if not citation or not hasattr(citation, 'URL'):
                 continue
             matches.append(citation.URL)
             self.template_names[citation.URL] = template.name
-            self.citation_texts[citation.URL] = citation.text
+            self.citation_texts[citation.URL] = citation.name or str(citation)
         return matches
                 
 
