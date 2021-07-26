@@ -1,5 +1,5 @@
 
-// This script was made with CiteURL v10.0.0, an extensible framework
+// This script was made with CiteURL v10.0.5, an extensible framework
 // to turn legal references into URLs.
 //
 // The "templates" variable below holds the data necessary to 
@@ -208,9 +208,9 @@ const templates = [
             "name regex": "U\\. ?S\\. ?C(ode|\\.)( ?A(nn(otated|\\.)|\\.)| ?S(erv(ice|\\.)|\\.?))?|USC[AS]?|United States Code"
         },
         "regexes": [
-            "(?<!\\w)([Tt]itle )?(?<title>\\d+)(?!\\w),? (U\\. ?S\\. ?C(ode|\\.)( ?A(nn(otated|\\.)|\\.)| ?S(erv(ice|\\.)|\\.?))?|USC[AS]?|United States Code)(,? )?(((&sect;|&#167|§){1,2}|[Ss]ec(tions?|t?s?\\.)))? ?(?<section>\\d[\\w.-]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))?(?!=\\w)",
-            "(?<!\\w)[Tt]itle (?<title>\\d+)(?!\\w),? (((&sect;|&#167|§){1,2}|[Ss]ec(tions?|t?s?\\.)))? ?(?<section>\\d[\\w.-]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))? of the (U\\. ?S\\. ?C(ode|\\.)( ?A(nn(otated|\\.)|\\.)| ?S(erv(ice|\\.)|\\.?))?|USC[AS]?|United States Code)(?!=\\w)",
-            "(?<!\\w)(((&sect;|&#167|§){1,2}|[Ss]ec(tions?|t?s?\\.)))? ?(?<section>\\d[\\w.-]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))? of [Tt]itle (?<title>\\d+)(?!\\w) of the (U\\. ?S\\. ?C(ode|\\.)( ?A(nn(otated|\\.)|\\.)| ?S(erv(ice|\\.)|\\.?))?|USC[AS]?|United States Code)(?!=\\w)"
+            "(?<!\\w)([Tt]itle )?(?<title>\\d+)(?!\\w),? (U\\. ?S\\. ?C(ode|\\.)( ?A(nn(otated|\\.)|\\.)| ?S(erv(ice|\\.)|\\.?))?|USC[AS]?|United States Code)(,? )?(((&sect;|&#167|§){1,2}|[Ss]ec(tions?|t?s?\\.)))? ?(?<section>\\d[\\w.-]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))?(?!=\\w)",
+            "(?<!\\w)[Tt]itle (?<title>\\d+)(?!\\w),? (((&sect;|&#167|§){1,2}|[Ss]ec(tions?|t?s?\\.)))? ?(?<section>\\d[\\w.-]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))? of the (U\\. ?S\\. ?C(ode|\\.)( ?A(nn(otated|\\.)|\\.)| ?S(erv(ice|\\.)|\\.?))?|USC[AS]?|United States Code)(?!=\\w)",
+            "(?<!\\w)(((&sect;|&#167|§){1,2}|[Ss]ec(tions?|t?s?\\.)))? ?(?<section>\\d[\\w.-]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))? of [Tt]itle (?<title>\\d+)(?!\\w) of the (U\\. ?S\\. ?C(ode|\\.)( ?A(nn(otated|\\.)|\\.)| ?S(erv(ice|\\.)|\\.?))?|USC[AS]?|United States Code)(?!=\\w)"
         ],
         "operations": [
             {
@@ -285,9 +285,9 @@ const templates = [
             "name regex": "C\\.? ?F\\.? ?R\\.?|Code of Federal Regulations"
         },
         "regexes": [
-            "(?<!\\w)([Tt]itle )?(?<title>\\d+)(?!\\w),? (C\\.? ?F\\.? ?R\\.?|Code of Federal Regulations)(,? )?(((&sect;|&#167|§){1,2}|[Ss]ec(tions?|t?s?\\.)))? ?(?<section>\\d[\\w.-]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))?(?!=\\w)",
-            "(?<!\\w)[Tt]itle (?<title>\\d+)(?!\\w),? (((&sect;|&#167|§){1,2}|[Ss]ec(tions?|t?s?\\.)))? ?(?<section>\\d[\\w.-]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))? of the (C\\.? ?F\\.? ?R\\.?|Code of Federal Regulations)(?!=\\w)",
-            "(?<!\\w)(((&sect;|&#167|§){1,2}|[Ss]ec(tions?|t?s?\\.)))? ?(?<section>\\d[\\w.-]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))? of [Tt]itle (?<title>\\d+)(?!\\w) of the (C\\.? ?F\\.? ?R\\.?|Code of Federal Regulations)(?!=\\w)"
+            "(?<!\\w)([Tt]itle )?(?<title>\\d+)(?!\\w),? (C\\.? ?F\\.? ?R\\.?|Code of Federal Regulations)(,? )?(((&sect;|&#167|§){1,2}|[Ss]ec(tions?|t?s?\\.)))? ?(?<section>\\d[\\w.-]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))?(?!=\\w)",
+            "(?<!\\w)[Tt]itle (?<title>\\d+)(?!\\w),? (((&sect;|&#167|§){1,2}|[Ss]ec(tions?|t?s?\\.)))? ?(?<section>\\d[\\w.-]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))? of the (C\\.? ?F\\.? ?R\\.?|Code of Federal Regulations)(?!=\\w)",
+            "(?<!\\w)(((&sect;|&#167|§){1,2}|[Ss]ec(tions?|t?s?\\.)))? ?(?<section>\\d[\\w.-]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))? of [Tt]itle (?<title>\\d+)(?!\\w) of the (C\\.? ?F\\.? ?R\\.?|Code of Federal Regulations)(?!=\\w)"
         ],
         "operations": [],
         "URL": [
@@ -303,8 +303,8 @@ const templates = [
             "name regex": "Civ(il|\\.) ?P(rocedure|(roc?)?\\.)|C\\.? ?P\\.?"
         },
         "regexes": [
-            "(?<!\\w)(Fed(eral|\\.) ?R(ules?|\\.)|F\\.? ?R\\.?)( of)? ?(Civ(il|\\.) ?P(rocedure|(roc?)?\\.)|C\\.? ?P\\.?)( [Rr]ule)? (?<rule>\\d+(\\.\\d+)?[a-z]?)(?!\\w)( ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))?(?!=\\w)",
-            "(?<!\\w)[Rr]ule (?<rule>\\d+(\\.\\d+)?[a-z]?)(?!\\w)( ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))? [Oo]f [Tt]he Fed(eral|\\.) Rules of (Civ(il|\\.) ?P(rocedure|(roc?)?\\.)|C\\.? ?P\\.?)(?!=\\w)"
+            "(?<!\\w)(Fed(eral|\\.) ?R(ules?|\\.)|F\\.? ?R\\.?)( of)? ?(Civ(il|\\.) ?P(rocedure|(roc?)?\\.)|C\\.? ?P\\.?)( [Rr]ule)? (?<rule>\\d+(\\.\\d+)?[a-z]?)(?!\\w)( ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))?(?!=\\w)",
+            "(?<!\\w)[Rr]ule (?<rule>\\d+(\\.\\d+)?[a-z]?)(?!\\w)( ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))? [Oo]f [Tt]he Fed(eral|\\.) Rules of (Civ(il|\\.) ?P(rocedure|(roc?)?\\.)|C\\.? ?P\\.?)(?!=\\w)"
         ],
         "operations": [
             {
@@ -335,8 +335,8 @@ const templates = [
             "name regex": "App(ellate|\\.) ?P(rocedure|(roc?)?\\.)|A\\.? ?P\\.?"
         },
         "regexes": [
-            "(?<!\\w)(Fed(eral|\\.) ?R(ules?|\\.)|F\\.? ?R\\.?)( of)? ?(App(ellate|\\.) ?P(rocedure|(roc?)?\\.)|A\\.? ?P\\.?)( [Rr]ule)? (?<rule>\\d+(\\.\\d+)?[a-z]?)(?!\\w)( ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))?(?!=\\w)",
-            "(?<!\\w)[Rr]ule (?<rule>\\d+(\\.\\d+)?[a-z]?)(?!\\w)( ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))? [Oo]f [Tt]he Fed(eral|\\.) Rules of (App(ellate|\\.) ?P(rocedure|(roc?)?\\.)|A\\.? ?P\\.?)(?!=\\w)"
+            "(?<!\\w)(Fed(eral|\\.) ?R(ules?|\\.)|F\\.? ?R\\.?)( of)? ?(App(ellate|\\.) ?P(rocedure|(roc?)?\\.)|A\\.? ?P\\.?)( [Rr]ule)? (?<rule>\\d+(\\.\\d+)?[a-z]?)(?!\\w)( ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))?(?!=\\w)",
+            "(?<!\\w)[Rr]ule (?<rule>\\d+(\\.\\d+)?[a-z]?)(?!\\w)( ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))? [Oo]f [Tt]he Fed(eral|\\.) Rules of (App(ellate|\\.) ?P(rocedure|(roc?)?\\.)|A\\.? ?P\\.?)(?!=\\w)"
         ],
         "operations": [
             {
@@ -367,8 +367,8 @@ const templates = [
             "name regex": "Crim(inal|\\.) ?P(rocedure|(roc?)?\\.)|Cr\\.? ?P\\.?"
         },
         "regexes": [
-            "(?<!\\w)(Fed(eral|\\.) ?R(ules?|\\.)|F\\.? ?R\\.?)( of)? ?(Crim(inal|\\.) ?P(rocedure|(roc?)?\\.)|Cr\\.? ?P\\.?)( [Rr]ule)? (?<rule>\\d+(\\.\\d+)?[a-z]?)(?!\\w)( ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))?(?!=\\w)",
-            "(?<!\\w)[Rr]ule (?<rule>\\d+(\\.\\d+)?[a-z]?)(?!\\w)( ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))? [Oo]f [Tt]he Fed(eral|\\.) Rules of (Crim(inal|\\.) ?P(rocedure|(roc?)?\\.)|Cr\\.? ?P\\.?)(?!=\\w)"
+            "(?<!\\w)(Fed(eral|\\.) ?R(ules?|\\.)|F\\.? ?R\\.?)( of)? ?(Crim(inal|\\.) ?P(rocedure|(roc?)?\\.)|Cr\\.? ?P\\.?)( [Rr]ule)? (?<rule>\\d+(\\.\\d+)?[a-z]?)(?!\\w)( ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))?(?!=\\w)",
+            "(?<!\\w)[Rr]ule (?<rule>\\d+(\\.\\d+)?[a-z]?)(?!\\w)( ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))? [Oo]f [Tt]he Fed(eral|\\.) Rules of (Crim(inal|\\.) ?P(rocedure|(roc?)?\\.)|Cr\\.? ?P\\.?)(?!=\\w)"
         ],
         "operations": [
             {
@@ -399,8 +399,8 @@ const templates = [
             "name regex": "Evid(ence|\\.)|E\\.?"
         },
         "regexes": [
-            "(?<!\\w)(Fed(eral|\\.) ?R(ules?|\\.)|F\\.? ?R\\.?)( of)? ?(Evid(ence|\\.)|E\\.?)( [Rr]ule)? (?<rule>\\d+(\\.\\d+)?[a-z]?)(?!\\w)( ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))?(?!=\\w)",
-            "(?<!\\w)[Rr]ule (?<rule>\\d+(\\.\\d+)?[a-z]?)(?!\\w)( ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))? [Oo]f [Tt]he Fed(eral|\\.) Rules of (Evid(ence|\\.)|E\\.?)(?!=\\w)"
+            "(?<!\\w)(Fed(eral|\\.) ?R(ules?|\\.)|F\\.? ?R\\.?)( of)? ?(Evid(ence|\\.)|E\\.?)( [Rr]ule)? (?<rule>\\d+(\\.\\d+)?[a-z]?)(?!\\w)( ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))?(?!=\\w)",
+            "(?<!\\w)[Rr]ule (?<rule>\\d+(\\.\\d+)?[a-z]?)(?!\\w)( ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))? [Oo]f [Tt]he Fed(eral|\\.) Rules of (Evid(ence|\\.)|E\\.?)(?!=\\w)"
         ],
         "operations": [
             {
@@ -431,7 +431,7 @@ const templates = [
             "title": "8"
         },
         "regexes": [
-            "(?<!\\w)(Immigration ([Aa]|&) Nationality Act|I\\.?N\\.?A\\.?|I\\. N\\. A\\.) ((&sect;|&#167|§){1,2}|[Ss]ec(tions?|t?s?\\.))? ?(?<section>10[1-6]|20[1-9]|210[Aa]?|21[36][Aa]|21[1-9]|22[1-4]|23[56][Aa]|23[1-9]|240[A-Ca-c]?|245[Aa]|24[1-9]|25[0-8]|26[1-6]|27[1-35-9]|274[A-Da-d]?|28[0-9]|29[0-5]|30[1-9]|329[Aa]|3[1-5][0-9]|36[01]|40[4-7]|41[1-4]|50[1-7])(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))?(?!=\\w)"
+            "(?<!\\w)(Immigration ([Aa]|&) Nationality Act|I\\.?N\\.?A\\.?|I\\. N\\. A\\.) ((&sect;|&#167|§){1,2}|[Ss]ec(tions?|t?s?\\.))? ?(?<section>10[1-6]|20[1-9]|210[Aa]?|21[36][Aa]|21[1-9]|22[1-4]|23[56][Aa]|23[1-9]|240[A-Ca-c]?|245[Aa]|24[1-9]|25[0-8]|26[1-6]|27[1-35-9]|274[A-Da-d]?|28[0-9]|29[0-5]|30[1-9]|329[Aa]|3[1-5][0-9]|36[01]|40[4-7]|41[1-4]|50[1-7])(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))?(?!=\\w)"
         ],
         "operations": [
             {
@@ -651,7 +651,7 @@ const templates = [
             "title": "26"
         },
         "regexes": [
-            "(?<!\\w)(Internal Revnue Code|I\\.? ?R\\.? ?C\\.?) ((&sect;|&#167|§){1,2}|[Ss]ec(tions?|t?s?\\.))? ?(?<section>\\d[\\w.-]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))?(?!=\\w)"
+            "(?<!\\w)(Internal Revnue Code|I\\.? ?R\\.? ?C\\.?) ((&sect;|&#167|§){1,2}|[Ss]ec(tions?|t?s?\\.))? ?(?<section>\\d[\\w.-]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))?(?!=\\w)"
         ],
         "operations": [
             {
@@ -681,7 +681,7 @@ const templates = [
             "name regex": "Treas(ury|\\.?) ?Reg(ulations?|s?\\.?)"
         },
         "regexes": [
-            "(?<!\\w)(Treas(ury|\\.?) ?Reg(ulations?|s?\\.?)) ((&sect;|&#167|§){1,2}|[Ss]ec(tions?|t?s?\\.))? ?(?<section>\\d[\\w.-]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))?(?!=\\w)"
+            "(?<!\\w)(Treas(ury|\\.?) ?Reg(ulations?|s?\\.?)) ((&sect;|&#167|§){1,2}|[Ss]ec(tions?|t?s?\\.))? ?(?<section>\\d[\\w.-]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))?(?!=\\w)"
         ],
         "operations": [],
         "URL": [
@@ -697,7 +697,7 @@ const templates = [
             "title": "29"
         },
         "regexes": [
-            "(?<!\\w)(National Labor Relations Act|N\\.? ?L\\.? ?R\\.? ?A\\.?) ((&sect;|&#167|§){1,2}|[Ss]ec(tions?|t?s?\\.))? ?(?<section>1[0-9]|[1-9])(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))?(?!=\\w)"
+            "(?<!\\w)(National Labor Relations Act|N\\.? ?L\\.? ?R\\.? ?A\\.?) ((&sect;|&#167|§){1,2}|[Ss]ec(tions?|t?s?\\.))? ?(?<section>1[0-9]|[1-9])(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))?(?!=\\w)"
         ],
         "operations": [
             {
@@ -752,7 +752,7 @@ const templates = [
             "title": "16"
         },
         "regexes": [
-            "(?<!\\w)(Endangered Species Act|E\\.? ?S\\.? ?A\\.?) ((&sect;|&#167|§){1,2}|[Ss]ec(tions?|t?s?\\.))? ?(?<section>1[0-578]|8[Aa]|[1-9])(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))?(?!=\\w)"
+            "(?<!\\w)(Endangered Species Act|E\\.? ?S\\.? ?A\\.?) ((&sect;|&#167|§){1,2}|[Ss]ec(tions?|t?s?\\.))? ?(?<section>1[0-578]|8[Aa]|[1-9])(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))?(?!=\\w)"
         ],
         "operations": [
             {
@@ -807,7 +807,7 @@ const templates = [
             "title": "42"
         },
         "regexes": [
-            "(?<!\\w)(Clean Air Act|C\\.? ?A\\.? ?A\\.?) ((&sect;|&#167|§){1,2}|[Ss]ec(tions?|t?s?\\.))? ?(?<section>10[1-9]|12[0-9]|13[01]|16[0-8]|169[AaBb]?|17[1-4]|175[Aa]?|176[Aa]?|17[78]|179[Bb]?|18[1-4]|185[AaBb]|18[6-9]|19[0-3]|20[1-9]|21[0-9]|23[1-4]|24[1-9]|250|30[1-9]|32[0-8]|40[1-9]|41[0-6]|50[1-7]|60[1-9]|61[0-8])(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))?(?!=\\w)"
+            "(?<!\\w)(Clean Air Act|C\\.? ?A\\.? ?A\\.?) ((&sect;|&#167|§){1,2}|[Ss]ec(tions?|t?s?\\.))? ?(?<section>10[1-9]|12[0-9]|13[01]|16[0-8]|169[AaBb]?|17[1-4]|175[Aa]?|176[Aa]?|17[78]|179[Bb]?|18[1-4]|185[AaBb]|18[6-9]|19[0-3]|20[1-9]|21[0-9]|23[1-4]|24[1-9]|250|30[1-9]|32[0-8]|40[1-9]|41[0-6]|50[1-7]|60[1-9]|61[0-8])(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))?(?!=\\w)"
         ],
         "operations": [
             {
@@ -1018,7 +1018,7 @@ const templates = [
             "title": "33"
         },
         "regexes": [
-            "(?<!\\w)(Clean Water Act|C\\.? ?W\\.? ?A\\.?) ((&sect;|&#167|§){1,2}|[Ss]ec(tions?|t?s?\\.))? ?(?<section>101|11[25]|30[1-9]|31[069]|40[1-6]|50[1-59]|51[0178])(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))?(?!=\\w)"
+            "(?<!\\w)(Clean Water Act|C\\.? ?W\\.? ?A\\.?) ((&sect;|&#167|§){1,2}|[Ss]ec(tions?|t?s?\\.))? ?(?<section>101|11[25]|30[1-9]|31[069]|40[1-6]|50[1-59]|51[0178])(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))?(?!=\\w)"
         ],
         "operations": [
             {
@@ -1083,7 +1083,7 @@ const templates = [
             "title": "42"
         },
         "regexes": [
-            "(?<!\\w)(Fair Housing Act|F\\.? ?H\\.? ?A\\.?) ((&sect;|&#167|§){1,2}|[Ss]ec(tions?|t?s?\\.))? ?(?<section>808[Aa]|80[1-9]|81[47][Aa]|81[0-9]|820|901)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))?(?!=\\w)"
+            "(?<!\\w)(Fair Housing Act|F\\.? ?H\\.? ?A\\.?) ((&sect;|&#167|§){1,2}|[Ss]ec(tions?|t?s?\\.))? ?(?<section>808[Aa]|80[1-9]|81[47][Aa]|81[0-9]|820|901)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))?(?!=\\w)"
         ],
         "operations": [
             {
@@ -1143,7 +1143,7 @@ const templates = [
             "title": "42"
         },
         "regexes": [
-            "(?<!\\w)(Americans [Ww]ith Disabilities Act|A\\. D\\. A\\.|A\\.?D\\.?A\\.?) ((&sect;|&#167|§){1,2}|[Ss]ec(tions?|t?s?\\.))? ?(?<section>10[1-7]|20[1-4]|22[1-9]|230|24[1-5]|30[1-9]|50[1-9]|51[0-4]|2|3)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))?(?!=\\w)"
+            "(?<!\\w)(Americans [Ww]ith Disabilities Act|A\\. D\\. A\\.|A\\.?D\\.?A\\.?) ((&sect;|&#167|§){1,2}|[Ss]ec(tions?|t?s?\\.))? ?(?<section>10[1-7]|20[1-4]|22[1-9]|230|24[1-5]|30[1-9]|50[1-9]|51[0-4]|2|3)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))?(?!=\\w)"
         ],
         "operations": [
             {
@@ -1228,7 +1228,7 @@ const templates = [
             "abbreviation": "Ala. Code"
         },
         "regexes": [
-            "(?<!\\w)(Ala(bama|\\.)|AL)( ?Rev(ised|\\.))?( ?Ann(otated|\\.))?( ?Gen(eral|\\.))? ?(C(odes?|\\.)|Stat(utes|s?\\.?))( Serv(ice|\\.))?( ?Ann(otated|\\.))?,? ?(([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?)?(?<title>\\d+(\\.\\d+)?[A-Za-z]?)(?!\\w)[-‑–](?<chapter>\\d+(\\.\\d+)?[A-Za-z]?)(?!\\w)[-‑–](?<section>\\d+(\\.\\d+)?[A-Za-z]?)(?!\\w)(,? ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))?(?!=\\w)"
+            "(?<!\\w)(Ala(bama|\\.)|AL)( ?Rev(ised|\\.))?( ?Ann(otated|\\.))?( ?Gen(eral|\\.))? ?(C(odes?|\\.)|Stat(utes|s?\\.?))( Serv(ice|\\.))?( ?Ann(otated|\\.))?,? ?(([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?)?(?<title>\\d+(\\.\\d+)?[A-Za-z]?)(?!\\w)[-‑–](?<chapter>\\d+(\\.\\d+)?[A-Za-z]?)(?!\\w)[-‑–](?<section>\\d+(\\.\\d+)?[A-Za-z]?)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))?(?!=\\w)"
         ],
         "operations": [
             {
@@ -1256,8 +1256,8 @@ const templates = [
             "ballotpedia slug": "Alabama"
         },
         "regexes": [
-            "(?<!\\w)(Ala(bama|\\.)|AL) Const(itution|\\.)?,? [Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))?)?(?!=\\w)",
-            "(?<!\\w)[Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))?)? [Oo]f [Tt]he (Ala(bama|\\.)|AL) Const(itution|\\.)?(?!=\\w)"
+            "(?<!\\w)(Ala(bama|\\.)|AL) Const(itution|\\.)?,? [Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))?)?(?!=\\w)",
+            "(?<!\\w)[Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))?)? [Oo]f [Tt]he (Ala(bama|\\.)|AL) Const(itution|\\.)?(?!=\\w)"
         ],
         "operations": [
             {
@@ -1285,7 +1285,7 @@ const templates = [
             "abbreviation": "Alaska Stat."
         },
         "regexes": [
-            "(?<!\\w)(Alaska|AK) ( ?Rev(ised|\\.))?( ?Ann(otated|\\.))?( ?Gen(eral|\\.))? ?(C(odes?|\\.)|Stat(utes|s?\\.?))( Serv(ice|\\.))?( ?Ann(otated|\\.))?,? ?(([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?)?(?<title>\\d+[A-Zz-z]?)(?!\\w)\\.(?<chapter>\\d+[A-Zz-z]?)(?!\\w)\\.(?<section>\\d+[A-Zz-z]?)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))?(?!=\\w)"
+            "(?<!\\w)(Alaska|AK) ( ?Rev(ised|\\.))?( ?Ann(otated|\\.))?( ?Gen(eral|\\.))? ?(C(odes?|\\.)|Stat(utes|s?\\.?))( Serv(ice|\\.))?( ?Ann(otated|\\.))?,? ?(([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?)?(?<title>\\d+[A-Zz-z]?)(?!\\w)\\.(?<chapter>\\d+[A-Zz-z]?)(?!\\w)\\.(?<section>\\d+[A-Zz-z]?)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))?(?!=\\w)"
         ],
         "operations": [
             {
@@ -1313,8 +1313,8 @@ const templates = [
             "ballotpedia slug": "Alaska"
         },
         "regexes": [
-            "(?<!\\w)(Alaska|AK) Const(itution|\\.)?,? [Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))?)?(?!=\\w)",
-            "(?<!\\w)[Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))?)? [Oo]f [Tt]he (Alaska|AK) Const(itution|\\.)?(?!=\\w)"
+            "(?<!\\w)(Alaska|AK) Const(itution|\\.)?,? [Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))?)?(?!=\\w)",
+            "(?<!\\w)[Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))?)? [Oo]f [Tt]he (Alaska|AK) Const(itution|\\.)?(?!=\\w)"
         ],
         "operations": [
             {
@@ -1341,7 +1341,7 @@ const templates = [
             "name regex": "Am(erican|\\.) ?Samoa"
         },
         "regexes": [
-            "(?<!\\w)(Am(erican|\\.) ?Samoa)( ?Rev(ised|\\.))?( ?Ann(otated|\\.))?( ?Gen(eral|\\.))? ?(C(odes?|\\.)|Stat(utes|s?\\.?))( Serv(ice|\\.))?( ?Ann(otated|\\.))?,? ?(([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?)?(?<title>\\d+[A-Z]?)(?!\\w)\\.(?<section>\\d+)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))?(?!=\\w)"
+            "(?<!\\w)(Am(erican|\\.) ?Samoa)( ?Rev(ised|\\.))?( ?Ann(otated|\\.))?( ?Gen(eral|\\.))? ?(C(odes?|\\.)|Stat(utes|s?\\.?))( Serv(ice|\\.))?( ?Ann(otated|\\.))?,? ?(([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?)?(?<title>\\d+[A-Z]?)(?!\\w)\\.(?<section>\\d+)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))?(?!=\\w)"
         ],
         "operations": [],
         "URL": [
@@ -1356,8 +1356,8 @@ const templates = [
             "ballotpedia slug": "American_Samoa"
         },
         "regexes": [
-            "(?<!\\w)(Am(erican|\\.) ?Samoa) Const(itution|\\.)?,? [Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))?)?(?!=\\w)",
-            "(?<!\\w)[Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))?)? [Oo]f [Tt]he (Am(erican|\\.) ?Samoa) Const(itution|\\.)?(?!=\\w)"
+            "(?<!\\w)(Am(erican|\\.) ?Samoa) Const(itution|\\.)?,? [Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))?)?(?!=\\w)",
+            "(?<!\\w)[Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))?)? [Oo]f [Tt]he (Am(erican|\\.) ?Samoa) Const(itution|\\.)?(?!=\\w)"
         ],
         "operations": [
             {
@@ -1386,8 +1386,8 @@ const templates = [
             "ballotpedia slug": "Arkansas"
         },
         "regexes": [
-            "(?<!\\w)(Ark(ansas|\\.)|AR) Const(itution|\\.)?,? [Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))?)?(?!=\\w)",
-            "(?<!\\w)[Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))?)? [Oo]f [Tt]he (Ark(ansas|\\.)|AR) Const(itution|\\.)?(?!=\\w)"
+            "(?<!\\w)(Ark(ansas|\\.)|AR) Const(itution|\\.)?,? [Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))?)?(?!=\\w)",
+            "(?<!\\w)[Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))?)? [Oo]f [Tt]he (Ark(ansas|\\.)|AR) Const(itution|\\.)?(?!=\\w)"
         ],
         "operations": [
             {
@@ -1415,7 +1415,7 @@ const templates = [
             "abbreviation": "Ariz. Rev. Stat."
         },
         "regexes": [
-            "(?<!\\w)(Ariz(ona|\\.)|AZ)( ?Rev(ised|\\.))?( ?Ann(otated|\\.))?( ?Gen(eral|\\.))? ?(C(odes?|\\.)|Stat(utes|s?\\.?))( Serv(ice|\\.))?( ?Ann(otated|\\.))?,? ?(([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?)?(?<title>\\d+(\\.\\d+)?[A-Z]?)(?!\\w)[-‑–](?<section>\\d+(\\.\\d+)?[A-Z]?)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))?(?!=\\w)"
+            "(?<!\\w)(Ariz(ona|\\.)|AZ)( ?Rev(ised|\\.))?( ?Ann(otated|\\.))?( ?Gen(eral|\\.))? ?(C(odes?|\\.)|Stat(utes|s?\\.?))( Serv(ice|\\.))?( ?Ann(otated|\\.))?,? ?(([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?)?(?<title>\\d+(\\.\\d+)?[A-Z]?)(?!\\w)[-‑–](?<section>\\d+(\\.\\d+)?[A-Z]?)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))?(?!=\\w)"
         ],
         "operations": [
             {
@@ -1442,8 +1442,8 @@ const templates = [
             "ballotpedia slug": "Arizona"
         },
         "regexes": [
-            "(?<!\\w)(Ariz(ona|\\.)|AZ) Const(itution|\\.)?,? [Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))?)?(?!=\\w)",
-            "(?<!\\w)[Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))?)? [Oo]f [Tt]he (Ariz(ona|\\.)|AZ) Const(itution|\\.)?(?!=\\w)"
+            "(?<!\\w)(Ariz(ona|\\.)|AZ) Const(itution|\\.)?,? [Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))?)?(?!=\\w)",
+            "(?<!\\w)[Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))?)? [Oo]f [Tt]he (Ariz(ona|\\.)|AZ) Const(itution|\\.)?(?!=\\w)"
         ],
         "operations": [
             {
@@ -1467,7 +1467,7 @@ const templates = [
     {
         "name": "California Codes",
         "regexes": [
-            "(?<!\\w)(Cal(ifornia|(if)?\\.)|CAL?) ?(?<code>Bus(iness|\\.) (and|&) Prof(essions|s?\\.)|B\\.? ?& ?P\\.?|BPC|Civ(il|\\.)|CIV|(Code( of)? )?(Civil Procedure|Civ\\. ?P(roc?)?\\.)|CCP|Commercial|Comm?\\.|COM|Corp(orations?|\\.)|CORP|Educ(ation|\\.)|EDU?C|Elec(tions|\\.)|ELEC|Evid(ence|\\.)|EVID|Fam(ily|\\.)|FAM|Fin(ancial|\\.)|FIN|Fish (and|&) Game|FGC|F&G|Food (and|&) Agric(ultural|\\.)|FAC|Gov(ernment|'?t?\\.?)|GOV|Harb(ors|\\.) (and|&) Nav(igation|\\.)|HNC|H&N|Health (and|&) Saf(ety|\\.)|HSC|H&S|Ins(urance|\\.)|INS|Lab(or|\\.)|LAB|Mil(itary|\\.) (and|&) Vet(erans|\\.)|MVC|M&V|Penal|PEN|Prob(ate|\\.)|PROB|Pub(lic|\\.) Cont(ract|\\.)|PCC|Pub(lic|\\.) ?Res(ources|\\.)|PRC|Pub(lic|\\.) Util(ities|s?\\.)|PUC|Rev(enue|\\.) (and|&) Tax(ation|\\.)|RTC|R&T|St(reets|s\\.) (and|&) High(ways|\\.)|SHC|S&H|Unemp(loyment|\\.) Ins(urance|(ur)?\\.)|UIC|Veh(icle|(ic)?\\.)|VEH|Water|WAT|Welf(are|\\.) (and|&) Inst(itutions|s?\\.)|WIC)(?!\\w)( ?C(ode|\\.)( Ann(otated|\\.))?,?)? (([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?)? ?(?<section>\\d+(\\.\\d+)?[A-Za-z]?)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))?(?!=\\w)"
+            "(?<!\\w)(Cal(ifornia|(if)?\\.)|CAL?) ?(?<code>Bus(iness|\\.) (and|&) Prof(essions|s?\\.)|B\\.? ?& ?P\\.?|BPC|Civ(il|\\.)|CIV|(Code( of)? )?(Civil Procedure|Civ\\. ?P(roc?)?\\.)|CCP|Commercial|Comm?\\.|COM|Corp(orations?|\\.)|CORP|Educ(ation|\\.)|EDU?C|Elec(tions|\\.)|ELEC|Evid(ence|\\.)|EVID|Fam(ily|\\.)|FAM|Fin(ancial|\\.)|FIN|Fish (and|&) Game|FGC|F&G|Food (and|&) Agric(ultural|\\.)|FAC|Gov(ernment|'?t?\\.?)|GOV|Harb(ors|\\.) (and|&) Nav(igation|\\.)|HNC|H&N|Health (and|&) Saf(ety|\\.)|HSC|H&S|Ins(urance|\\.)|INS|Lab(or|\\.)|LAB|Mil(itary|\\.) (and|&) Vet(erans|\\.)|MVC|M&V|Penal|PEN|Prob(ate|\\.)|PROB|Pub(lic|\\.) Cont(ract|\\.)|PCC|Pub(lic|\\.) ?Res(ources|\\.)|PRC|Pub(lic|\\.) Util(ities|s?\\.)|PUC|Rev(enue|\\.) (and|&) Tax(ation|\\.)|RTC|R&T|St(reets|s\\.) (and|&) High(ways|\\.)|SHC|S&H|Unemp(loyment|\\.) Ins(urance|(ur)?\\.)|UIC|Veh(icle|(ic)?\\.)|VEH|Water|WAT|Welf(are|\\.) (and|&) Inst(itutions|s?\\.)|WIC)(?!\\w)( ?C(ode|\\.)( Ann(otated|\\.))?,?)? (([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?)? ?(?<section>\\d+(\\.\\d+)?[A-Za-z]?)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))?(?!=\\w)"
         ],
         "operations": [
             {
@@ -1555,8 +1555,8 @@ const templates = [
             "display type": "Text"
         },
         "regexes": [
-            "(?<!\\w)(Cal(ifornia|(if)?\\.)|CAL?) Const(itution|\\.)?,? [Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))?)?(?!=\\w)",
-            "(?<!\\w)[Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))?)? [Oo]f [Tt]he (Cal(ifornia|(if)?\\.)|CAL?) Const(itution|\\.)?(?!=\\w)"
+            "(?<!\\w)(Cal(ifornia|(if)?\\.)|CAL?) Const(itution|\\.)?,? [Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))?)?(?!=\\w)",
+            "(?<!\\w)[Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))?)? [Oo]f [Tt]he (Cal(ifornia|(if)?\\.)|CAL?) Const(itution|\\.)?(?!=\\w)"
         ],
         "operations": [
             {
@@ -1591,7 +1591,7 @@ const templates = [
             "name regex": "CA|Cal(ifornia|\\.) Code of Reg(ulations|s\\.)|CA ADR"
         },
         "regexes": [
-            "(?<!\\w)(?<title>\\d+)(?!\\w) (CA|Cal(ifornia|\\.) Code of Reg(ulations|s\\.)|CA ADR) (([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?)?(?<section>\\d+(\\.\\d+)?[A-Za-z]?)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))?(?!=\\w)"
+            "(?<!\\w)(?<title>\\d+)(?!\\w) (CA|Cal(ifornia|\\.) Code of Reg(ulations|s\\.)|CA ADR) (([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?)?(?<section>\\d+(\\.\\d+)?[A-Za-z]?)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))?(?!=\\w)"
         ],
         "operations": [
             {
@@ -1611,7 +1611,7 @@ const templates = [
             "year": "2020"
         },
         "regexes": [
-            "(?<!\\w)(Colo(rado|\\.)|CO)( ?Rev(ised|\\.))?( ?Ann(otated|\\.))?( ?Gen(eral|\\.))? ?(C(odes?|\\.)|Stat(utes|s?\\.?))( Serv(ice|\\.))?( ?Ann(otated|\\.))?,? ?(([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?)?(?<title>\\d+(\\.\\d+)?[A-Za-z]?)(?!\\w)[-‑–](?<article>\\d+(\\.\\d+)?[A-Za-z]?)(?!\\w)[-‑–](?<section>\\d+(\\.\\d+)?[A-Za-z]?)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))?(?!=\\w)"
+            "(?<!\\w)(Colo(rado|\\.)|CO)( ?Rev(ised|\\.))?( ?Ann(otated|\\.))?( ?Gen(eral|\\.))? ?(C(odes?|\\.)|Stat(utes|s?\\.?))( Serv(ice|\\.))?( ?Ann(otated|\\.))?,? ?(([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?)?(?<title>\\d+(\\.\\d+)?[A-Za-z]?)(?!\\w)[-‑–](?<article>\\d+(\\.\\d+)?[A-Za-z]?)(?!\\w)[-‑–](?<section>\\d+(\\.\\d+)?[A-Za-z]?)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))?(?!=\\w)"
         ],
         "operations": [
             {
@@ -1658,8 +1658,8 @@ const templates = [
             "ballotpedia slug": "Colorado"
         },
         "regexes": [
-            "(?<!\\w)(Colo(rado|\\.)|CO) Const(itution|\\.)?,? [Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))?)?(?!=\\w)",
-            "(?<!\\w)[Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))?)? [Oo]f [Tt]he (Colo(rado|\\.)|CO) Const(itution|\\.)?(?!=\\w)"
+            "(?<!\\w)(Colo(rado|\\.)|CO) Const(itution|\\.)?,? [Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))?)?(?!=\\w)",
+            "(?<!\\w)[Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))?)? [Oo]f [Tt]he (Colo(rado|\\.)|CO) Const(itution|\\.)?(?!=\\w)"
         ],
         "operations": [
             {
@@ -1683,7 +1683,7 @@ const templates = [
     {
         "name": "General Statutes of Connecticut",
         "regexes": [
-            "(?<!\\w)(Conn(ecticut|\\.)|CT)( ?Rev(ised|\\.))?( ?Ann(otated|\\.))?( ?Gen(eral|\\.))? ?(C(odes?|\\.)|Stat(utes|s?\\.?))( Serv(ice|\\.))?( ?Ann(otated|\\.))?,? ?(([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?)?(?<section>(\\d[a-z\\-]*[\\w]+))(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))?(?!=\\w)"
+            "(?<!\\w)(Conn(ecticut|\\.)|CT)( ?Rev(ised|\\.))?( ?Ann(otated|\\.))?( ?Gen(eral|\\.))? ?(C(odes?|\\.)|Stat(utes|s?\\.?))( Serv(ice|\\.))?( ?Ann(otated|\\.))?,? ?(([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?)?(?<section>(\\d[a-z\\-]*[\\w]+))(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))?(?!=\\w)"
         ],
         "operations": [],
         "URL": [
@@ -1698,8 +1698,8 @@ const templates = [
             "ballotpedia slug": "Connecticut"
         },
         "regexes": [
-            "(?<!\\w)(Conn(ecticut|\\.)|CT) Const(itution|\\.)?,? [Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))?)?(?!=\\w)",
-            "(?<!\\w)[Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))?)? [Oo]f [Tt]he (Conn(ecticut|\\.)|CT) Const(itution|\\.)?(?!=\\w)"
+            "(?<!\\w)(Conn(ecticut|\\.)|CT) Const(itution|\\.)?,? [Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))?)?(?!=\\w)",
+            "(?<!\\w)[Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))?)? [Oo]f [Tt]he (Conn(ecticut|\\.)|CT) Const(itution|\\.)?(?!=\\w)"
         ],
         "operations": [
             {
@@ -1728,8 +1728,8 @@ const templates = [
             "title": "8"
         },
         "regexes": [
-            "(?<!\\w)([Tt]it(le |\\. ?))?(?<title>\\d{1,2})(?!\\w) (Del(aware|\\.)?)( ?Rev(ised|\\.))?( ?Ann(otated|\\.))?( ?Gen(eral|\\.))? ?(C(odes?|\\.)|Stat(utes|s?\\.?))( Serv(ice|\\.))?( ?Ann(otated|\\.))?,? ?(([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?)?(?<section>\\d+(\\.\\d+)?[A-Za-z]?)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))?(?!=\\w)",
-            "(?<!\\w)(Del(aware|\\.)?)( ?Rev(ised|\\.))?( ?Ann(otated|\\.))?( ?Gen(eral|\\.))? ?(C(odes?|\\.)|Stat(utes|s?\\.?))( Serv(ice|\\.))?( ?Ann(otated|\\.))?,? ?[Tt]it(le |\\. ?)(?<title>\\d{1,2})(?!\\w),? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d+(\\.\\d+)?[A-Za-z]?)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))?(?!=\\w)"
+            "(?<!\\w)([Tt]it(le |\\. ?))?(?<title>\\d{1,2})(?!\\w) (Del(aware|\\.)?)( ?Rev(ised|\\.))?( ?Ann(otated|\\.))?( ?Gen(eral|\\.))? ?(C(odes?|\\.)|Stat(utes|s?\\.?))( Serv(ice|\\.))?( ?Ann(otated|\\.))?,? ?(([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?)?(?<section>\\d+(\\.\\d+)?[A-Za-z]?)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))?(?!=\\w)",
+            "(?<!\\w)(Del(aware|\\.)?)( ?Rev(ised|\\.))?( ?Ann(otated|\\.))?( ?Gen(eral|\\.))? ?(C(odes?|\\.)|Stat(utes|s?\\.?))( Serv(ice|\\.))?( ?Ann(otated|\\.))?,? ?[Tt]it(le |\\. ?)(?<title>\\d{1,2})(?!\\w),? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d+(\\.\\d+)?[A-Za-z]?)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))?(?!=\\w)"
         ],
         "operations": [
             {
@@ -1749,8 +1749,8 @@ const templates = [
             "ballotpedia slug": "Delaware"
         },
         "regexes": [
-            "(?<!\\w)(Del(aware|\\.)?) Const(itution|\\.)?,? [Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))?)?(?!=\\w)",
-            "(?<!\\w)[Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))?)? [Oo]f [Tt]he (Del(aware|\\.)?) Const(itution|\\.)?(?!=\\w)"
+            "(?<!\\w)(Del(aware|\\.)?) Const(itution|\\.)?,? [Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))?)?(?!=\\w)",
+            "(?<!\\w)[Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))?)? [Oo]f [Tt]he (Del(aware|\\.)?) Const(itution|\\.)?(?!=\\w)"
         ],
         "operations": [
             {
@@ -1779,7 +1779,7 @@ const templates = [
             "title": "8"
         },
         "regexes": [
-            "(?<!\\w)(D\\.? ?G\\.? ?C\\.? ?L\\.?|Del(aware|\\.) ?Gen(eral|\\.) ?Corp(orations?|s?\\.) ?L(aw|\\.)) (([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?)?(?<section>\\d+(\\.\\d+)?[A-Za-z]?)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))?(?!=\\w)"
+            "(?<!\\w)(D\\.? ?G\\.? ?C\\.? ?L\\.?|Del(aware|\\.) ?Gen(eral|\\.) ?Corp(orations?|s?\\.) ?L(aw|\\.)) (([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?)?(?<section>\\d+(\\.\\d+)?[A-Za-z]?)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))?(?!=\\w)"
         ],
         "operations": [
             {
@@ -1798,7 +1798,7 @@ const templates = [
             "abbreviation": "D.C. Code"
         },
         "regexes": [
-            "(?<!\\w)((District of Columbia|D\\.? ?C\\.?)( Official)?)( ?Rev(ised|\\.))?( ?Ann(otated|\\.))?( ?Gen(eral|\\.))? ?(C(odes?|\\.)|Stat(utes|s?\\.?))( Serv(ice|\\.))?( ?Ann(otated|\\.))?,? ?(([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?)?(?<title>\\d+(\\.\\d+)?[A-Z]?)(?!\\w)[-‑–](?<section>\\d+(\\.\\d+)?[A-Z]?)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))?(?!=\\w)"
+            "(?<!\\w)((District of Columbia|D\\.? ?C\\.?)( Official)?)( ?Rev(ised|\\.))?( ?Ann(otated|\\.))?( ?Gen(eral|\\.))? ?(C(odes?|\\.)|Stat(utes|s?\\.?))( Serv(ice|\\.))?( ?Ann(otated|\\.))?,? ?(([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?)?(?<title>\\d+(\\.\\d+)?[A-Z]?)(?!\\w)[-‑–](?<section>\\d+(\\.\\d+)?[A-Z]?)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))?(?!=\\w)"
         ],
         "operations": [],
         "URL": [
@@ -1814,7 +1814,7 @@ const templates = [
             "year": "2020"
         },
         "regexes": [
-            "(?<!\\w)(Fl(orida|a?\\.)|FL)( ?Rev(ised|\\.))?( ?Ann(otated|\\.))?( ?Gen(eral|\\.))? ?(C(odes?|\\.)|Stat(utes|s?\\.?))( Serv(ice|\\.))?( ?Ann(otated|\\.))?,? ?(([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?)?(?<chapter>\\d+[A-Zz-z]?)(?!\\w)\\.(?<section>\\d+[A-Zz-z]?)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))?(?!=\\w)"
+            "(?<!\\w)(Fl(orida|a?\\.)|FL)( ?Rev(ised|\\.))?( ?Ann(otated|\\.))?( ?Gen(eral|\\.))? ?(C(odes?|\\.)|Stat(utes|s?\\.?))( Serv(ice|\\.))?( ?Ann(otated|\\.))?,? ?(([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?)?(?<chapter>\\d+[A-Zz-z]?)(?!\\w)\\.(?<section>\\d+[A-Zz-z]?)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))?(?!=\\w)"
         ],
         "operations": [
             {
@@ -1841,8 +1841,8 @@ const templates = [
             "abbreviation": "Fla."
         },
         "regexes": [
-            "(?<!\\w)(Fl(orida|a?\\.)|FL) Const(itution|\\.)?,? [Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))?)?(?!=\\w)",
-            "(?<!\\w)[Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))?)? [Oo]f [Tt]he (Fl(orida|a?\\.)|FL) Const(itution|\\.)?(?!=\\w)"
+            "(?<!\\w)(Fl(orida|a?\\.)|FL) Const(itution|\\.)?,? [Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))?)?(?!=\\w)",
+            "(?<!\\w)[Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))?)? [Oo]f [Tt]he (Fl(orida|a?\\.)|FL) Const(itution|\\.)?(?!=\\w)"
         ],
         "operations": [
             {
@@ -1874,7 +1874,7 @@ const templates = [
             "abbreviation": "Haw. Rev. Stat."
         },
         "regexes": [
-            "(?<!\\w)(Haw(ai.?i|\\.)|HI)( ?Rev(ised|\\.))?( ?Ann(otated|\\.))?( ?Gen(eral|\\.))? ?(C(odes?|\\.)|Stat(utes|s?\\.?))( Serv(ice|\\.))?( ?Ann(otated|\\.))?,? ?(([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?)?(?<chapter>\\d+(\\.\\d+)?[A-Za-z]?)(?!\\w)[-‑–](?<section>\\d+(\\.\\d+)?[A-Za-z]?)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))?(?!=\\w)"
+            "(?<!\\w)(Haw(ai.?i|\\.)|HI)( ?Rev(ised|\\.))?( ?Ann(otated|\\.))?( ?Gen(eral|\\.))? ?(C(odes?|\\.)|Stat(utes|s?\\.?))( Serv(ice|\\.))?( ?Ann(otated|\\.))?,? ?(([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?)?(?<chapter>\\d+(\\.\\d+)?[A-Za-z]?)(?!\\w)[-‑–](?<section>\\d+(\\.\\d+)?[A-Za-z]?)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))?(?!=\\w)"
         ],
         "operations": [
             {
@@ -1898,8 +1898,8 @@ const templates = [
             "ballotpedia slug": "Hawaii"
         },
         "regexes": [
-            "(?<!\\w)(Haw(ai.?i|\\.)|HI) Const(itution|\\.)?,? [Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))?)?(?!=\\w)",
-            "(?<!\\w)[Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))?)? [Oo]f [Tt]he (Haw(ai.?i|\\.)|HI) Const(itution|\\.)?(?!=\\w)"
+            "(?<!\\w)(Haw(ai.?i|\\.)|HI) Const(itution|\\.)?,? [Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))?)?(?!=\\w)",
+            "(?<!\\w)[Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))?)? [Oo]f [Tt]he (Haw(ai.?i|\\.)|HI) Const(itution|\\.)?(?!=\\w)"
         ],
         "operations": [
             {
@@ -1927,7 +1927,7 @@ const templates = [
             "abbreviation": "Idaho Code"
         },
         "regexes": [
-            "(?<!\\w)(I(daho|D))( ?Rev(ised|\\.))?( ?Ann(otated|\\.))?( ?Gen(eral|\\.))? ?(C(odes?|\\.)|Stat(utes|s?\\.?))( Serv(ice|\\.))?( ?Ann(otated|\\.))?,? ?(([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?)?(?<title>\\d+(\\.\\d+)?[A-Z]?)(?!\\w)[-‑–](?<section>\\d+(\\.\\d+)?[A-Z]?)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))?(?!=\\w)"
+            "(?<!\\w)(I(daho|D))( ?Rev(ised|\\.))?( ?Ann(otated|\\.))?( ?Gen(eral|\\.))? ?(C(odes?|\\.)|Stat(utes|s?\\.?))( Serv(ice|\\.))?( ?Ann(otated|\\.))?,? ?(([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?)?(?<title>\\d+(\\.\\d+)?[A-Z]?)(?!\\w)[-‑–](?<section>\\d+(\\.\\d+)?[A-Z]?)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))?(?!=\\w)"
         ],
         "operations": [
             {
@@ -1951,8 +1951,8 @@ const templates = [
             "ballotpedia slug": "Idaho"
         },
         "regexes": [
-            "(?<!\\w)(I(daho|D)) Const(itution|\\.)?,? [Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))?)?(?!=\\w)",
-            "(?<!\\w)[Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))?)? [Oo]f [Tt]he (I(daho|D)) Const(itution|\\.)?(?!=\\w)"
+            "(?<!\\w)(I(daho|D)) Const(itution|\\.)?,? [Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))?)?(?!=\\w)",
+            "(?<!\\w)[Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))?)? [Oo]f [Tt]he (I(daho|D)) Const(itution|\\.)?(?!=\\w)"
         ],
         "operations": [
             {
@@ -1976,7 +1976,7 @@ const templates = [
     {
         "name": "Illinois Compiled Statutes",
         "regexes": [
-            "(?<!\\w)([Cc]h(apter|\\.) )?(?<chapter>\\d+)(?!\\w) (ILCS|Ill(inois|\\.) Comp(iled|\\.) Stat(utes|\\.)) (?<act>\\d+)(?!\\w)/(?<section>\\d+(\\.\\d+)?[A-Za-z]?)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))?(?!=\\w)"
+            "(?<!\\w)([Cc]h(apter|\\.) )?(?<chapter>\\d+)(?!\\w) (ILCS|Ill(inois|\\.) Comp(iled|\\.) Stat(utes|\\.)) (?<act>\\d+)(?!\\w)/(?<section>\\d+(\\.\\d+)?[A-Za-z]?)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))?(?!=\\w)"
         ],
         "operations": [
             {
@@ -2004,8 +2004,8 @@ const templates = [
             "ballotpedia slug": "Illinois"
         },
         "regexes": [
-            "(?<!\\w)(Ill(inois|\\.)?|IL) Const(itution|\\.)?,? [Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))?)?(?!=\\w)",
-            "(?<!\\w)[Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))?)? [Oo]f [Tt]he (Ill(inois|\\.)?|IL) Const(itution|\\.)?(?!=\\w)"
+            "(?<!\\w)(Ill(inois|\\.)?|IL) Const(itution|\\.)?,? [Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))?)?(?!=\\w)",
+            "(?<!\\w)[Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))?)? [Oo]f [Tt]he (Ill(inois|\\.)?|IL) Const(itution|\\.)?(?!=\\w)"
         ],
         "operations": [
             {
@@ -2034,7 +2034,7 @@ const templates = [
             "year": "2020"
         },
         "regexes": [
-            "(?<!\\w)(Ind(iana|\\.)|IN)( ?Rev(ised|\\.))?( ?Ann(otated|\\.))?( ?Gen(eral|\\.))? ?(C(odes?|\\.)|Stat(utes|s?\\.?))( Serv(ice|\\.))?( ?Ann(otated|\\.))?,? ?(([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?)?(?<title>\\d+)(?!\\w)[-‑–](?<article>\\d+(\\.\\d+)?[A-Za-z]?)(?!\\w)[-‑–](?<chapter>\\d+(\\.\\d+)?[A-Za-z]?)(?!\\w)[-‑–](?<section>\\d+(\\.\\d+)?[A-Za-z]?)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))?(?!=\\w)"
+            "(?<!\\w)(Ind(iana|\\.)|IN)( ?Rev(ised|\\.))?( ?Ann(otated|\\.))?( ?Gen(eral|\\.))? ?(C(odes?|\\.)|Stat(utes|s?\\.?))( Serv(ice|\\.))?( ?Ann(otated|\\.))?,? ?(([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?)?(?<title>\\d+)(?!\\w)[-‑–](?<article>\\d+(\\.\\d+)?[A-Za-z]?)(?!\\w)[-‑–](?<chapter>\\d+(\\.\\d+)?[A-Za-z]?)(?!\\w)[-‑–](?<section>\\d+(\\.\\d+)?[A-Za-z]?)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))?(?!=\\w)"
         ],
         "operations": [
             {
@@ -2066,8 +2066,8 @@ const templates = [
             "ballotpedia slug": "Indiana"
         },
         "regexes": [
-            "(?<!\\w)(Ind(iana|\\.)|IN) Const(itution|\\.)?,? [Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))?)?(?!=\\w)",
-            "(?<!\\w)[Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))?)? [Oo]f [Tt]he (Ind(iana|\\.)|IN) Const(itution|\\.)?(?!=\\w)"
+            "(?<!\\w)(Ind(iana|\\.)|IN) Const(itution|\\.)?,? [Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))?)?(?!=\\w)",
+            "(?<!\\w)[Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))?)? [Oo]f [Tt]he (Ind(iana|\\.)|IN) Const(itution|\\.)?(?!=\\w)"
         ],
         "operations": [
             {
@@ -2095,7 +2095,7 @@ const templates = [
             "abbreviation": "Iowa Code"
         },
         "regexes": [
-            "(?<!\\w)(I(owa|A))( ?Rev(ised|\\.))?( ?Ann(otated|\\.))?( ?Gen(eral|\\.))? ?(C(odes?|\\.)|Stat(utes|s?\\.?))( Serv(ice|\\.))?( ?Ann(otated|\\.))?,? ?(([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?)?(?<chapter>\\d+[A-Zz-z]?)(?!\\w)\\.(?<section>\\d+[A-Zz-z]?)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))?(?!=\\w)"
+            "(?<!\\w)(I(owa|A))( ?Rev(ised|\\.))?( ?Ann(otated|\\.))?( ?Gen(eral|\\.))? ?(C(odes?|\\.)|Stat(utes|s?\\.?))( Serv(ice|\\.))?( ?Ann(otated|\\.))?,? ?(([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?)?(?<chapter>\\d+[A-Zz-z]?)(?!\\w)\\.(?<section>\\d+[A-Zz-z]?)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))?(?!=\\w)"
         ],
         "operations": [
             {
@@ -2119,8 +2119,8 @@ const templates = [
             "ballotpedia slug": "Iowa"
         },
         "regexes": [
-            "(?<!\\w)(I(owa|A)) Const(itution|\\.)?,? [Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))?)?(?!=\\w)",
-            "(?<!\\w)[Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))?)? [Oo]f [Tt]he (I(owa|A)) Const(itution|\\.)?(?!=\\w)"
+            "(?<!\\w)(I(owa|A)) Const(itution|\\.)?,? [Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))?)?(?!=\\w)",
+            "(?<!\\w)[Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))?)? [Oo]f [Tt]he (I(owa|A)) Const(itution|\\.)?(?!=\\w)"
         ],
         "operations": [
             {
@@ -2148,7 +2148,7 @@ const templates = [
             "abbreviation": "Kan. Stat."
         },
         "regexes": [
-            "(?<!\\w)(Kan(sas|\\.)|KS)( ?Rev(ised|\\.))?( ?Ann(otated|\\.))?( ?Gen(eral|\\.))? ?(C(odes?|\\.)|Stat(utes|s?\\.?))( Serv(ice|\\.))?( ?Ann(otated|\\.))?,? ?(([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?)?(?<chapter>\\d+(\\.\\d+)?[A-Za-z]?)(?!\\w)[-‑–](?<section>\\d+(\\.\\d+)?[A-Za-z]?)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))?(?!=\\w)"
+            "(?<!\\w)(Kan(sas|\\.)|KS)( ?Rev(ised|\\.))?( ?Ann(otated|\\.))?( ?Gen(eral|\\.))? ?(C(odes?|\\.)|Stat(utes|s?\\.?))( Serv(ice|\\.))?( ?Ann(otated|\\.))?,? ?(([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?)?(?<chapter>\\d+(\\.\\d+)?[A-Za-z]?)(?!\\w)[-‑–](?<section>\\d+(\\.\\d+)?[A-Za-z]?)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))?(?!=\\w)"
         ],
         "operations": [
             {
@@ -2173,8 +2173,8 @@ const templates = [
         },
         "regexes": [
             "(?<!\\w)(Kan(sas|\\.)|KS) Const(itution|\\.)?,? [Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(,? [Cc]l(ause|\\.)? ?{clause})?)?(?!=\\w)",
-            "(?<!\\w)(Kan(sas|\\.)|KS) Const(itution|\\.)?,? (?<part>Bill of Rights|Preamble|Ordinance)(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))?)?(?!=\\w)",
-            "(?<!\\w)[Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))?)? [Oo]f [Tt]he (Kan(sas|\\.)|KS) Const(itution|\\.)?(?!=\\w)"
+            "(?<!\\w)(Kan(sas|\\.)|KS) Const(itution|\\.)?,? (?<part>Bill of Rights|Preamble|Ordinance)(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))?)?(?!=\\w)",
+            "(?<!\\w)[Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))?)? [Oo]f [Tt]he (Kan(sas|\\.)|KS) Const(itution|\\.)?(?!=\\w)"
         ],
         "operations": [
             {
@@ -2223,7 +2223,7 @@ const templates = [
             "abbreviation": "Ky. Rev. Stat."
         },
         "regexes": [
-            "(?<!\\w)(K(entucky|y\\.|Y))( ?Rev(ised|\\.))?( ?Ann(otated|\\.))?( ?Gen(eral|\\.))? ?(C(odes?|\\.)|Stat(utes|s?\\.?))( Serv(ice|\\.))?( ?Ann(otated|\\.))?,? ?(([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?)?(?<chapter>\\d+[A-Zz-z]?)(?!\\w)\\.(?<section>\\d+[A-Zz-z]?)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))?(?!=\\w)"
+            "(?<!\\w)(K(entucky|y\\.|Y))( ?Rev(ised|\\.))?( ?Ann(otated|\\.))?( ?Gen(eral|\\.))? ?(C(odes?|\\.)|Stat(utes|s?\\.?))( Serv(ice|\\.))?( ?Ann(otated|\\.))?,? ?(([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?)?(?<chapter>\\d+[A-Zz-z]?)(?!\\w)\\.(?<section>\\d+[A-Zz-z]?)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))?(?!=\\w)"
         ],
         "operations": [
             {
@@ -2259,8 +2259,8 @@ const templates = [
         },
         "regexes": [
             "(?<!\\w)(K(entucky|y\\.|Y)) Const(itution|\\.)?,? [Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d{1,3}[A-Za-z]?)(?!\\w)(,? [Cc]l(ause|\\.)? ?{clause})?)?(?!=\\w)",
-            "(?<!\\w)(K(entucky|y\\.|Y)) Const(itution|\\.)?,? (?<part>Bill of Rights|Rights of Victims of Crime|Dist(ribution|\\.?) of the Powers of Gov(ernment|('t)?\\.)|(The )?(Leg(islative|(is)?\\.)|Exec(utive|\\.)|Jud(icial|\\.)) ?Dep(artment|('t)?\\.?)|Counties (and|&) County Seats|Impeachments|(C(ounty|ty\\.)|Fisc(al|\\.?)) ?C(ourts|ts\\.?)|Justices of the Peace|Suff(rage|\\.?) ?(and|&) ?Elec(tions|s?\\.?)|Mun(icipalities|i?\\.?)|Rev(enue|\\.?) ?(and|&) ?Tax(ation|\\.?)|Educ(ation|\\.)|Corp(orations?|s?\\.)|R(ailroads|\\.R\\.) (and|&) Com(merce|m?\\.)|(The )?Militia|Gen(eral|\\.) ?Prov(isions|s?\\.)|Mode of Rev(ision|\\.))(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d{1,3}[A-Za-z]?)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))?)?(?!=\\w)",
-            "(?<!\\w)[Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d{1,3}[A-Za-z]?)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))?)? [Oo]f [Tt]he (K(entucky|y\\.|Y)) Const(itution|\\.)?(?!=\\w)"
+            "(?<!\\w)(K(entucky|y\\.|Y)) Const(itution|\\.)?,? (?<part>Bill of Rights|Rights of Victims of Crime|Dist(ribution|\\.?) of the Powers of Gov(ernment|('t)?\\.)|(The )?(Leg(islative|(is)?\\.)|Exec(utive|\\.)|Jud(icial|\\.)) ?Dep(artment|('t)?\\.?)|Counties (and|&) County Seats|Impeachments|(C(ounty|ty\\.)|Fisc(al|\\.?)) ?C(ourts|ts\\.?)|Justices of the Peace|Suff(rage|\\.?) ?(and|&) ?Elec(tions|s?\\.?)|Mun(icipalities|i?\\.?)|Rev(enue|\\.?) ?(and|&) ?Tax(ation|\\.?)|Educ(ation|\\.)|Corp(orations?|s?\\.)|R(ailroads|\\.R\\.) (and|&) Com(merce|m?\\.)|(The )?Militia|Gen(eral|\\.) ?Prov(isions|s?\\.)|Mode of Rev(ision|\\.))(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d{1,3}[A-Za-z]?)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))?)?(?!=\\w)",
+            "(?<!\\w)[Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d{1,3}[A-Za-z]?)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))?)? [Oo]f [Tt]he (K(entucky|y\\.|Y)) Const(itution|\\.)?(?!=\\w)"
         ],
         "operations": [
             {
@@ -2582,7 +2582,7 @@ const templates = [
             "abbreviation": "La. Stat."
         },
         "regexes": [
-            "(?<!\\w)(L(ouisiana|a\\.|A))( ?Rev(ised|\\.))?( ?Ann(otated|\\.))?( ?Gen(eral|\\.))? ?(C(odes?|\\.)|Stat(utes|s?\\.?))( Serv(ice|\\.))?( ?Ann(otated|\\.))?,? ?(([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?)?(?<title>\\d+[A-Z]?)(?!\\w):(?<section>\\d+)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))?(?!=\\w)"
+            "(?<!\\w)(L(ouisiana|a\\.|A))( ?Rev(ised|\\.))?( ?Ann(otated|\\.))?( ?Gen(eral|\\.))? ?(C(odes?|\\.)|Stat(utes|s?\\.?))( Serv(ice|\\.))?( ?Ann(otated|\\.))?,? ?(([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?)?(?<title>\\d+[A-Z]?)(?!\\w):(?<section>\\d+)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))?(?!=\\w)"
         ],
         "operations": [],
         "URL": [
@@ -2597,8 +2597,8 @@ const templates = [
             "ballotpedia slug": "Louisiana"
         },
         "regexes": [
-            "(?<!\\w)(L(ouisiana|a\\.|A)) Const(itution|\\.)?,? [Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))?)?(?!=\\w)",
-            "(?<!\\w)[Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))?)? [Oo]f [Tt]he (L(ouisiana|a\\.|A)) Const(itution|\\.)?(?!=\\w)"
+            "(?<!\\w)(L(ouisiana|a\\.|A)) Const(itution|\\.)?,? [Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))?)?(?!=\\w)",
+            "(?<!\\w)[Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))?)? [Oo]f [Tt]he (L(ouisiana|a\\.|A)) Const(itution|\\.)?(?!=\\w)"
         ],
         "operations": [
             {
@@ -2626,8 +2626,8 @@ const templates = [
             "abbreviation": "Me. Stat."
         },
         "regexes": [
-            "(?<!\\w)([Tt]it(le |\\. ?))?(?<title>\\d+([-‑–][A-Z])?)(?!\\w) (M(aine|e\\.|E))( ?Rev(ised|\\.))?( ?Ann(otated|\\.))?( ?Gen(eral|\\.))? ?(C(odes?|\\.)|Stat(utes|s?\\.?))( Serv(ice|\\.))?( ?Ann(otated|\\.))?,? ?(([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?)?(?<section>\\d+(\\.\\d+)?([-‑–][A-Za-z])?)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))?(?!=\\w)",
-            "(?<!\\w)(M(aine|e\\.|E))( ?Rev(ised|\\.))?( ?Ann(otated|\\.))?( ?Gen(eral|\\.))? ?(C(odes?|\\.)|Stat(utes|s?\\.?))( Serv(ice|\\.))?( ?Ann(otated|\\.))?,? ?[Tt]it(le |\\. ?)(?<title>\\d+([-‑–][A-Z])?)(?!\\w),? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d+(\\.\\d+)?([-‑–][A-Za-z])?)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))?(?!=\\w)"
+            "(?<!\\w)([Tt]it(le |\\. ?))?(?<title>\\d+([-‑–][A-Z])?)(?!\\w) (M(aine|e\\.|E))( ?Rev(ised|\\.))?( ?Ann(otated|\\.))?( ?Gen(eral|\\.))? ?(C(odes?|\\.)|Stat(utes|s?\\.?))( Serv(ice|\\.))?( ?Ann(otated|\\.))?,? ?(([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?)?(?<section>\\d+(\\.\\d+)?([-‑–][A-Za-z])?)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))?(?!=\\w)",
+            "(?<!\\w)(M(aine|e\\.|E))( ?Rev(ised|\\.))?( ?Ann(otated|\\.))?( ?Gen(eral|\\.))? ?(C(odes?|\\.)|Stat(utes|s?\\.?))( Serv(ice|\\.))?( ?Ann(otated|\\.))?,? ?[Tt]it(le |\\. ?)(?<title>\\d+([-‑–][A-Z])?)(?!\\w),? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d+(\\.\\d+)?([-‑–][A-Za-z])?)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))?(?!=\\w)"
         ],
         "operations": [
             {
@@ -2722,7 +2722,7 @@ const templates = [
             "name regex": "M(aryland|d\\.|D)"
         },
         "regexes": [
-            "(?<!\\w)(M(aryland|d\\.|D)) (Code( Ann(otated|\\.))? (of )?)?(?<article>(Ac|Al|[BCEFHILNPRST]).{4,38}?)(?!\\w)( Code( Ann(otated|\\.))?)?,? (([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?)?(?<title>\\d+(\\.\\d+)?[A-Za-z]?)(?!\\w)-(?<section>[\\da-zA-Z\\-–.]*[\\da-zA-Z])(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))?(?!=\\w)"
+            "(?<!\\w)(M(aryland|d\\.|D)) (Code( Ann(otated|\\.))? (of )?)?(?<article>(Ac|Al|[BCEFHILNPRST]).{4,38}?)(?!\\w)( Code( Ann(otated|\\.))?)?,? (([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?)?(?<title>\\d+(\\.\\d+)?[A-Za-z]?)(?!\\w)-(?<section>[\\da-zA-Z\\-–.]*[\\da-zA-Z])(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))?(?!=\\w)"
         ],
         "operations": [
             {
@@ -2832,8 +2832,8 @@ const templates = [
             "ballotpedia slug": "Maryland"
         },
         "regexes": [
-            "(?<!\\w)(M(aryland|d\\.|D)) Const(itution|\\.)?,? [Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))?)?(?!=\\w)",
-            "(?<!\\w)[Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))?)? [Oo]f [Tt]he (M(aryland|d\\.|D)) Const(itution|\\.)?(?!=\\w)"
+            "(?<!\\w)(M(aryland|d\\.|D)) Const(itution|\\.)?,? [Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))?)?(?!=\\w)",
+            "(?<!\\w)[Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))?)? [Oo]f [Tt]he (M(aryland|d\\.|D)) Const(itution|\\.)?(?!=\\w)"
         ],
         "operations": [
             {
@@ -2857,7 +2857,7 @@ const templates = [
     {
         "name": "Massachusetts General Laws",
         "regexes": [
-            "(?<!\\w)((Mass(achusetts|\\.)?|MA) ?(Gen(eral|\\.)|Ann(otated|\\.)) ?Laws( Ann(otated|\\.))?|M\\.?G\\.?L\\.?(A\\.?)?|A\\.?L\\.?M\\.?),? [Cc](hapter|h?\\.) ?(?<chapter>\\d+[A-Z]?)(?!\\w),? (([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?)?(?<section>\\d+[A-Z]?\\d*([/]\\d+[A-Z])?)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))?(?!=\\w)"
+            "(?<!\\w)((Mass(achusetts|\\.)?|MA) ?(Gen(eral|\\.)|Ann(otated|\\.)) ?Laws( Ann(otated|\\.))?|M\\.?G\\.?L\\.?(A\\.?)?|A\\.?L\\.?M\\.?),? [Cc](hapter|h?\\.) ?(?<chapter>\\d+[A-Z]?)(?!\\w),? (([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?)?(?<section>\\d+[A-Z]?\\d*([/]\\d+[A-Z])?)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))?(?!=\\w)"
         ],
         "operations": [
             {
@@ -2955,7 +2955,7 @@ const templates = [
             "abbreviation": "Michigan Compiled Laws"
         },
         "regexes": [
-            "(?<!\\w)((Mich(igan|\\.)?|MI)? ?Comp(iled|\\.)? Laws( (Serv(ice|\\.)|Ann(otated|\\.)))?),? ?(([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?)?(?<chapter>\\d+[A-Zz-z]?)(?!\\w)\\.(?<section>\\d+[A-Zz-z]?)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))?(?!=\\w)"
+            "(?<!\\w)((Mich(igan|\\.)?|MI)? ?Comp(iled|\\.)? Laws( (Serv(ice|\\.)|Ann(otated|\\.)))?),? ?(([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?)?(?<chapter>\\d+[A-Zz-z]?)(?!\\w)\\.(?<section>\\d+[A-Zz-z]?)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))?(?!=\\w)"
         ],
         "operations": [
             {
@@ -2979,8 +2979,8 @@ const templates = [
             "ballotpedia slug": "Michigan"
         },
         "regexes": [
-            "(?<!\\w)(Mich(igan|\\.)?|MI) Const(itution|\\.)?,? [Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))?)?(?!=\\w)",
-            "(?<!\\w)[Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))?)? [Oo]f [Tt]he (Mich(igan|\\.)?|MI) Const(itution|\\.)?(?!=\\w)"
+            "(?<!\\w)(Mich(igan|\\.)?|MI) Const(itution|\\.)?,? [Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))?)?(?!=\\w)",
+            "(?<!\\w)[Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))?)? [Oo]f [Tt]he (Mich(igan|\\.)?|MI) Const(itution|\\.)?(?!=\\w)"
         ],
         "operations": [
             {
@@ -3008,7 +3008,7 @@ const templates = [
             "abbreviation": "Minn. Stat."
         },
         "regexes": [
-            "(?<!\\w)(Minn(esota|\\.)?|MN)( ?Rev(ised|\\.))?( ?Ann(otated|\\.))?( ?Gen(eral|\\.))? ?(C(odes?|\\.)|Stat(utes|s?\\.?))( Serv(ice|\\.))?( ?Ann(otated|\\.))?,? ?(([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?)?(?<chapter>\\d+[A-Zz-z]?)(?!\\w)\\.(?<section>\\d+[A-Zz-z]?)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))?(?!=\\w)"
+            "(?<!\\w)(Minn(esota|\\.)?|MN)( ?Rev(ised|\\.))?( ?Ann(otated|\\.))?( ?Gen(eral|\\.))? ?(C(odes?|\\.)|Stat(utes|s?\\.?))( Serv(ice|\\.))?( ?Ann(otated|\\.))?,? ?(([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?)?(?<chapter>\\d+[A-Zz-z]?)(?!\\w)\\.(?<section>\\d+[A-Zz-z]?)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))?(?!=\\w)"
         ],
         "operations": [
             {
@@ -3047,8 +3047,8 @@ const templates = [
             "ballotpedia slug": "Minnesota"
         },
         "regexes": [
-            "(?<!\\w)(Minn(esota|\\.)?|MN) Const(itution|\\.)?,? [Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))?)?(?!=\\w)",
-            "(?<!\\w)[Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))?)? [Oo]f [Tt]he (Minn(esota|\\.)?|MN) Const(itution|\\.)?(?!=\\w)"
+            "(?<!\\w)(Minn(esota|\\.)?|MN) Const(itution|\\.)?,? [Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))?)?(?!=\\w)",
+            "(?<!\\w)[Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))?)? [Oo]f [Tt]he (Minn(esota|\\.)?|MN) Const(itution|\\.)?(?!=\\w)"
         ],
         "operations": [
             {
@@ -3077,7 +3077,7 @@ const templates = [
             "year": "2019"
         },
         "regexes": [
-            "(?<!\\w)(Miss(issippi|\\.)?|MS)( ?Rev(ised|\\.))?( ?Ann(otated|\\.))?( ?Gen(eral|\\.))? ?(C(odes?|\\.)|Stat(utes|s?\\.?))( Serv(ice|\\.))?( ?Ann(otated|\\.))?,? ?(([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?)?(?<title>\\d+(\\.\\d+)?[A-Za-z]?)(?!\\w)[-‑–](?<chapter>\\d+(\\.\\d+)?[A-Za-z]?)(?!\\w)[-‑–](?<section>\\d+(\\.\\d+)?[A-Za-z]?)(?!\\w)(,? ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))?(?!=\\w)"
+            "(?<!\\w)(Miss(issippi|\\.)?|MS)( ?Rev(ised|\\.))?( ?Ann(otated|\\.))?( ?Gen(eral|\\.))? ?(C(odes?|\\.)|Stat(utes|s?\\.?))( Serv(ice|\\.))?( ?Ann(otated|\\.))?,? ?(([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?)?(?<title>\\d+(\\.\\d+)?[A-Za-z]?)(?!\\w)[-‑–](?<chapter>\\d+(\\.\\d+)?[A-Za-z]?)(?!\\w)[-‑–](?<section>\\d+(\\.\\d+)?[A-Za-z]?)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))?(?!=\\w)"
         ],
         "operations": [
             {
@@ -3105,8 +3105,8 @@ const templates = [
             "ballotpedia slug": "Mississippi"
         },
         "regexes": [
-            "(?<!\\w)(Miss(issippi|\\.)?|MS) Const(itution|\\.)?,? [Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))?)?(?!=\\w)",
-            "(?<!\\w)[Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))?)? [Oo]f [Tt]he (Miss(issippi|\\.)?|MS) Const(itution|\\.)?(?!=\\w)"
+            "(?<!\\w)(Miss(issippi|\\.)?|MS) Const(itution|\\.)?,? [Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))?)?(?!=\\w)",
+            "(?<!\\w)[Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))?)? [Oo]f [Tt]he (Miss(issippi|\\.)?|MS) Const(itution|\\.)?(?!=\\w)"
         ],
         "operations": [
             {
@@ -3134,7 +3134,7 @@ const templates = [
             "abbreviation": "Mo. Rev. Stat."
         },
         "regexes": [
-            "(?<!\\w)(M(issouri|o\\.|O))( ?Rev(ised|\\.))?( ?Ann(otated|\\.))?( ?Gen(eral|\\.))? ?(C(odes?|\\.)|Stat(utes|s?\\.?))( Serv(ice|\\.))?( ?Ann(otated|\\.))?,? ?(([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?)?(?<chapter>\\d+[A-Zz-z]?)(?!\\w)\\.(?<section>\\d+[A-Zz-z]?)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))?(?!=\\w)"
+            "(?<!\\w)(M(issouri|o\\.|O))( ?Rev(ised|\\.))?( ?Ann(otated|\\.))?( ?Gen(eral|\\.))? ?(C(odes?|\\.)|Stat(utes|s?\\.?))( Serv(ice|\\.))?( ?Ann(otated|\\.))?,? ?(([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?)?(?<chapter>\\d+[A-Zz-z]?)(?!\\w)\\.(?<section>\\d+[A-Zz-z]?)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))?(?!=\\w)"
         ],
         "operations": [
             {
@@ -3158,8 +3158,8 @@ const templates = [
             "ballotpedia slug": "Missouri"
         },
         "regexes": [
-            "(?<!\\w)(M(issouri|o\\.|O)) Const(itution|\\.)?,? [Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))?)?(?!=\\w)",
-            "(?<!\\w)[Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))?)? [Oo]f [Tt]he (M(issouri|o\\.|O)) Const(itution|\\.)?(?!=\\w)"
+            "(?<!\\w)(M(issouri|o\\.|O)) Const(itution|\\.)?,? [Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))?)?(?!=\\w)",
+            "(?<!\\w)[Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))?)? [Oo]f [Tt]he (M(issouri|o\\.|O)) Const(itution|\\.)?(?!=\\w)"
         ],
         "operations": [
             {
@@ -3187,7 +3187,7 @@ const templates = [
             "abberviation": "Mont. Code"
         },
         "regexes": [
-            "(?<!\\w)(Mont(ana|\\.)?|MT)( ?Rev(ised|\\.))?( ?Ann(otated|\\.))?( ?Gen(eral|\\.))? ?(C(odes?|\\.)|Stat(utes|s?\\.?))( Serv(ice|\\.))?( ?Ann(otated|\\.))?,? ?(([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?)?(?<title>\\d+(\\.\\d+)?[A-Za-z]?)(?!\\w)[-‑–](?<chapter>\\d+(\\.\\d+)?[A-Za-z]?)(?!\\w)[-‑–](?<section>\\d+(\\.\\d+)?[A-Za-z]?)(?!\\w)(,? ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))?(?!=\\w)"
+            "(?<!\\w)(Mont(ana|\\.)?|MT)( ?Rev(ised|\\.))?( ?Ann(otated|\\.))?( ?Gen(eral|\\.))? ?(C(odes?|\\.)|Stat(utes|s?\\.?))( Serv(ice|\\.))?( ?Ann(otated|\\.))?,? ?(([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?)?(?<title>\\d+(\\.\\d+)?[A-Za-z]?)(?!\\w)[-‑–](?<chapter>\\d+(\\.\\d+)?[A-Za-z]?)(?!\\w)[-‑–](?<section>\\d+(\\.\\d+)?[A-Za-z]?)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))?(?!=\\w)"
         ],
         "operations": [
             {
@@ -3215,8 +3215,8 @@ const templates = [
             "ballotpedia slug": "Montana"
         },
         "regexes": [
-            "(?<!\\w)(Mont(ana|\\.)?|MT) Const(itution|\\.)?,? [Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))?)?(?!=\\w)",
-            "(?<!\\w)[Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))?)? [Oo]f [Tt]he (Mont(ana|\\.)?|MT) Const(itution|\\.)?(?!=\\w)"
+            "(?<!\\w)(Mont(ana|\\.)?|MT) Const(itution|\\.)?,? [Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))?)?(?!=\\w)",
+            "(?<!\\w)[Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))?)? [Oo]f [Tt]he (Mont(ana|\\.)?|MT) Const(itution|\\.)?(?!=\\w)"
         ],
         "operations": [
             {
@@ -3244,7 +3244,7 @@ const templates = [
             "abbreviation": "Neb. Rev. Stat."
         },
         "regexes": [
-            "(?<!\\w)(Neb(raska|\\.)?|NE)( ?Rev(ised|\\.))?( ?Ann(otated|\\.))?( ?Gen(eral|\\.))? ?(C(odes?|\\.)|Stat(utes|s?\\.?))( Serv(ice|\\.))?( ?Ann(otated|\\.))?,? ?(([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?)?(?<chapter>\\d+(\\.\\d+)?[A-Za-z]?)(?!\\w)[-‑–](?<section>\\d+(\\.\\d+)?[A-Za-z]?)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))?(?!=\\w)"
+            "(?<!\\w)(Neb(raska|\\.)?|NE)( ?Rev(ised|\\.))?( ?Ann(otated|\\.))?( ?Gen(eral|\\.))? ?(C(odes?|\\.)|Stat(utes|s?\\.?))( Serv(ice|\\.))?( ?Ann(otated|\\.))?,? ?(([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?)?(?<chapter>\\d+(\\.\\d+)?[A-Za-z]?)(?!\\w)[-‑–](?<section>\\d+(\\.\\d+)?[A-Za-z]?)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))?(?!=\\w)"
         ],
         "operations": [
             {
@@ -3268,8 +3268,8 @@ const templates = [
             "ballotpedia slug": "Nebraska"
         },
         "regexes": [
-            "(?<!\\w)(Neb(raska|\\.)?|NE) Const(itution|\\.)?,? [Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))?)?(?!=\\w)",
-            "(?<!\\w)[Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))?)? [Oo]f [Tt]he (Neb(raska|\\.)?|NE) Const(itution|\\.)?(?!=\\w)"
+            "(?<!\\w)(Neb(raska|\\.)?|NE) Const(itution|\\.)?,? [Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))?)?(?!=\\w)",
+            "(?<!\\w)[Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))?)? [Oo]f [Tt]he (Neb(raska|\\.)?|NE) Const(itution|\\.)?(?!=\\w)"
         ],
         "operations": [
             {
@@ -3297,7 +3297,7 @@ const templates = [
             "abbreviation": "Nev. Rev. Stat."
         },
         "regexes": [
-            "(?<!\\w)(Nev(ada|\\.)?|NV)( ?Rev(ised|\\.))?( ?Ann(otated|\\.))?( ?Gen(eral|\\.))? ?(C(odes?|\\.)|Stat(utes|s?\\.?))( Serv(ice|\\.))?( ?Ann(otated|\\.))?,? ?(([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?)?(?<chapter>\\d+[A-Zz-z]?)(?!\\w)\\.(?<section>\\d+[A-Zz-z]?)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))?(?!=\\w)"
+            "(?<!\\w)(Nev(ada|\\.)?|NV)( ?Rev(ised|\\.))?( ?Ann(otated|\\.))?( ?Gen(eral|\\.))? ?(C(odes?|\\.)|Stat(utes|s?\\.?))( Serv(ice|\\.))?( ?Ann(otated|\\.))?,? ?(([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?)?(?<chapter>\\d+[A-Zz-z]?)(?!\\w)\\.(?<section>\\d+[A-Zz-z]?)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))?(?!=\\w)"
         ],
         "operations": [
             {
@@ -3326,8 +3326,8 @@ const templates = [
             "ballotpedia slug": "Nevada"
         },
         "regexes": [
-            "(?<!\\w)(Nev(ada|\\.)?|NV) Const(itution|\\.)?,? [Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))?)?(?!=\\w)",
-            "(?<!\\w)[Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))?)? [Oo]f [Tt]he (Nev(ada|\\.)?|NV) Const(itution|\\.)?(?!=\\w)"
+            "(?<!\\w)(Nev(ada|\\.)?|NV) Const(itution|\\.)?,? [Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))?)?(?!=\\w)",
+            "(?<!\\w)[Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))?)? [Oo]f [Tt]he (Nev(ada|\\.)?|NV) Const(itution|\\.)?(?!=\\w)"
         ],
         "operations": [
             {
@@ -3355,7 +3355,7 @@ const templates = [
             "abbreviation": "N.H. Rev. Stat."
         },
         "regexes": [
-            "(?<!\\w)(New Hampshire|N\\.? ?H\\.?)( ?Rev(ised|\\.))?( ?Ann(otated|\\.))?( ?Gen(eral|\\.))? ?(C(odes?|\\.)|Stat(utes|s?\\.?))( Serv(ice|\\.))?( ?Ann(otated|\\.))?,? ?(([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?)?(?<chapter>\\d+(\\.\\d+)?([-‑–][A-Za-z])?)(?!\\w):(?<section>\\d+(\\.\\d+)?([-‑–][A-Za-z])?)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))?(?!=\\w)"
+            "(?<!\\w)(New Hampshire|N\\.? ?H\\.?)( ?Rev(ised|\\.))?( ?Ann(otated|\\.))?( ?Gen(eral|\\.))? ?(C(odes?|\\.)|Stat(utes|s?\\.?))( Serv(ice|\\.))?( ?Ann(otated|\\.))?,? ?(([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?)?(?<chapter>\\d+(\\.\\d+)?([-‑–][A-Za-z])?)(?!\\w):(?<section>\\d+(\\.\\d+)?([-‑–][A-Za-z])?)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))?(?!=\\w)"
         ],
         "operations": [
             {
@@ -3621,8 +3621,8 @@ const templates = [
             "ballotpedia slug": "New_Mexico"
         },
         "regexes": [
-            "(?<!\\w)(New Mexico|N\\.? ?M\\.?) Const(itution|\\.)?,? [Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))?)?(?!=\\w)",
-            "(?<!\\w)[Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))?)? [Oo]f [Tt]he (New Mexico|N\\.? ?M\\.?) Const(itution|\\.)?(?!=\\w)"
+            "(?<!\\w)(New Mexico|N\\.? ?M\\.?) Const(itution|\\.)?,? [Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))?)?(?!=\\w)",
+            "(?<!\\w)[Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))?)? [Oo]f [Tt]he (New Mexico|N\\.? ?M\\.?) Const(itution|\\.)?(?!=\\w)"
         ],
         "operations": [
             {
@@ -3650,7 +3650,7 @@ const templates = [
             "abbreviation": "N.Y."
         },
         "regexes": [
-            "(?<!\\w)(New York|N\\.? ?Y\\.?) ?(?<chapter>.{2,40}?)(?!\\w)( Law)? ?(([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?)?(?<section>\\d+(\\.\\d+)?[A-Za-z]?)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))?(?!=\\w)"
+            "(?<!\\w)(New York|N\\.? ?Y\\.?) ?(?<chapter>.{2,40}?)(?!\\w)( Law)? ?(([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?)?(?<section>\\d+(\\.\\d+)?[A-Za-z]?)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))?(?!=\\w)"
         ],
         "operations": [
             {
@@ -3850,8 +3850,8 @@ const templates = [
             "ballotpedia slug": "New_York"
         },
         "regexes": [
-            "(?<!\\w)(New York|N\\.? ?Y\\.?) Const(itution|\\.)?,? [Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))?)?(?!=\\w)",
-            "(?<!\\w)[Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))?)? [Oo]f [Tt]he (New York|N\\.? ?Y\\.?) Const(itution|\\.)?(?!=\\w)"
+            "(?<!\\w)(New York|N\\.? ?Y\\.?) Const(itution|\\.)?,? [Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))?)?(?!=\\w)",
+            "(?<!\\w)[Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))?)? [Oo]f [Tt]he (New York|N\\.? ?Y\\.?) Const(itution|\\.)?(?!=\\w)"
         ],
         "operations": [
             {
@@ -3879,7 +3879,7 @@ const templates = [
             "abbreviation": "N.C. Gen. Stat."
         },
         "regexes": [
-            "(?<!\\w)(North Carolina|N\\.? ?C\\.?) ?Gen(eral|\\.)( ?Rev(ised|\\.))?( ?Ann(otated|\\.))?( ?Gen(eral|\\.))? ?(C(odes?|\\.)|Stat(utes|s?\\.?))( Serv(ice|\\.))?( ?Ann(otated|\\.))?,? ?(([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?)?(?<chapter>\\d+(\\.\\d+)?[A-Za-z]?)(?!\\w)[-‑–](?<section>\\d+(\\.\\d+)?[A-Za-z]?)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))?(?!=\\w)"
+            "(?<!\\w)(North Carolina|N\\.? ?C\\.?) ?Gen(eral|\\.)( ?Rev(ised|\\.))?( ?Ann(otated|\\.))?( ?Gen(eral|\\.))? ?(C(odes?|\\.)|Stat(utes|s?\\.?))( Serv(ice|\\.))?( ?Ann(otated|\\.))?,? ?(([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?)?(?<chapter>\\d+(\\.\\d+)?[A-Za-z]?)(?!\\w)[-‑–](?<section>\\d+(\\.\\d+)?[A-Za-z]?)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))?(?!=\\w)"
         ],
         "operations": [
             {
@@ -3903,8 +3903,8 @@ const templates = [
             "ballotpedia slug": "North_Carolina"
         },
         "regexes": [
-            "(?<!\\w)(North Carolina|N\\.? ?C\\.?) Const(itution|\\.)?,? [Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))?)?(?!=\\w)",
-            "(?<!\\w)[Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))?)? [Oo]f [Tt]he (North Carolina|N\\.? ?C\\.?) Const(itution|\\.)?(?!=\\w)"
+            "(?<!\\w)(North Carolina|N\\.? ?C\\.?) Const(itution|\\.)?,? [Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))?)?(?!=\\w)",
+            "(?<!\\w)[Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))?)? [Oo]f [Tt]he (North Carolina|N\\.? ?C\\.?) Const(itution|\\.)?(?!=\\w)"
         ],
         "operations": [
             {
@@ -3932,7 +3932,7 @@ const templates = [
             "abbreviation": "N.D. Cent. Code"
         },
         "regexes": [
-            "(?<!\\w)(North Dakota|N\\.? ?D\\.?) ?Cent(ury|\\.)( ?Rev(ised|\\.))?( ?Ann(otated|\\.))?( ?Gen(eral|\\.))? ?(C(odes?|\\.)|Stat(utes|s?\\.?))( Serv(ice|\\.))?( ?Ann(otated|\\.))?,? ?(([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?)?(?<title>\\d+(\\.\\d+)?[A-Za-z]?)(?!\\w)[-‑–](?<chapter>\\d+(\\.\\d+)?[A-Za-z]?)(?!\\w)[-‑–](?<section>\\d+(\\.\\d+)?[A-Za-z]?)(?!\\w)(,? ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))?(?!=\\w)"
+            "(?<!\\w)(North Dakota|N\\.? ?D\\.?) ?Cent(ury|\\.)( ?Rev(ised|\\.))?( ?Ann(otated|\\.))?( ?Gen(eral|\\.))? ?(C(odes?|\\.)|Stat(utes|s?\\.?))( Serv(ice|\\.))?( ?Ann(otated|\\.))?,? ?(([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?)?(?<title>\\d+(\\.\\d+)?[A-Za-z]?)(?!\\w)[-‑–](?<chapter>\\d+(\\.\\d+)?[A-Za-z]?)(?!\\w)[-‑–](?<section>\\d+(\\.\\d+)?[A-Za-z]?)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))?(?!=\\w)"
         ],
         "operations": [
             {
@@ -3982,8 +3982,8 @@ const templates = [
             "ballotpedia slug": "North_Dakota"
         },
         "regexes": [
-            "(?<!\\w)(North Dakota|N\\.? ?D\\.?) Const(itution|\\.)?,? [Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))?)?(?!=\\w)",
-            "(?<!\\w)[Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))?)? [Oo]f [Tt]he (North Dakota|N\\.? ?D\\.?) Const(itution|\\.)?(?!=\\w)"
+            "(?<!\\w)(North Dakota|N\\.? ?D\\.?) Const(itution|\\.)?,? [Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))?)?(?!=\\w)",
+            "(?<!\\w)[Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))?)? [Oo]f [Tt]he (North Dakota|N\\.? ?D\\.?) Const(itution|\\.)?(?!=\\w)"
         ],
         "operations": [
             {
@@ -4011,8 +4011,8 @@ const templates = [
             "abbreviation": "N. Mar. I. Code"
         },
         "regexes": [
-            "(?<!\\w)([Tt]it(le |\\. ?))?(?<title>\\d{1,2})(?!\\w) (N(orthern|\\.) ?Mar(iana||\\.) ?I(slands|\\.))( ?Rev(ised|\\.))?( ?Ann(otated|\\.))?( ?Gen(eral|\\.))? ?(C(odes?|\\.)|Stat(utes|s?\\.?))( Serv(ice|\\.))?( ?Ann(otated|\\.))?,? ?(([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?)?(?<section>\\d+(\\.\\d+)?[A-Za-z]?)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))?(?!=\\w)",
-            "(?<!\\w)(N(orthern|\\.) ?Mar(iana||\\.) ?I(slands|\\.))( ?Rev(ised|\\.))?( ?Ann(otated|\\.))?( ?Gen(eral|\\.))? ?(C(odes?|\\.)|Stat(utes|s?\\.?))( Serv(ice|\\.))?( ?Ann(otated|\\.))?,? ?[Tt]it(le |\\. ?)(?<title>\\d{1,2})(?!\\w),? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d+(\\.\\d+)?[A-Za-z]?)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))?(?!=\\w)"
+            "(?<!\\w)([Tt]it(le |\\. ?))?(?<title>\\d{1,2})(?!\\w) (N(orthern|\\.) ?Mar(iana||\\.) ?I(slands|\\.))( ?Rev(ised|\\.))?( ?Ann(otated|\\.))?( ?Gen(eral|\\.))? ?(C(odes?|\\.)|Stat(utes|s?\\.?))( Serv(ice|\\.))?( ?Ann(otated|\\.))?,? ?(([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?)?(?<section>\\d+(\\.\\d+)?[A-Za-z]?)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))?(?!=\\w)",
+            "(?<!\\w)(N(orthern|\\.) ?Mar(iana||\\.) ?I(slands|\\.))( ?Rev(ised|\\.))?( ?Ann(otated|\\.))?( ?Gen(eral|\\.))? ?(C(odes?|\\.)|Stat(utes|s?\\.?))( Serv(ice|\\.))?( ?Ann(otated|\\.))?,? ?[Tt]it(le |\\. ?)(?<title>\\d{1,2})(?!\\w),? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d+(\\.\\d+)?[A-Za-z]?)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))?(?!=\\w)"
         ],
         "operations": [
             {
@@ -4032,8 +4032,8 @@ const templates = [
             "ballotpedia slug": "Northern_Mariana_Islands"
         },
         "regexes": [
-            "(?<!\\w)(N(orthern|\\.) ?Mar(iana||\\.) ?I(slands|\\.)) Const(itution|\\.)?,? [Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))?)?(?!=\\w)",
-            "(?<!\\w)[Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))?)? [Oo]f [Tt]he (N(orthern|\\.) ?Mar(iana||\\.) ?I(slands|\\.)) Const(itution|\\.)?(?!=\\w)"
+            "(?<!\\w)(N(orthern|\\.) ?Mar(iana||\\.) ?I(slands|\\.)) Const(itution|\\.)?,? [Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))?)?(?!=\\w)",
+            "(?<!\\w)[Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))?)? [Oo]f [Tt]he (N(orthern|\\.) ?Mar(iana||\\.) ?I(slands|\\.)) Const(itution|\\.)?(?!=\\w)"
         ],
         "operations": [
             {
@@ -4061,7 +4061,7 @@ const templates = [
             "abbreviation": "Ohio Rev. Code"
         },
         "regexes": [
-            "(?<!\\w)(O(hio|H))( ?Rev(ised|\\.))?( ?Ann(otated|\\.))?( ?Gen(eral|\\.))? ?(C(odes?|\\.)|Stat(utes|s?\\.?))( Serv(ice|\\.))?( ?Ann(otated|\\.))?,? ?(([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?)?(?<chapter>\\d+[A-Zz-z]?)(?!\\w)\\.(?<section>\\d+[A-Zz-z]?)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))?(?!=\\w)"
+            "(?<!\\w)(O(hio|H))( ?Rev(ised|\\.))?( ?Ann(otated|\\.))?( ?Gen(eral|\\.))? ?(C(odes?|\\.)|Stat(utes|s?\\.?))( Serv(ice|\\.))?( ?Ann(otated|\\.))?,? ?(([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?)?(?<chapter>\\d+[A-Zz-z]?)(?!\\w)\\.(?<section>\\d+[A-Zz-z]?)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))?(?!=\\w)"
         ],
         "operations": [
             {
@@ -4086,8 +4086,8 @@ const templates = [
             "ballotpedia slug": "Ohio"
         },
         "regexes": [
-            "(?<!\\w)(O(hio|H)) Const(itution|\\.)?,? [Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))?)?(?!=\\w)",
-            "(?<!\\w)[Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))?)? [Oo]f [Tt]he (O(hio|H)) Const(itution|\\.)?(?!=\\w)"
+            "(?<!\\w)(O(hio|H)) Const(itution|\\.)?,? [Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))?)?(?!=\\w)",
+            "(?<!\\w)[Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))?)? [Oo]f [Tt]he (O(hio|H)) Const(itution|\\.)?(?!=\\w)"
         ],
         "operations": [
             {
@@ -4116,8 +4116,8 @@ const templates = [
             "year": "2020"
         },
         "regexes": [
-            "(?<!\\w)([Tt]it(le |\\. ?))?(?<title>\\d{1,2})(?!\\w) (Okla(homa|\\.)?|OK)( ?Rev(ised|\\.))?( ?Ann(otated|\\.))?( ?Gen(eral|\\.))? ?(C(odes?|\\.)|Stat(utes|s?\\.?))( Serv(ice|\\.))?( ?Ann(otated|\\.))?,? ?(([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?)?(?<section>\\d+(\\.\\d+)?[A-Za-z]?)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))?(?!=\\w)",
-            "(?<!\\w)(Okla(homa|\\.)?|OK)( ?Rev(ised|\\.))?( ?Ann(otated|\\.))?( ?Gen(eral|\\.))? ?(C(odes?|\\.)|Stat(utes|s?\\.?))( Serv(ice|\\.))?( ?Ann(otated|\\.))?,? ?[Tt]it(le |\\. ?)(?<title>\\d{1,2})(?!\\w),? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d+(\\.\\d+)?[A-Za-z]?)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))?(?!=\\w)"
+            "(?<!\\w)([Tt]it(le |\\. ?))?(?<title>\\d{1,2})(?!\\w) (Okla(homa|\\.)?|OK)( ?Rev(ised|\\.))?( ?Ann(otated|\\.))?( ?Gen(eral|\\.))? ?(C(odes?|\\.)|Stat(utes|s?\\.?))( Serv(ice|\\.))?( ?Ann(otated|\\.))?,? ?(([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?)?(?<section>\\d+(\\.\\d+)?[A-Za-z]?)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))?(?!=\\w)",
+            "(?<!\\w)(Okla(homa|\\.)?|OK)( ?Rev(ised|\\.))?( ?Ann(otated|\\.))?( ?Gen(eral|\\.))? ?(C(odes?|\\.)|Stat(utes|s?\\.?))( Serv(ice|\\.))?( ?Ann(otated|\\.))?,? ?[Tt]it(le |\\. ?)(?<title>\\d{1,2})(?!\\w),? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d+(\\.\\d+)?[A-Za-z]?)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))?(?!=\\w)"
         ],
         "operations": [
             {
@@ -4137,8 +4137,8 @@ const templates = [
             "ballotpedia slug": "Oklahoma"
         },
         "regexes": [
-            "(?<!\\w)(Okla(homa|\\.)?|OK) Const(itution|\\.)?,? [Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))?)?(?!=\\w)",
-            "(?<!\\w)[Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))?)? [Oo]f [Tt]he (Okla(homa|\\.)?|OK) Const(itution|\\.)?(?!=\\w)"
+            "(?<!\\w)(Okla(homa|\\.)?|OK) Const(itution|\\.)?,? [Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))?)?(?!=\\w)",
+            "(?<!\\w)[Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))?)? [Oo]f [Tt]he (Okla(homa|\\.)?|OK) Const(itution|\\.)?(?!=\\w)"
         ],
         "operations": [
             {
@@ -4166,7 +4166,7 @@ const templates = [
             "abbreviation": "Or. Rev. Stat."
         },
         "regexes": [
-            "(?<!\\w)(Or(egon|e?\\.)|OR)( ?Rev(ised|\\.))?( ?Ann(otated|\\.))?( ?Gen(eral|\\.))? ?(C(odes?|\\.)|Stat(utes|s?\\.?))( Serv(ice|\\.))?( ?Ann(otated|\\.))?,? ?(([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?)?(?<chapter>\\d+[A-Zz-z]?)(?!\\w)\\.(?<section>\\d+[A-Zz-z]?)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))?(?!=\\w)"
+            "(?<!\\w)(Or(egon|e?\\.)|OR)( ?Rev(ised|\\.))?( ?Ann(otated|\\.))?( ?Gen(eral|\\.))? ?(C(odes?|\\.)|Stat(utes|s?\\.?))( Serv(ice|\\.))?( ?Ann(otated|\\.))?,? ?(([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?)?(?<chapter>\\d+[A-Zz-z]?)(?!\\w)\\.(?<section>\\d+[A-Zz-z]?)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))?(?!=\\w)"
         ],
         "operations": [
             {
@@ -4219,8 +4219,8 @@ const templates = [
             "abbreviation": "Pa. Cons. Stat."
         },
         "regexes": [
-            "(?<!\\w)([Tt]it(le |\\. ?))?(?<title>\\d{1,2})(?!\\w) (Penn(sylvania|\\.)|Pa\\.|PA)( ?Stat\\. [Aa]nd)? ?Cons(olidated|\\.)( ?Rev(ised|\\.))?( ?Ann(otated|\\.))?( ?Gen(eral|\\.))? ?(C(odes?|\\.)|Stat(utes|s?\\.?))( Serv(ice|\\.))?( ?Ann(otated|\\.))?,? ?(([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?)?(?<section>\\d+(\\.\\d+)?[A-Za-z]?)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))?(?!=\\w)",
-            "(?<!\\w)(Penn(sylvania|\\.)|Pa\\.|PA)( ?Stat\\. [Aa]nd)? ?Cons(olidated|\\.)( ?Rev(ised|\\.))?( ?Ann(otated|\\.))?( ?Gen(eral|\\.))? ?(C(odes?|\\.)|Stat(utes|s?\\.?))( Serv(ice|\\.))?( ?Ann(otated|\\.))?,? ?[Tt]it(le |\\. ?)(?<title>\\d{1,2})(?!\\w),? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d+(\\.\\d+)?[A-Za-z]?)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))?(?!=\\w)"
+            "(?<!\\w)([Tt]it(le |\\. ?))?(?<title>\\d{1,2})(?!\\w) (Penn(sylvania|\\.)|Pa\\.|PA)( ?Stat\\. [Aa]nd)? ?Cons(olidated|\\.)( ?Rev(ised|\\.))?( ?Ann(otated|\\.))?( ?Gen(eral|\\.))? ?(C(odes?|\\.)|Stat(utes|s?\\.?))( Serv(ice|\\.))?( ?Ann(otated|\\.))?,? ?(([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?)?(?<section>\\d+(\\.\\d+)?[A-Za-z]?)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))?(?!=\\w)",
+            "(?<!\\w)(Penn(sylvania|\\.)|Pa\\.|PA)( ?Stat\\. [Aa]nd)? ?Cons(olidated|\\.)( ?Rev(ised|\\.))?( ?Ann(otated|\\.))?( ?Gen(eral|\\.))? ?(C(odes?|\\.)|Stat(utes|s?\\.?))( Serv(ice|\\.))?( ?Ann(otated|\\.))?,? ?[Tt]it(le |\\. ?)(?<title>\\d{1,2})(?!\\w),? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d+(\\.\\d+)?[A-Za-z]?)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))?(?!=\\w)"
         ],
         "operations": [
             {
@@ -4239,8 +4239,8 @@ const templates = [
             "abbreviation": "Pa. Code"
         },
         "regexes": [
-            "(?<!\\w)([Tt]it(le |\\. ?))?(?<title>\\d{1,2})(?!\\w) (Penn(sylvania|\\.)|Pa\\.|PA)( ?Rev(ised|\\.))?( ?Ann(otated|\\.))?( ?Gen(eral|\\.))? ?(C(odes?|\\.)|Stat(utes|s?\\.?))( Serv(ice|\\.))?( ?Ann(otated|\\.))?,? ?(([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?)?(?<section>\\d+(\\.\\d+)?[A-Za-z]?)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))?(?!=\\w)",
-            "(?<!\\w)(Penn(sylvania|\\.)|Pa\\.|PA)( ?Rev(ised|\\.))?( ?Ann(otated|\\.))?( ?Gen(eral|\\.))? ?(C(odes?|\\.)|Stat(utes|s?\\.?))( Serv(ice|\\.))?( ?Ann(otated|\\.))?,? ?[Tt]it(le |\\. ?)(?<title>\\d{1,2})(?!\\w),? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d+(\\.\\d+)?[A-Za-z]?)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))?(?!=\\w)"
+            "(?<!\\w)([Tt]it(le |\\. ?))?(?<title>\\d{1,2})(?!\\w) (Penn(sylvania|\\.)|Pa\\.|PA)( ?Rev(ised|\\.))?( ?Ann(otated|\\.))?( ?Gen(eral|\\.))? ?(C(odes?|\\.)|Stat(utes|s?\\.?))( Serv(ice|\\.))?( ?Ann(otated|\\.))?,? ?(([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?)?(?<section>\\d+(\\.\\d+)?[A-Za-z]?)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))?(?!=\\w)",
+            "(?<!\\w)(Penn(sylvania|\\.)|Pa\\.|PA)( ?Rev(ised|\\.))?( ?Ann(otated|\\.))?( ?Gen(eral|\\.))? ?(C(odes?|\\.)|Stat(utes|s?\\.?))( Serv(ice|\\.))?( ?Ann(otated|\\.))?,? ?[Tt]it(le |\\. ?)(?<title>\\d{1,2})(?!\\w),? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d+(\\.\\d+)?[A-Za-z]?)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))?(?!=\\w)"
         ],
         "operations": [
             {
@@ -4264,8 +4264,8 @@ const templates = [
             "ballotpedia slug": "Pennsylvania"
         },
         "regexes": [
-            "(?<!\\w)(Penn(sylvania|\\.)|Pa\\.|PA) Const(itution|\\.)?,? [Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))?)?(?!=\\w)",
-            "(?<!\\w)[Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))?)? [Oo]f [Tt]he (Penn(sylvania|\\.)|Pa\\.|PA) Const(itution|\\.)?(?!=\\w)"
+            "(?<!\\w)(Penn(sylvania|\\.)|Pa\\.|PA) Const(itution|\\.)?,? [Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))?)?(?!=\\w)",
+            "(?<!\\w)[Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))?)? [Oo]f [Tt]he (Penn(sylvania|\\.)|Pa\\.|PA) Const(itution|\\.)?(?!=\\w)"
         ],
         "operations": [
             {
@@ -4294,8 +4294,8 @@ const templates = [
             "ballotpedia slug": "Puerto_Rico"
         },
         "regexes": [
-            "(?<!\\w)(Puerto Rico|P\\.? ?R\\.?) Const(itution|\\.)?,? [Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))?)?(?!=\\w)",
-            "(?<!\\w)[Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))?)? [Oo]f [Tt]he (Puerto Rico|P\\.? ?R\\.?) Const(itution|\\.)?(?!=\\w)"
+            "(?<!\\w)(Puerto Rico|P\\.? ?R\\.?) Const(itution|\\.)?,? [Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))?)?(?!=\\w)",
+            "(?<!\\w)[Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))?)? [Oo]f [Tt]he (Puerto Rico|P\\.? ?R\\.?) Const(itution|\\.)?(?!=\\w)"
         ],
         "operations": [
             {
@@ -4323,7 +4323,7 @@ const templates = [
             "abbreviation": "R.I. Gen. Laws"
         },
         "regexes": [
-            "(?<!\\w)(Rhode Island|R\\.? ?I\\.?) ?Gen(eral|\\.)( ?Rev(ised|\\.))?( ?Ann(otated|\\.))?( ?Gen(eral|\\.))? ?(C(odes?|\\.)|Stat(utes|s?\\.?))( Serv(ice|\\.))?( ?Ann(otated|\\.))?,? ?(([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?)?(?<title>\\d+(\\.\\d+)?[A-Za-z]?)(?!\\w)[-‑–](?<chapter>\\d+(\\.\\d+)?[A-Za-z]?)(?!\\w)[-‑–](?<section>\\d+(\\.\\d+)?[A-Za-z]?)(?!\\w)(,? ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))?(?!=\\w)"
+            "(?<!\\w)(Rhode Island|R\\.? ?I\\.?) ?Gen(eral|\\.)( ?Rev(ised|\\.))?( ?Ann(otated|\\.))?( ?Gen(eral|\\.))? ?(C(odes?|\\.)|Stat(utes|s?\\.?))( Serv(ice|\\.))?( ?Ann(otated|\\.))?,? ?(([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?)?(?<title>\\d+(\\.\\d+)?[A-Za-z]?)(?!\\w)[-‑–](?<chapter>\\d+(\\.\\d+)?[A-Za-z]?)(?!\\w)[-‑–](?<section>\\d+(\\.\\d+)?[A-Za-z]?)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))?(?!=\\w)"
         ],
         "operations": [
             {
@@ -4351,8 +4351,8 @@ const templates = [
             "ballotpedia slug": "Rhode_Island"
         },
         "regexes": [
-            "(?<!\\w)(Rhode Island|R\\.? ?I\\.?) Const(itution|\\.)?,? [Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))?)?(?!=\\w)",
-            "(?<!\\w)[Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))?)? [Oo]f [Tt]he (Rhode Island|R\\.? ?I\\.?) Const(itution|\\.)?(?!=\\w)"
+            "(?<!\\w)(Rhode Island|R\\.? ?I\\.?) Const(itution|\\.)?,? [Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))?)?(?!=\\w)",
+            "(?<!\\w)[Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))?)? [Oo]f [Tt]he (Rhode Island|R\\.? ?I\\.?) Const(itution|\\.)?(?!=\\w)"
         ],
         "operations": [
             {
@@ -4380,7 +4380,7 @@ const templates = [
             "abbreviation": "S.C. Code"
         },
         "regexes": [
-            "(?<!\\w)(South Carolina|S\\.? ?C\\.?)( ?Rev(ised|\\.))?( ?Ann(otated|\\.))?( ?Gen(eral|\\.))? ?(C(odes?|\\.)|Stat(utes|s?\\.?))( Serv(ice|\\.))?( ?Ann(otated|\\.))?,? ?(([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?)?(?<title>\\d+(\\.\\d+)?[A-Za-z]?)(?!\\w)[-‑–](?<chapter>\\d+(\\.\\d+)?[A-Za-z]?)(?!\\w)[-‑–](?<section>\\d+(\\.\\d+)?[A-Za-z]?)(?!\\w)(,? ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))?(?!=\\w)"
+            "(?<!\\w)(South Carolina|S\\.? ?C\\.?)( ?Rev(ised|\\.))?( ?Ann(otated|\\.))?( ?Gen(eral|\\.))? ?(C(odes?|\\.)|Stat(utes|s?\\.?))( Serv(ice|\\.))?( ?Ann(otated|\\.))?,? ?(([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?)?(?<title>\\d+(\\.\\d+)?[A-Za-z]?)(?!\\w)[-‑–](?<chapter>\\d+(\\.\\d+)?[A-Za-z]?)(?!\\w)[-‑–](?<section>\\d+(\\.\\d+)?[A-Za-z]?)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))?(?!=\\w)"
         ],
         "operations": [
             {
@@ -4412,8 +4412,8 @@ const templates = [
             "ballotpedia slug": "South_Carolina"
         },
         "regexes": [
-            "(?<!\\w)(South Carolina|S\\.? ?C\\.?) Const(itution|\\.)?,? [Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))?)?(?!=\\w)",
-            "(?<!\\w)[Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))?)? [Oo]f [Tt]he (South Carolina|S\\.? ?C\\.?) Const(itution|\\.)?(?!=\\w)"
+            "(?<!\\w)(South Carolina|S\\.? ?C\\.?) Const(itution|\\.)?,? [Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))?)?(?!=\\w)",
+            "(?<!\\w)[Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))?)? [Oo]f [Tt]he (South Carolina|S\\.? ?C\\.?) Const(itution|\\.)?(?!=\\w)"
         ],
         "operations": [
             {
@@ -4441,7 +4441,7 @@ const templates = [
             "abbreviation": "S.D. Codified Laws"
         },
         "regexes": [
-            "(?<!\\w)(South Dakota|S\\.? ?D\\.?) ?(Codified|Comp(iled|\\.)?)( ?Rev(ised|\\.))?( ?Ann(otated|\\.))?( ?Gen(eral|\\.))? ?(C(odes?|\\.)|Stat(utes|s?\\.?))( Serv(ice|\\.))?( ?Ann(otated|\\.))?,? ?(([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?)?(?<title>\\d+(\\.\\d+)?[A-Za-z]?)(?!\\w)[-‑–](?<chapter>\\d+(\\.\\d+)?[A-Za-z]?)(?!\\w)[-‑–](?<section>\\d+(\\.\\d+)?[A-Za-z]?)(?!\\w)(,? ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))?(?!=\\w)"
+            "(?<!\\w)(South Dakota|S\\.? ?D\\.?) ?(Codified|Comp(iled|\\.)?)( ?Rev(ised|\\.))?( ?Ann(otated|\\.))?( ?Gen(eral|\\.))? ?(C(odes?|\\.)|Stat(utes|s?\\.?))( Serv(ice|\\.))?( ?Ann(otated|\\.))?,? ?(([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?)?(?<title>\\d+(\\.\\d+)?[A-Za-z]?)(?!\\w)[-‑–](?<chapter>\\d+(\\.\\d+)?[A-Za-z]?)(?!\\w)[-‑–](?<section>\\d+(\\.\\d+)?[A-Za-z]?)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))?(?!=\\w)"
         ],
         "operations": [
             {
@@ -4469,8 +4469,8 @@ const templates = [
             "ballotpedia slug": "South_Dakota"
         },
         "regexes": [
-            "(?<!\\w)(South Dakota|S\\.? ?D\\.?) Const(itution|\\.)?,? [Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))?)?(?!=\\w)",
-            "(?<!\\w)[Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))?)? [Oo]f [Tt]he (South Dakota|S\\.? ?D\\.?) Const(itution|\\.)?(?!=\\w)"
+            "(?<!\\w)(South Dakota|S\\.? ?D\\.?) Const(itution|\\.)?,? [Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))?)?(?!=\\w)",
+            "(?<!\\w)[Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))?)? [Oo]f [Tt]he (South Dakota|S\\.? ?D\\.?) Const(itution|\\.)?(?!=\\w)"
         ],
         "operations": [
             {
@@ -4498,7 +4498,7 @@ const templates = [
             "abbreviation": "Tenn. Code"
         },
         "regexes": [
-            "(?<!\\w)(Tenn(essee|\\.)?|TN)( ?Rev(ised|\\.))?( ?Ann(otated|\\.))?( ?Gen(eral|\\.))? ?(C(odes?|\\.)|Stat(utes|s?\\.?))( Serv(ice|\\.))?( ?Ann(otated|\\.))?,? ?(([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?)?(?<title>\\d+(\\.\\d+)?[A-Za-z]?)(?!\\w)[-‑–](?<chapter>\\d+(\\.\\d+)?[A-Za-z]?)(?!\\w)[-‑–](?<section>\\d+(\\.\\d+)?[A-Za-z]?)(?!\\w)(,? ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))?(?!=\\w)"
+            "(?<!\\w)(Tenn(essee|\\.)?|TN)( ?Rev(ised|\\.))?( ?Ann(otated|\\.))?( ?Gen(eral|\\.))? ?(C(odes?|\\.)|Stat(utes|s?\\.?))( Serv(ice|\\.))?( ?Ann(otated|\\.))?,? ?(([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?)?(?<title>\\d+(\\.\\d+)?[A-Za-z]?)(?!\\w)[-‑–](?<chapter>\\d+(\\.\\d+)?[A-Za-z]?)(?!\\w)[-‑–](?<section>\\d+(\\.\\d+)?[A-Za-z]?)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))?(?!=\\w)"
         ],
         "operations": [
             {
@@ -4526,8 +4526,8 @@ const templates = [
             "ballotpedia slug": "Tennessee"
         },
         "regexes": [
-            "(?<!\\w)(Tenn(essee|\\.)?|TN) Const(itution|\\.)?,? [Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))?)?(?!=\\w)",
-            "(?<!\\w)[Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))?)? [Oo]f [Tt]he (Tenn(essee|\\.)?|TN) Const(itution|\\.)?(?!=\\w)"
+            "(?<!\\w)(Tenn(essee|\\.)?|TN) Const(itution|\\.)?,? [Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))?)?(?!=\\w)",
+            "(?<!\\w)[Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))?)? [Oo]f [Tt]he (Tenn(essee|\\.)?|TN) Const(itution|\\.)?(?!=\\w)"
         ],
         "operations": [
             {
@@ -4556,7 +4556,7 @@ const templates = [
             "year": "2020"
         },
         "regexes": [
-            "(?<!\\w)(Tex(as|\\.)?|TX) (?<code>\\w.{2,40}?)(?!\\w)( Code)? ?(([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?)?(?<chapter>\\d+[A-Zz-z]?)(?!\\w)\\.(?<section>\\d+[A-Zz-z]?)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))?(?!=\\w)"
+            "(?<!\\w)(Tex(as|\\.)?|TX) (?<code>\\w.{2,40}?)(?!\\w)( Code)? ?(([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?)?(?<chapter>\\d+[A-Zz-z]?)(?!\\w)\\.(?<section>\\d+[A-Zz-z]?)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))?(?!=\\w)"
         ],
         "operations": [
             {
@@ -4647,8 +4647,8 @@ const templates = [
             "abbreviation": "Tex."
         },
         "regexes": [
-            "(?<!\\w)(Tex(as|\\.)?|TX) Const(itution|\\.)?,? [Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))?)?(?!=\\w)",
-            "(?<!\\w)[Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))?)? [Oo]f [Tt]he (Tex(as|\\.)?|TX) Const(itution|\\.)?(?!=\\w)"
+            "(?<!\\w)(Tex(as|\\.)?|TX) Const(itution|\\.)?,? [Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))?)?(?!=\\w)",
+            "(?<!\\w)[Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))?)? [Oo]f [Tt]he (Tex(as|\\.)?|TX) Const(itution|\\.)?(?!=\\w)"
         ],
         "operations": [
             {
@@ -4673,7 +4673,7 @@ const templates = [
             "abbreviation": "Utah Code"
         },
         "regexes": [
-            "(?<!\\w)(Utah|UT)( ?Rev(ised|\\.))?( ?Ann(otated|\\.))?( ?Gen(eral|\\.))? ?(C(odes?|\\.)|Stat(utes|s?\\.?))( Serv(ice|\\.))?( ?Ann(otated|\\.))?,? ?(([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?)?(?<title>\\d+(\\.\\d+)?[A-Za-z]?)(?!\\w)[-‑–](?<chapter>\\d+(\\.\\d+)?[A-Za-z]?)(?!\\w)[-‑–](?<section>\\d+(\\.\\d+)?[A-Za-z]?)(?!\\w)(,? ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))?(?!=\\w)"
+            "(?<!\\w)(Utah|UT)( ?Rev(ised|\\.))?( ?Ann(otated|\\.))?( ?Gen(eral|\\.))? ?(C(odes?|\\.)|Stat(utes|s?\\.?))( Serv(ice|\\.))?( ?Ann(otated|\\.))?,? ?(([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?)?(?<title>\\d+(\\.\\d+)?[A-Za-z]?)(?!\\w)[-‑–](?<chapter>\\d+(\\.\\d+)?[A-Za-z]?)(?!\\w)[-‑–](?<section>\\d+(\\.\\d+)?[A-Za-z]?)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))?(?!=\\w)"
         ],
         "operations": [
             {
@@ -4702,8 +4702,8 @@ const templates = [
             "ballotpedia slug": "Utah"
         },
         "regexes": [
-            "(?<!\\w)(Utah|UT) Const(itution|\\.)?,? [Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))?)?(?!=\\w)",
-            "(?<!\\w)[Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))?)? [Oo]f [Tt]he (Utah|UT) Const(itution|\\.)?(?!=\\w)"
+            "(?<!\\w)(Utah|UT) Const(itution|\\.)?,? [Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))?)?(?!=\\w)",
+            "(?<!\\w)[Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))?)? [Oo]f [Tt]he (Utah|UT) Const(itution|\\.)?(?!=\\w)"
         ],
         "operations": [
             {
@@ -4731,8 +4731,8 @@ const templates = [
             "abbreviation": "Vt. Stat."
         },
         "regexes": [
-            "(?<!\\w)([Tt]it(le |\\. ?))?(?<title>\\d{1,2})(?!\\w) (V(ermont|t\\.?)|VT)( ?Rev(ised|\\.))?( ?Ann(otated|\\.))?( ?Gen(eral|\\.))? ?(C(odes?|\\.)|Stat(utes|s?\\.?))( Serv(ice|\\.))?( ?Ann(otated|\\.))?,? ?(([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?)?(?<section>\\d+(\\.\\d+)?[A-Za-z]?)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))?(?!=\\w)",
-            "(?<!\\w)(V(ermont|t\\.?)|VT)( ?Rev(ised|\\.))?( ?Ann(otated|\\.))?( ?Gen(eral|\\.))? ?(C(odes?|\\.)|Stat(utes|s?\\.?))( Serv(ice|\\.))?( ?Ann(otated|\\.))?,? ?[Tt]it(le |\\. ?)(?<title>\\d{1,2})(?!\\w),? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d+(\\.\\d+)?[A-Za-z]?)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))?(?!=\\w)"
+            "(?<!\\w)([Tt]it(le |\\. ?))?(?<title>\\d{1,2})(?!\\w) (V(ermont|t\\.?)|VT)( ?Rev(ised|\\.))?( ?Ann(otated|\\.))?( ?Gen(eral|\\.))? ?(C(odes?|\\.)|Stat(utes|s?\\.?))( Serv(ice|\\.))?( ?Ann(otated|\\.))?,? ?(([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?)?(?<section>\\d+(\\.\\d+)?[A-Za-z]?)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))?(?!=\\w)",
+            "(?<!\\w)(V(ermont|t\\.?)|VT)( ?Rev(ised|\\.))?( ?Ann(otated|\\.))?( ?Gen(eral|\\.))? ?(C(odes?|\\.)|Stat(utes|s?\\.?))( Serv(ice|\\.))?( ?Ann(otated|\\.))?,? ?[Tt]it(le |\\. ?)(?<title>\\d{1,2})(?!\\w),? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d+(\\.\\d+)?[A-Za-z]?)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))?(?!=\\w)"
         ],
         "operations": [
             {
@@ -4820,7 +4820,7 @@ const templates = [
             "abbreviation": "Va. Code"
         },
         "regexes": [
-            "(?<!\\w)(?<!W\\. )(?<!West )(?<!W\\.)V(irginia|a\\.|A)( ?Rev(ised|\\.))?( ?Ann(otated|\\.))?( ?Gen(eral|\\.))? ?(C(odes?|\\.)|Stat(utes|s?\\.?))( Serv(ice|\\.))?( ?Ann(otated|\\.))?,? ?(([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?)?(?<title>\\d+(\\.\\d+)?[A-Z]?)(?!\\w)[-‑–](?<section>\\d+(\\.\\d+)?[A-Z]?)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))?(?!=\\w)"
+            "(?<!\\w)(?<!W\\. )(?<!West )(?<!W\\.)V(irginia|a\\.|A)( ?Rev(ised|\\.))?( ?Ann(otated|\\.))?( ?Gen(eral|\\.))? ?(C(odes?|\\.)|Stat(utes|s?\\.?))( Serv(ice|\\.))?( ?Ann(otated|\\.))?,? ?(([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?)?(?<title>\\d+(\\.\\d+)?[A-Z]?)(?!\\w)[-‑–](?<section>\\d+(\\.\\d+)?[A-Z]?)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))?(?!=\\w)"
         ],
         "operations": [],
         "URL": [
@@ -4835,8 +4835,8 @@ const templates = [
             "ballotpedia slug": "Virginia"
         },
         "regexes": [
-            "(?<!\\w)(?<!W\\. )(?<!West )(?<!W\\.)V(irginia|a\\.|A) Const(itution|\\.)?,? [Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))?)?(?!=\\w)",
-            "(?<!\\w)[Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))?)? [Oo]f [Tt]he (?<!W\\. )(?<!West )(?<!W\\.)V(irginia|a\\.|A) Const(itution|\\.)?(?!=\\w)"
+            "(?<!\\w)(?<!W\\. )(?<!West )(?<!W\\.)V(irginia|a\\.|A) Const(itution|\\.)?,? [Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))?)?(?!=\\w)",
+            "(?<!\\w)[Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))?)? [Oo]f [Tt]he (?<!W\\. )(?<!West )(?<!W\\.)V(irginia|a\\.|A) Const(itution|\\.)?(?!=\\w)"
         ],
         "operations": [
             {
@@ -4865,7 +4865,7 @@ const templates = [
             "year": "2019"
         },
         "regexes": [
-            "(?<!\\w)(Virgin Islands|V\\.? ?I\\.?)( ?Rev(ised|\\.))?( ?Ann(otated|\\.))?( ?Gen(eral|\\.))? ?(C(odes?|\\.)|Stat(utes|s?\\.?))( Serv(ice|\\.))?( ?Ann(otated|\\.))?,? ?[Tt]it(le|\\.) (?<title>\\d+(\\.\\d+)?[A-Za-z]?)(?!\\w),? (([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?)?(?<chapter>\\d+(\\.\\d+)?[A-Za-z]?)(?!\\w)[-‑–](?<section>\\d+(\\.\\d+)?[A-Za-z]?)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))?(?!=\\w)"
+            "(?<!\\w)(Virgin Islands|V\\.? ?I\\.?)( ?Rev(ised|\\.))?( ?Ann(otated|\\.))?( ?Gen(eral|\\.))? ?(C(odes?|\\.)|Stat(utes|s?\\.?))( Serv(ice|\\.))?( ?Ann(otated|\\.))?,? ?[Tt]it(le|\\.) (?<title>\\d+(\\.\\d+)?[A-Za-z]?)(?!\\w),? (([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?)?(?<chapter>\\d+(\\.\\d+)?[A-Za-z]?)(?!\\w)[-‑–](?<section>\\d+(\\.\\d+)?[A-Za-z]?)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))?(?!=\\w)"
         ],
         "operations": [
             {
@@ -4892,7 +4892,7 @@ const templates = [
             "abbreviation": "Wash. Rev. Code"
         },
         "regexes": [
-            "(?<!\\w)(Wash(ington|\\.)?|WA) ( ?Rev(ised|\\.))?( ?Ann(otated|\\.))?( ?Gen(eral|\\.))? ?(C(odes?|\\.)|Stat(utes|s?\\.?))( Serv(ice|\\.))?( ?Ann(otated|\\.))?,? ?(([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?)?(?<title>\\d+[A-Zz-z]?)(?!\\w)\\.(?<chapter>\\d+[A-Zz-z]?)(?!\\w)\\.(?<section>\\d+[A-Zz-z]?)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))?(?!=\\w)"
+            "(?<!\\w)(Wash(ington|\\.)?|WA) ( ?Rev(ised|\\.))?( ?Ann(otated|\\.))?( ?Gen(eral|\\.))? ?(C(odes?|\\.)|Stat(utes|s?\\.?))( Serv(ice|\\.))?( ?Ann(otated|\\.))?,? ?(([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?)?(?<title>\\d+[A-Zz-z]?)(?!\\w)\\.(?<chapter>\\d+[A-Zz-z]?)(?!\\w)\\.(?<section>\\d+[A-Zz-z]?)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))?(?!=\\w)"
         ],
         "operations": [
             {
@@ -4920,8 +4920,8 @@ const templates = [
             "ballotpedia slug": "West_Virginia"
         },
         "regexes": [
-            "(?<!\\w)(West Virginia|W\\. ?Va?\\.|WV) Const(itution|\\.)?,? [Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))?)?(?!=\\w)",
-            "(?<!\\w)[Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))?)? [Oo]f [Tt]he (West Virginia|W\\. ?Va?\\.|WV) Const(itution|\\.)?(?!=\\w)"
+            "(?<!\\w)(West Virginia|W\\. ?Va?\\.|WV) Const(itution|\\.)?,? [Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))?)?(?!=\\w)",
+            "(?<!\\w)[Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))?)? [Oo]f [Tt]he (West Virginia|W\\. ?Va?\\.|WV) Const(itution|\\.)?(?!=\\w)"
         ],
         "operations": [
             {
@@ -4976,7 +4976,7 @@ const templates = [
             "abbreviation": "Wis. Stat."
         },
         "regexes": [
-            "(?<!\\w)(Wis(consin|\\.)?|WI)( ?Rev(ised|\\.))?( ?Ann(otated|\\.))?( ?Gen(eral|\\.))? ?(C(odes?|\\.)|Stat(utes|s?\\.?))( Serv(ice|\\.))?( ?Ann(otated|\\.))?,? ?(([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?)?(?<chapter>\\d+[A-Zz-z]?)(?!\\w)\\.(?<section>\\d+[A-Zz-z]?)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))?(?!=\\w)"
+            "(?<!\\w)(Wis(consin|\\.)?|WI)( ?Rev(ised|\\.))?( ?Ann(otated|\\.))?( ?Gen(eral|\\.))? ?(C(odes?|\\.)|Stat(utes|s?\\.?))( Serv(ice|\\.))?( ?Ann(otated|\\.))?,? ?(([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?)?(?<chapter>\\d+[A-Zz-z]?)(?!\\w)\\.(?<section>\\d+[A-Zz-z]?)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))?(?!=\\w)"
         ],
         "operations": [
             {
@@ -5001,8 +5001,8 @@ const templates = [
             "ballotpedia slug": "Wisconsin"
         },
         "regexes": [
-            "(?<!\\w)(Wis(consin|\\.)?|WI) Const(itution|\\.)?,? [Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))?)?(?!=\\w)",
-            "(?<!\\w)[Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))?)? [Oo]f [Tt]he (Wis(consin|\\.)?|WI) Const(itution|\\.)?(?!=\\w)"
+            "(?<!\\w)(Wis(consin|\\.)?|WI) Const(itution|\\.)?,? [Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))?)?(?!=\\w)",
+            "(?<!\\w)[Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))?)? [Oo]f [Tt]he (Wis(consin|\\.)?|WI) Const(itution|\\.)?(?!=\\w)"
         ],
         "operations": [
             {
@@ -5030,7 +5030,7 @@ const templates = [
             "abbreviation": "Wyo. Stat."
         },
         "regexes": [
-            "(?<!\\w)(Wyo(ming|\\.)?|WY)( ?Rev(ised|\\.))?( ?Ann(otated|\\.))?( ?Gen(eral|\\.))? ?(C(odes?|\\.)|Stat(utes|s?\\.?))( Serv(ice|\\.))?( ?Ann(otated|\\.))?,? ?(([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?)?(?<title>\\d+(\\.\\d+)?[A-Za-z]?)(?!\\w)[-‑–](?<chapter>\\d+(\\.\\d+)?[A-Za-z]?)(?!\\w)[-‑–](?<section>\\d+(\\.\\d+)?[A-Za-z]?)(?!\\w)(,? ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))?(?!=\\w)"
+            "(?<!\\w)(Wyo(ming|\\.)?|WY)( ?Rev(ised|\\.))?( ?Ann(otated|\\.))?( ?Gen(eral|\\.))? ?(C(odes?|\\.)|Stat(utes|s?\\.?))( Serv(ice|\\.))?( ?Ann(otated|\\.))?,? ?(([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?)?(?<title>\\d+(\\.\\d+)?[A-Za-z]?)(?!\\w)[-‑–](?<chapter>\\d+(\\.\\d+)?[A-Za-z]?)(?!\\w)[-‑–](?<section>\\d+(\\.\\d+)?[A-Za-z]?)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))?(?!=\\w)"
         ],
         "operations": [
             {
@@ -5063,8 +5063,8 @@ const templates = [
             "ballotpedia slug": "Wyoming"
         },
         "regexes": [
-            "(?<!\\w)(Wyo(ming|\\.)?|WY) Const(itution|\\.)?,? [Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))?)?(?!=\\w)",
-            "(?<!\\w)[Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(\\w{1,4}\\))+)(?!\\w))?)? [Oo]f [Tt]he (Wyo(ming|\\.)?|WY) Const(itution|\\.)?(?!=\\w)"
+            "(?<!\\w)(Wyo(ming|\\.)?|WY) Const(itution|\\.)?,? [Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))?)?(?!=\\w)",
+            "(?<!\\w)[Aa]rt(icle|\\.)? ?(?<article>[\\dIVXivx]{1,8})(?!\\w)(,? ([Ss]ec(tions?|t?s?\\.?)|(&sect;|&#167|§){1,2}) ?(?<section>\\d[\\w.]*\\w|\\d)(?!\\w)(((,? )?sub(sections?|divisions?|(sec|d(iv)?)?s?\\.))? ?(?<subsection>(\\(([A-Za-z]{1,5}|\\d{1,3})\\))+)(?!\\w))?)? [Oo]f [Tt]he (Wyo(ming|\\.)?|WY) Const(itution|\\.)?(?!=\\w)"
         ],
         "operations": [
             {

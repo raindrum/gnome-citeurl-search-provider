@@ -5,5 +5,5 @@
     "settings-schema": "org.gnome.shell.extensions.citeurl-search-provider",
     "description": "This extension lets you look up U.S. state and federal laws and court cases by typing citations (like \"42 USC 1983\" or \"U.S. Constitution Art. I, Sec. 3\") into the search bar.\nBy default, the search supports the U.S. Code and federal constitution, as well as nearly all codified state laws and constitutions, among other sources of law. You can also add more types of citation by following the instructions on the GitHub page.",
     "url": "https://github.com/raindrum/gnome-citeurl-search-provider",
-    "version": 5
+    "version": 6
 }

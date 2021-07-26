@@ -1,6 +1,6 @@
 ![Sreenshot](screenshot.png)
 
-This is a search provider for the GNOME Shell that lets you look up legal citations using [CiteURL](https://github.com/raindrum/citeurl/). For example, here are some search terms and their respective links:
+This is a search provider for the GNOME Shell that lets you look up legal citations using [CiteURL](https://raindrum.github.io/citeurl/). For example, here are some search terms and their respective links:
 
 - [CA Public Resources Code 21000](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PRC&sectionNum=21000)
 - [42 usc 1983](https://www.law.cornell.edu/uscode/text/42/1983)
